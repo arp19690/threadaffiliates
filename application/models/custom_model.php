@@ -127,7 +127,7 @@ class Custom_model extends CI_Model
 
     public function get_all_lowest_level_category_ids($category_id)
     {
-        $cat_id_arr = array();
+        $cat_id_arr = array($category_id);
         $tmp_data = $this->create_menu(array("category_id" => $category_id, "category_status" => 1));
         foreach ($tmp_data as $tmp_value)
         {
