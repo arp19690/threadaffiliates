@@ -37,20 +37,4 @@ class Index extends CI_Controller
         $this->template->render();
     }
 
-    public function runcron()
-    {
-        try
-        {
-            $amzon_helper = new AmazonHelper();
-            $amzon_helper->auto_populate();
-
-            $flipkart_helper = new FlipkartHelper();
-            $flipkart_helper->auto_populate();
-            echo 'done';
-        } catch (Exception $e)
-        {
-            echo 'Caught exception: ', $e->getMessage(), "\n";
-        }
-    }
-
 }
