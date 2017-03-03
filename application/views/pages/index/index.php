@@ -1,7 +1,7 @@
 <div class="home-content">
     <?php
     $this->load->view("pages/index/homepage/slider");
-    
+
     if (!empty($featured_products))
     {
         ?>
@@ -112,6 +112,61 @@
                                             <div class="product-tab-carousel">
                                                 <?php
                                                 foreach ($best_sellers as $value)
+                                                {
+                                                    ?>
+                                                    <div class="item">
+                                                        <div class="product-preview  clearfix">
+                                                            <div class="preview">
+                                                                <a href="<?php echo base_url("p/" . stripslashes($value["product_url_key"])); ?>">
+                                                                    <img src="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="first-image img-responsive">
+                                                                    <img src="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="second-img img-responsive" />
+                                                                </a>
+                                                                <div class="wrapper-label"></div>
+                                                            </div> 
+
+                                                            <div class="product-info clearfix">
+                                                                <a class="product-title" href="<?php echo base_url("p/" . stripslashes($value["product_url_key"])); ?>"><?php echo stripslashes($value["product_title"]); ?></a>
+                                                                <div class="content_price"><span class="price"><span class="money">Rs. <?php echo number_format($value["product_price_min"], 2); ?></span></span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <?php
+                                                }
+                                                ?>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php
+    }
+
+    if (!empty($home_decor_products))
+    {
+        ?>
+        <div class="shopify-section">
+            <div class="section-products productfilter-section">
+                <div class="container">
+                    <div class="home-row row fullwidth">  
+                        <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12"> 
+                            <div class="home-block">
+                                <div class="block-content">
+                                    <div class="jms-tab">
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li class="active"><a href="#best-sellers" data-toggle="tab" class="button">Home Decor</a></li>
+                                        </ul>  
+                                        <span class="small-star"><i class="fa fa-star-o" aria-hidden="true"></i></span>
+                                    </div> 
+                                    <div class="tab-content">
+                                        <div id="best-sellers" class="tab-pane active" role="tabpanel">      
+                                            <div class="product-tab-carousel">
+                                                <?php
+                                                foreach ($home_decor_products as $value)
                                                 {
                                                     ?>
                                                     <div class="item">
