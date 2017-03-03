@@ -91,7 +91,7 @@
     </div>
 
     <?php
-    if (!empty($best_sellers))
+    if (!empty($most_viewed))
     {
         ?>
         <div class="shopify-section">
@@ -103,7 +103,7 @@
                                 <div class="block-content">
                                     <div class="jms-tab">
                                         <ul class="nav nav-tabs" role="tablist">
-                                            <li class="active"><a href="#best-sellers" data-toggle="tab" class="button">Best Sellers</a></li>
+                                            <li class="active"><a href="#best-sellers" data-toggle="tab" class="button">Most Viewed</a></li>
                                         </ul>  
                                         <span class="small-star"><i class="fa fa-star-o" aria-hidden="true"></i></span>
                                     </div> 
@@ -111,7 +111,7 @@
                                         <div id="best-sellers" class="tab-pane active" role="tabpanel">      
                                             <div class="product-tab-carousel">
                                                 <?php
-                                                foreach ($best_sellers as $value)
+                                                foreach ($most_viewed as $value)
                                                 {
                                                     ?>
                                                     <div class="item">
