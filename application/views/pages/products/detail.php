@@ -20,7 +20,7 @@ echo isset($breadcrumb) ? $breadcrumb : "";
             <div class="row">
                 <div class="product-img-box pb-left-column col-xs-12 col-sm-5 ">     	
                     <div class="product-photo-container" id="ProductPhoto">
-                        <img class="img-responsive" id="ProductPhotoImg" src="<?php echo $product_data["product_image_url"]; ?>" data-zoom="<?php echo $product_data["product_image_url"]; ?>" data-image-id="<?php echo $product_data["product_unique_code"]; ?>">
+                        <img class="img-responsive lazy" id="ProductPhotoImg" src="<?php echo $product_data["product_image_url"]; ?>" data-original="<?php echo $product_data["product_image_url"]; ?>" data-zoom="<?php echo $product_data["product_image_url"]; ?>" data-image-id="<?php echo $product_data["product_unique_code"]; ?>">
                     </div>
                 </div>
 
@@ -79,8 +79,8 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                                 <div class="product-preview  clearfix">
                                     <div class="preview">
                                         <a href="<?php echo base_url("p/" . $rvalue["product_url_key"]); ?>" title="<?php echo stripslashes($rvalue["product_title"]); ?>">
-                                            <img src="<?php echo $rvalue["product_image_url"]; ?>" alt="<?php echo stripslashes($rvalue["product_title"]); ?>" class="first-image img-responsive">
-                                            <img src="<?php echo $rvalue["product_image_url"]; ?>" alt="<?php echo stripslashes($rvalue["product_title"]); ?>" class="second-img img-responsive" />
+                                            <img src="<?php echo $rvalue["product_image_url"]; ?>" data-original="<?php echo $rvalue["product_image_url"]; ?>" alt="<?php echo stripslashes($rvalue["product_title"]); ?>" class="first-image img-responsive lazy">
+                                            <img src="<?php echo $rvalue["product_image_url"]; ?>" data-original="<?php echo $rvalue["product_image_url"]; ?>" alt="<?php echo stripslashes($rvalue["product_title"]); ?>" class="second-img img-responsive lazy" />
                                         </a>
                                         <div class="wrapper-label"></div>
                                     </div> 
