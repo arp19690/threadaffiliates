@@ -31,8 +31,8 @@
                             <fieldset class="content-group">
 
                                 <div class="form-group">
-                                    <label class="control-label col-lg-2">Category</label>
-                                    <div class="col-lg-10">
+                                    <label class="control-label col-lg-4">Category</label>
+                                    <div class="col-lg-8">
                                         <select name="category_id" class="form-control" required="required">
                                             <?php
                                             echo create_category_select_option($categories);
@@ -42,8 +42,8 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label col-lg-2">From Website?</label>
-                                    <div class="col-lg-10">
+                                    <label class="control-label col-lg-4">From Website?</label>
+                                    <div class="col-lg-8">
                                         <select name="dc_type" class="form-control" required="required">
                                             <option value=""></option>
                                             <option value="amazon">Amazon</option>
@@ -53,8 +53,8 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label col-lg-2">Product Code</label>
-                                    <div class="col-lg-10">
+                                    <label class="control-label col-lg-4">Product Code</label>
+                                    <div class="col-lg-8">
                                         <input type="text" name="product_code" class="form-control" required="required"/>
                                     </div>
                                 </div>

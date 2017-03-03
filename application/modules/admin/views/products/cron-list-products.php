@@ -5,7 +5,7 @@
     <div class="page-header">
         <div class="page-header-content">
             <div class="page-title">
-                <h4><i class="icon-users position-left"></i> All Products</h4>
+                <h4><i class="icon-list position-left"></i> <?php echo $page_title; ?></h4>
             </div>
 
             <div class="heading-elements">
@@ -29,7 +29,7 @@
                 <!-- Collapsible list -->
                 <div class="panel panel-flat">
                     <div class="panel-heading">
-                        <h5 class="panel-title">All Products</h5>
+                        <h5 class="panel-title"><?php echo $page_title; ?></h5>
                     </div>
 
                     <div class="panel-body">
@@ -87,7 +87,7 @@
                                             if (strtotime($value["updated_on"]) <= time() - (CRON_THRESHOLD_HOURS * 60 * 60) || empty($value["product_url_key"]))
                                             {
                                                 ?>
-                                                <a href="<?php echo base_url_admin("products/fetch_cron_product_info/" . $value["dc_id"]) ?>" class="btn btn-warning btn-xs">Fetch new info</a>
+                                                <p><a href="<?php echo base_url_admin("products/fetch_cron_product_info/" . $value["dc_id"]) ?>" class="btn btn-warning btn-xs">Fetch new info</a></p>
                                                 <?php
                                             }
                                             else
@@ -97,6 +97,7 @@
                                                 <?php
                                             }
                                             ?>
+                                            <p><a href="<?php echo base_url_admin("products/delete_product/" . $value["dc_product_unique_code"]) ?>" class="text-danger" onclick="return confirm('Sure you want to delete?');">Delete</a></p>
                                         </td>
                                     </tr>
                                     <?php

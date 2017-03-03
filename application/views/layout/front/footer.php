@@ -5,7 +5,7 @@
                     <div class="layout-column col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
                         <div class="addon-box">
                             <a href="<?php echo base_url(); ?>" class="logo-wrapper">
-                                <img src="<?php echo IMAGES_PATH . "/logo.png" ?>" alt="<?php echo SITE_NAME; ?>" width="150">
+                                <img src="<?php echo IMAGES_PATH . "/logo.png" ?>" data-original="<?php echo IMAGES_PATH . "/logo.png" ?>" alt="<?php echo SITE_NAME; ?>" class="lazy" width="150">
                             </a>
                         </div>
                     </div>
@@ -65,6 +65,12 @@
 <script src="<?php echo JS_PATH; ?>/owl.carousel.js" type="text/javascript"></script>
 <script src="<?php echo JS_PATH; ?>/jquery.bxslider.js" type="text/javascript"></script>
 <script src="<?php echo JS_PATH; ?>/jmsfont-js.js" type="text/javascript"></script>
+<script src="<?php echo JS_PATH; ?>/jquery.lazyload.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $("img.lazy").lazyload({
+        threshold: 200
+    });
+</script>
 
 <?php
 if (USER_IP != "127.0.0.1")

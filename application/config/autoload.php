@@ -55,7 +55,7 @@ $autoload['packages'] = array();
   |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
  */
 
-$autoload['libraries'] = array('template', 'session','AdminLogin_auth');
+$autoload['libraries'] = array('template', 'session', 'AdminLogin_auth');
 
 
 /*
@@ -67,7 +67,7 @@ $autoload['libraries'] = array('template', 'session','AdminLogin_auth');
   |	$autoload['helper'] = array('url', 'file');
  */
 
-$autoload['helper'] = array("url", "form", "cookie", "AmazonHelper", "FlipkartHelper");
+$autoload['helper'] = array("url", "form", "cookie", "AmazonHelper", "FlipkartHelper", "AutorunHelper");
 
 
 /*

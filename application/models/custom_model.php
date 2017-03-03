@@ -10,6 +10,19 @@ class Custom_model extends CI_Model
         $this->load->database();
     }
 
+    public function get_all_products_for_category($category_id, $orderby = "rand()", $orderby_type = "rand()", $limit = "0,12")
+    {
+        $model = new Common_model();
+        $cat_cat_id_arr = $this->get_all_lowest_level_category_ids($category_id);
+        $cat_where_cond = array("product_status" => 1);
+        foreach ($cat_cat_id_arr as $hdvalue)
+        {
+            $cat_where_cond["category_id"] = $hdvalue;
+        }
+        $cat_products = $model->getAllDataFromJoin("p.*", TABLE_PRODUCTS . " as p", array(TABLE_CATEGORIES . " as c" => "c.category_id = p.product_category_id"), "INNER", $cat_where_cond, $orderby, $orderby_type, $limit);
+        return $cat_products;
+    }
+
     public function get_parent_category_info($parent_category_id, $output_data)
     {
         $data = Custom_model::get_menu_data(array("category_id" => $parent_category_id), "category_id");
@@ -114,7 +127,7 @@ class Custom_model extends CI_Model
 
     public function get_all_lowest_level_category_ids($category_id)
     {
-        $cat_id_arr = array();
+        $cat_id_arr = array($category_id);
         $tmp_data = $this->create_menu(array("category_id" => $category_id, "category_status" => 1));
         foreach ($tmp_data as $tmp_value)
         {

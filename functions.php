@@ -18,7 +18,7 @@ function create_category_select_option($data, $i = 0, $selected_category_id = NU
         $str.="<option value='" . $value["category_id"] . "' " . $selected . ">" . $tmpstr . stripslashes($value["category_name"]) . "</option>";
         if (isset($value["children"]) && !empty($value["children"]))
         {
-            $str.=create_category_select_option($value["children"], $i + 1);
+            $str.=create_category_select_option($value["children"], $i + 1, $selected_category_id);
         }
     }
     return $str;

@@ -22,14 +22,29 @@ class Products extends CI_Controller
         $this->cron_list_products();
     }
 
-    public function cron_list_products()
+    public function cron_list_products($type = NULL)
     {
         $data = array();
         $model = new Common_model();
-//        $result = $model->fetchSelectedData('*', TABLE_DAILY_CRON);
-        $result = $model->getAllDataFromJoin("*", TABLE_DAILY_CRON . " as dc", array(TABLE_PRODUCTS . " as p" => "dc.dc_product_unique_code = p.product_unique_code"), "LEFT");
+        $where_cond_arr = array();
+        $page_title = "All Products";
+
+        switch ($type)
+        {
+            case "amazon":
+                $where_cond_arr["dc_type"] = "amazon";
+                $page_title = "Amazon Products";
+                break;
+            case "flipkart":
+                $where_cond_arr["dc_type"] = "flipkart";
+                $page_title = "Flipkart Products";
+                break;
+        }
+
+        $result = $model->getAllDataFromJoin("*", TABLE_DAILY_CRON . " as dc", array(TABLE_PRODUCTS . " as p" => "dc.dc_product_unique_code = p.product_unique_code"), "LEFT", $where_cond_arr);
 
         $data["data"] = $result;
+        $data["page_title"] = $page_title;
         $this->template->write_view("content", "products/cron-list-products", $data);
         $this->template->render();
     }
@@ -41,6 +56,8 @@ class Products extends CI_Controller
             $arr = $this->input->post();
             $model = new Common_model();
             $dc_id = $model->insertData(TABLE_DAILY_CRON, array("dc_category_id" => $arr["category_id"], "dc_product_unique_code" => trim($arr["product_code"]), "dc_type" => $arr["dc_type"]));
+
+            // updating the products info
             $this->fetch_cron_product_info($dc_id);
         }
         else
@@ -57,34 +74,26 @@ class Products extends CI_Controller
 
     public function fetch_cron_product_info($dc_id)
     {
-        $amazon_helper = new AmazonHelper();
-                    $amazon_helper->auto_populate();
-        $model = new Common_model();
-        $data = $model->fetchSelectedData("*", TABLE_DAILY_CRON, array("dc_id" => $dc_id));
-        if (!empty($data))
+        try
         {
-            $arr = $data[0];
-
-            try
-            {
-                // updating the products info
-                if ($arr["dc_type"] == "amazon")
-                {
-                    $amazon_helper = new AmazonHelper();
-                    $amazon_helper->auto_populate(array("dc_id" => $dc_id));
-                }
-                else if ($arr["dc_type"] == "flipkart")
-                {
-                    $flipkart_helper = new FlipkartHelper();
-                    $flipkart_helper->auto_populate(array("dc_id" => $dc_id));
-                }
-
-                $this->session->set_flashdata("success", "Product info updated successfully");
-            } catch (Exception $e)
-            {
-                $this->session->set_flashdata("error", "Error: " . $e->getMessage());
-            }
+            // updating the products info
+            $autorun_helper = new AutorunHelper();
+            $autorun_helper->auto_populate(array("dc_id" => $dc_id));
+            $this->session->set_flashdata("success", "Product info updated successfully");
+        } catch (Exception $e)
+        {
+            $this->session->set_flashdata("error", "Error: " . $e->getMessage());
         }
+
+        redirect(base_url_admin("products/cron_list_products"));
+    }
+
+    public function delete_product($product_unique_code)
+    {
+        $model = new Common_model();
+        $model->updateData(TABLE_DAILY_CRON, array("is_deleted" => 1), array("dc_product_unique_code" => $product_unique_code));
+        $model->updateData(TABLE_PRODUCTS, array("product_status" => 2), array("product_unique_code" => $product_unique_code));
+        $this->session->set_flashdata("success", "Product deleted successfully");
         redirect(base_url_admin("products/cron_list_products"));
     }
 

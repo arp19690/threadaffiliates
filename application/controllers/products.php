@@ -18,15 +18,19 @@ class Products extends CI_Controller
 
         // fetching category_ids from their category_url_key
         $where_cond = array("category_status" => 1, "category_url_key" => $parent_category);
+        $category_data = $model->fetchSelectedData("category_id, category_name", TABLE_CATEGORIES, $where_cond);
         if ($child_category != NULL)
         {
             $where_cond["category_url_key"] = $child_category;
+            $where_cond["category_parent_id"] = $category_data[0]["category_id"];
+            $category_data = $model->fetchSelectedData("category_id, category_name", TABLE_CATEGORIES, $where_cond);
         }
         if ($child2_category != NULL)
         {
             $where_cond["category_url_key"] = $child2_category;
+            $where_cond["category_parent_id"] = $category_data[0]["category_id"];
+            $category_data = $model->fetchSelectedData("category_id, category_name", TABLE_CATEGORIES, $where_cond);
         }
-        $category_data = $model->fetchSelectedData("category_id, category_name", TABLE_CATEGORIES, $where_cond);
         $breadcrumb = $custom_model->create_breadcrumb($category_data[0]["category_id"], "category");
 
         // fetching products with status 1 and other relevant where condition

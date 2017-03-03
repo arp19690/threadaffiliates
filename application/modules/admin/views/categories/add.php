@@ -5,7 +5,7 @@
     <div class="page-header">
         <div class="page-header-content">
             <div class="page-title">
-                <h4><i class="icon-users position-left"></i> Add Category</h4>
+                <h4><i class="icon-list position-left"></i> <?php echo $page_title; ?></h4>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
                 <!-- Collapsible list -->
                 <div class="panel panel-flat">
                     <div class="panel-heading">
-                        <h5 class="panel-title">Add Category</h5>
+                        <h5 class="panel-title"><?php echo $page_title; ?></h5>
                     </div>
 
                     <div class="panel-body">
@@ -31,8 +31,8 @@
                             <fieldset class="content-group">
 
                                 <div class="form-group">
-                                    <label class="control-label col-lg-2">Parent Category</label>
-                                    <div class="col-lg-10">
+                                    <label class="control-label col-lg-4">Parent Category</label>
+                                    <div class="col-lg-8">
                                         <select name="parent_category_id" class="form-control">
                                             <option value="">None</option>
                                             <?php
@@ -43,8 +43,8 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label col-lg-2">Category Name</label>
-                                    <div class="col-lg-10">
+                                    <label class="control-label col-lg-4">Category Name</label>
+                                    <div class="col-lg-8">
                                         <input type="text" name="category_name" class="form-control" value="<?php echo @$data["category_name"]; ?>" required="required"/>
                                     </div>
                                 </div>
