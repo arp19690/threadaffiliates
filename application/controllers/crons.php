@@ -16,16 +16,17 @@ class Crons extends CI_Controller
         try
         {
             $autorun_helper = new AutorunHelper();
+            $where_cond_arr = array("is_deleted" => 0, "updated_on <=" => date("Y-m-d H:i:s", time() - (CRON_THRESHOLD_HOURS * 60 * 60)));
             switch ($type)
             {
                 case "amazon":
-                    $autorun_helper->auto_populate(array("dc_type" => "amazon"));
+                    $where_cond_arr["dc_type"] = "amazon";
                     break;
-
                 case "flipkart":
-                    $autorun_helper->auto_populate(array("dc_type" => "flipkart"));
+                    $where_cond_arr["dc_type"] = "flipkart";
                     break;
             }
+            $autorun_helper->auto_populate($where_cond_arr);
             echo 'done';
         } catch (Exception $e)
         {

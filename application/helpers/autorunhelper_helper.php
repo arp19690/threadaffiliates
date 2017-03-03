@@ -18,11 +18,13 @@ class AutorunHelper
         $this->URLShortener = new URLShortener();
     }
 
-    public function auto_populate($extra_where_arr = array())
+    public function auto_populate($where_cond_arr = array())
     {
         $model = new Common_model();
-        $where_cond_arr = array("is_deleted" => 0, "updated_on <=" => date("Y-m-d H:i:s", time() - (CRON_THRESHOLD_HOURS * 60 * 60)));
-        $where_cond_arr = array_merge($where_cond_arr, $extra_where_arr);
+        if (empty($where_cond_arr))
+        {
+            $where_cond_arr = array("is_deleted" => 0, "updated_on <=" => date("Y-m-d H:i:s", time() - (CRON_THRESHOLD_HOURS * 60 * 60)));
+        }
         $products_data = $model->fetchSelectedData("dc_id, dc_product_unique_code, dc_category_id, dc_type", TABLE_DAILY_CRON, $where_cond_arr, "updated_on");
 
         $amazon_helper = new AmazonHelper();
