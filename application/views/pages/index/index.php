@@ -22,7 +22,7 @@
                                 <div class="product-preview clearfix">
                                     <div class="preview">
                                         <a href="<?php echo base_url("p/" . stripslashes($value["product_url_key"])); ?>">
-                                            <img src="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class=" img-responsive">
+                                            <img src="<?php echo $value['product_image_url']; ?>" data-original="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class=" img-responsive lazy">
                                         </a>
                                         <div class="wrapper-label"></div>
                                     </div> 
@@ -50,7 +50,7 @@
                     <div class="layout-column col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="addon-box">
                             <div class="jms-banner">
-                                <img src="<?php echo IMAGES_PATH; ?>/banner1.jpg" alt="" class="banner__image" />
+                                <img src="<?php echo IMAGES_PATH; ?>/banner1.jpg" data-original="<?php echo IMAGES_PATH; ?>/banner1.jpg" alt="Men" class="banner__image lazy" />
                                 <div class="text">
                                     <div class="banner-heading" ><span>SHOP FOR</span></div>
                                     <div class="banner-subheading" ><h3>MEN</h3></div>
@@ -63,7 +63,7 @@
                     <div class="layout-column col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="addon-box">
                             <div class="jms-banner">
-                                <img src="<?php echo IMAGES_PATH; ?>/banner2.jpg" alt="Women" class="banner__image" />
+                                <img src="<?php echo IMAGES_PATH; ?>/banner2.jpg" data-original="<?php echo IMAGES_PATH; ?>/banner2.jpg" alt="Women" class="banner__image lazy" />
                                 <div class="text">
                                     <div class="banner-heading" ><span>SHOP FOR</span></div>
                                     <div class="banner-subheading" ><h3>WOMEN</h3></div>
@@ -76,7 +76,7 @@
                     <div class="layout-column col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="addon-box">
                             <div class="jms-banner">
-                                <img src="<?php echo IMAGES_PATH; ?>/banner3.jpg" alt="Kids" class="banner__image" />
+                                <img src="<?php echo IMAGES_PATH; ?>/banner3.jpg" data-original="<?php echo IMAGES_PATH; ?>/banner3.jpg" alt="Kids" class="banner__image lazy" />
                                 <div class="text">
                                     <div class="banner-heading" ><span>SHOP FOR</span></div>
                                     <div class="banner-subheading" ><h3>KIDS</h3></div>
@@ -115,11 +115,11 @@
                                                 {
                                                     ?>
                                                     <div class="item">
-                                                        <div class="product-preview  clearfix">
+                                                        <div class="product-preview clearfix">
                                                             <div class="preview">
                                                                 <a href="<?php echo base_url("p/" . stripslashes($value["product_url_key"])); ?>">
-                                                                    <img src="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="first-image img-responsive">
-                                                                    <img src="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="second-img img-responsive" />
+                                                                    <img src="<?php echo $value['product_image_url']; ?>" data-original="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="first-image img-responsive lazy">
+                                                                    <img src="<?php echo $value['product_image_url']; ?>" data-original="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="second-image img-responsive lazy">
                                                                 </a>
                                                                 <div class="wrapper-label"></div>
                                                             </div> 
@@ -158,12 +158,12 @@
                                 <div class="block-content">
                                     <div class="jms-tab">
                                         <ul class="nav nav-tabs" role="tablist">
-                                            <li class="active"><a href="#best-sellers" data-toggle="tab" class="button">Home Decor</a></li>
+                                            <li class="active"><a href="#home-decors" data-toggle="tab" class="button">Home Decor</a></li>
                                         </ul>  
                                         <span class="small-star"><i class="fa fa-star-o" aria-hidden="true"></i></span>
                                     </div> 
                                     <div class="tab-content">
-                                        <div id="best-sellers" class="tab-pane active" role="tabpanel">      
+                                        <div id="home-decors" class="tab-pane active" role="tabpanel">      
                                             <div class="product-tab-carousel">
                                                 <?php
                                                 foreach ($home_decor_products as $value)
@@ -173,8 +173,8 @@
                                                         <div class="product-preview  clearfix">
                                                             <div class="preview">
                                                                 <a href="<?php echo base_url("p/" . stripslashes($value["product_url_key"])); ?>">
-                                                                    <img src="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="first-image img-responsive">
-                                                                    <img src="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="second-img img-responsive" />
+                                                                    <img src="<?php echo $value['product_image_url']; ?>" data-original="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="first-image img-responsive lazy">
+                                                                    <img src="<?php echo $value['product_image_url']; ?>" data-original="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="second-img img-responsive lazy" />
                                                                 </a>
                                                                 <div class="wrapper-label"></div>
                                                             </div> 
