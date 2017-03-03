@@ -16,8 +16,8 @@ class Index extends CI_Controller
         $data = array();
         $model = new Common_model();
 
-        $best_sellers = $model->fetchSelectedData("*", TABLE_PRODUCTS, array("product_status" => 1), "product_id", "rand()", "0,12");
-        $featured_products = $model->fetchSelectedData("*", TABLE_PRODUCTS, array("product_status" => 1, "product_featured" => 1), "product_id", "rand()", "0,12");
+        $best_sellers = $model->fetchSelectedData("*", TABLE_PRODUCTS, array("product_status" => 1), "rand()", "rand()", "0,12");
+        $featured_products = $model->fetchSelectedData("*", TABLE_PRODUCTS, array("product_status" => 1, "product_featured" => 1), "rand()", "rand()", "0,12");
 
         $page_title = "Home - " . SITE_NAME;
         $data["page_title"] = $page_title;
