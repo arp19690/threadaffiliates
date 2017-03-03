@@ -58,7 +58,7 @@ class Products extends CI_Controller
     public function fetch_cron_product_info($dc_id)
     {
         $amazon_helper = new AmazonHelper();
-                    $amazon_helper->auto_populate();
+        $amazon_helper->auto_populate();
         $model = new Common_model();
         $data = $model->fetchSelectedData("*", TABLE_DAILY_CRON, array("dc_id" => $dc_id));
         if (!empty($data))
@@ -85,6 +85,15 @@ class Products extends CI_Controller
                 $this->session->set_flashdata("error", "Error: " . $e->getMessage());
             }
         }
+        redirect(base_url_admin("products/cron_list_products"));
+    }
+
+    public function delete_product($product_unique_code)
+    {
+        $model = new Common_model();
+        $model->updateData(TABLE_DAILY_CRON, array("is_deleted" => 1), array("dc_product_unique_code" => $product_unique_code));
+        $model->updateData(TABLE_PRODUCTS, array("product_status" => 2), array("product_unique_code" => $product_unique_code));
+        $this->session->set_flashdata("success", "Product deleted successfully");
         redirect(base_url_admin("products/cron_list_products"));
     }
 

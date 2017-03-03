@@ -87,7 +87,7 @@
                                             if (strtotime($value["updated_on"]) <= time() - (CRON_THRESHOLD_HOURS * 60 * 60) || empty($value["product_url_key"]))
                                             {
                                                 ?>
-                                                <a href="<?php echo base_url_admin("products/fetch_cron_product_info/" . $value["dc_id"]) ?>" class="btn btn-warning btn-xs">Fetch new info</a>
+                                                <p><a href="<?php echo base_url_admin("products/fetch_cron_product_info/" . $value["dc_id"]) ?>" class="btn btn-warning btn-xs">Fetch new info</a></p>
                                                 <?php
                                             }
                                             else
@@ -97,6 +97,7 @@
                                                 <?php
                                             }
                                             ?>
+                                            <p><a href="<?php echo base_url_admin("products/delete_product/" . $value["dc_product_unique_code"]) ?>" class="text-danger" onclick="return confirm('Sure you want to delete?');">Delete</a></p>
                                         </td>
                                     </tr>
                                     <?php
