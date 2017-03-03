@@ -1,0 +1,264 @@
+@font-face {
+  font-family: 'jmsfont';
+  src:  url('jmsfont.eot?iblvfp');
+  src:  url('jmsfont.eot?iblvfp#iefix') format('embedded-opentype'),
+    url('jmsfont.ttf?iblvfp') format('truetype'),
+    url('jmsfont.woff?iblvfp') format('woff'),
+    url('jmsfont.svg?iblvfp#jmsfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="jmsf-"], [class*="jmsf-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'jmsfont' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.jmsf-arrows-down-1:before {
+  content: "\e900";
+}
+.jmsf-arrows-down-2:before {
+  content: "\e901";
+}
+.jmsf-arrows-left-1:before {
+  content: "\e902";
+}
+.jmsf-arrows-left-2:before {
+  content: "\e903";
+}
+.jmsf-arrows-left-3:before {
+  content: "\e904";
+}
+.jmsf-arrows-left-4:before {
+  content: "\e905";
+}
+.jmsf-arrows-left-double-1:before {
+  content: "\e906";
+}
+.jmsf-arrows-minus-1:before {
+  content: "\e907";
+}
+.jmsf-arrows-minus-2:before {
+  content: "\e908";
+}
+.jmsf-arrows-plus-1:before {
+  content: "\e909";
+}
+.jmsf-arrows-plus-2:before {
+  content: "\e90a";
+}
+.jmsf-arrows-remove-1:before {
+  content: "\e90b";
+}
+.jmsf-arrows-remove-2:before {
+  content: "\e90c";
+}
+.jmsf-arrows-right-1:before {
+  content: "\e90d";
+}
+.jmsf-arrows-right-2:before {
+  content: "\e90e";
+}
+.jmsf-arrows-right-3:before {
+  content: "\e90f";
+}
+.jmsf-arrows-right-4:before {
+  content: "\e910";
+}
+.jmsf-arrows-right-double-1:before {
+  content: "\e911";
+}
+.jmsf-arrows-rotate-1:before {
+  content: "\e912";
+}
+.jmsf-arrows-up-1:before {
+  content: "\e913";
+}
+.jmsf-arrows-up-2:before {
+  content: "\e914";
+}
+.jmsf-bag-1:before {
+  content: "\e915";
+}
+.jmsf-bag-2:before {
+  content: "\e916";
+}
+.jmsf-bag-3:before {
+  content: "\e917";
+}
+.jmsf-bag-4:before {
+  content: "\e918";
+}
+.jmsf-basket-1:before {
+  content: "\e919";
+}
+.jmsf-basket-2:before {
+  content: "\e91a";
+}
+.jmsf-calendar-1:before {
+  content: "\e91b";
+}
+.jmsf-calendar-2:before {
+  content: "\e91c";
+}
+.jmsf-cart-1:before {
+  content: "\e91d";
+}
+.jmsf-cart-2:before {
+  content: "\e91e";
+}
+.jmsf-clock-1:before {
+  content: "\e91f";
+}
+.jmsf-clock-2:before {
+  content: "\e920";
+}
+.jmsf-compare-1:before {
+  content: "\e921";
+}
+.jmsf-compare-2:before {
+  content: "\e922";
+}
+.jmsf-config-1:before {
+  content: "\e923";
+}
+.jmsf-config-2:before {
+  content: "\e924";
+}
+.jmsf-config-3:before {
+  content: "\e925";
+}
+.jmsf-delivery-1:before {
+  content: "\e926";
+}
+.jmsf-gift-1:before {
+  content: "\e927";
+}
+.jmsf-grid-1:before {
+  content: "\e928";
+}
+.jmsf-grid-2:before {
+  content: "\e929";
+}
+.jmsf-grid-3:before {
+  content: "\e92a";
+}
+.jmsf-heart-1:before {
+  content: "\e92b";
+}
+.jmsf-heart-2:before {
+  content: "\e92c";
+}
+.jmsf-home-1:before {
+  content: "\e92d";
+}
+.jmsf-home-2:before {
+  content: "\e92e";
+}
+.jmsf-list-1:before {
+  content: "\e92f";
+}
+.jmsf-list-2:before {
+  content: "\e930";
+}
+.jmsf-local-1:before {
+  content: "\e931";
+}
+.jmsf-local-2:before {
+  content: "\e932";
+}
+.jmsf-lock-1:before {
+  content: "\e933";
+}
+.jmsf-lock-2:before {
+  content: "\e934";
+}
+.jmsf-mail-1:before {
+  content: "\e935";
+}
+.jmsf-menu-1:before {
+  content: "\e936";
+}
+.jmsf-menu-2:before {
+  content: "\e937";
+}
+.jmsf-message-1:before {
+  content: "\e938";
+}
+.jmsf-message-2:before {
+  content: "\e939";
+}
+.jmsf-message-3:before {
+  content: "\e93a";
+}
+.jmsf-phone-1:before {
+  content: "\e93b";
+}
+.jmsf-phone-2:before {
+  content: "\e93c";
+}
+.jmsf-quickview-1:before {
+  content: "\e93d";
+}
+.jmsf-quickview-2:before {
+  content: "\e93e";
+}
+.jmsf-quotes-1:before {
+  content: "\e93f";
+}
+.jmsf-quotes-2:before {
+  content: "\e940";
+}
+.jmsf-search-1:before {
+  content: "\e941";
+}
+.jmsf-search-2:before {
+  content: "\e942";
+}
+.jmsf-search-3:before {
+  content: "\e943";
+}
+.jmsf-search-4:before {
+  content: "\e944";
+}
+.jmsf-star-1:before {
+  content: "\e945";
+}
+.jmsf-star-2:before {
+  content: "\e946";
+}
+.jmsf-star-3:before {
+  content: "\e947";
+}
+.jmsf-star-4:before {
+  content: "\e948";
+}
+.jmsf-support:before {
+  content: "\e949";
+}
+.jmsf-user-1:before {
+  content: "\e94a";
+}
+.jmsf-user-2:before {
+  content: "\e94b";
+}
+.jmsf-user-3:before {
+  content: "\e94c";
+}
+.jmsf-user-4:before {
+  content: "\e94d";
+}
+.jmsf-wallet-1:before {
+  content: "\e94e";
+}
+

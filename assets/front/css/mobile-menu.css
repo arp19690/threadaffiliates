@@ -1,0 +1,177 @@
+#off-canvas-menu-title {
+  display: block;
+  font-weight: bold;
+  text-transform:uppercase;
+  color: #fff;
+  padding: 10px 0;
+}
+#open-button i {
+  font-size: 18px;
+  vertical-align: middle;
+}
+#close-button {
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-weight: normal;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  background: #fff;
+}
+#close-button:hover {
+  cursor: pointer;
+}
+#close-button::before {
+  content: '';
+  font-family: 'Linearicons-Free';
+  font-size: 20px;
+  line-height: 30px;
+}
+
+#content-wrap {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+#content-wrap {	
+  -webkit-overflow-scrolling: touch;
+}
+.menu-wrap {
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+  width: 270px;
+  top:0;
+  left:0;
+  bottom: 0;
+  z-index: 2019;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.5s;
+  -moz-transition: -moz-transform 0.5s;
+  transition: transform 0.5s;
+}
+.show-menu .menu-wrap {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.5s;
+  -moz-transition: -moz-transform 0.5s;
+  transition: transform 0.5s;
+  background: #fff;
+}
+.show-menu .content::before {
+  opacity: 1;
+  -webkit-transition: opacity 0.8s;
+  transition: opacity 0.8s;
+  -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+  transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+#off-canvas-menu {
+  background: #fff;
+  height: 100%;
+}
+#off-canvas-menu img{
+  width: 100%;
+  max-width: 100%;
+}
+@media (max-width: 991px) {
+  #content-wrap{
+    background-color: #fff;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.7s;
+    -moz-transition: -moz-transform 0.7s;
+    transition: transform 0.7s;
+    -webkit-transition-timing-function: cubic-bezier(1, 0.1, 0, 1);
+    -moz-transition-timing-function: cubic-bezier(1, 0.1, 0, 1);
+    transition-timing-function: cubic-bezier(1, 0.1, 0, 1);
+  }
+
+  .jms-megamenu {
+    display: none;
+  }
+  #open-button {
+    display:block;
+  }
+}
+#off-canvas-menu .nav li {
+  float: left;
+  width: 100%;
+  margin:0px;
+}
+#off-canvas-menu .nav li:last-child {
+  border: none;
+}
+#off-canvas-menu .nav > li > a{
+  text-transform: uppercase;
+  color: #2f2f2f;
+}
+#off-canvas-menu .nav > li > a:hover {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  color: #FFA800;
+}
+#off-canvas-menu li a {
+  border-radius: 0;
+  display: block;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover{
+  background: none;
+}
+#off-canvas-menu li.active a,
+#off-canvas-menu li a:focus {
+  background:none;
+  color: #FFA800;
+}
+#off-canvas-menu li > a em {
+  float: right;
+  width: 23px;
+  height: 23px;
+  text-align: center;
+  color: #2b2b2b;
+  font-size: 18px;
+  line-height: 22px;
+}
+#off-canvas-menu .nav > li ul li.group > a {
+  text-transform: uppercase;
+  padding: 0 30px
+}
+#off-canvas-menu .open > .dropdown-menu {
+    border: 0 none;
+    box-shadow: none !important;
+    position: static;
+    width: 100%;
+    background: none;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+}
+#off-canvas-menu .dropdown-menu > li > a {
+  line-height: 35px;
+  padding: 0px 45px;
+  color: #2f2f2f;
+  font-size: 12px;
+}
+#off-canvas-menu .dropdown-menu > li > a:hover {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  color: #FFA800;
+}
