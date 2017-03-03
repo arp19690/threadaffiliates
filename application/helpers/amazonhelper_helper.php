@@ -15,7 +15,7 @@ class AmazonHelper
         require APPPATH . 'libraries/affiliates/amazon/lib/AmazonECS.class.php';
         $amazonEcs = new AmazonECS(AWS_API_KEY, AWS_API_SECRET_KEY, 'in', AWS_ASSOCIATE_TAG);
         $amazonEcs->associateTag(AWS_ASSOCIATE_TAG);
-        $this->amazonEcs=$amazonEcs;
+        $this->amazonEcs = $amazonEcs;
     }
 
     public function get_product_info($product_asin)
