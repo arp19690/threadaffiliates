@@ -58,7 +58,7 @@ class Categories extends CI_Controller
             $categories = $custom_model->create_menu();
             $categories_option_html = create_category_select_option($categories);
 
-            $data = array("categories_option_html" => $categories_option_html);
+            $data = array("categories_option_html" => $categories_option_html, "page_title" => "Add Category");
             $this->template->write_view("content", "categories/add", $data);
             $this->template->render();
         }
@@ -109,7 +109,7 @@ class Categories extends CI_Controller
                 $categories = $custom_model->create_menu();
                 $categories_option_html = create_category_select_option($categories, 0, $category_info[0]["category_parent_id"]);
 
-                $data = array("categories_option_html" => $categories_option_html, "data" => $category_info[0]);
+                $data = array("categories_option_html" => $categories_option_html, "data" => $category_info[0], "page_title" => "Edit Category");
                 $this->template->write_view("content", "categories/add", $data);
                 $this->template->render();
             }

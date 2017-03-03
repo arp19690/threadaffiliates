@@ -5,7 +5,7 @@
     <div class="page-header">
         <div class="page-header-content">
             <div class="page-title">
-                <h4><i class="icon-users position-left"></i> Add Category</h4>
+                <h4><i class="icon-list position-left"></i> <?php echo $page_title; ?></h4>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
                 <!-- Collapsible list -->
                 <div class="panel panel-flat">
                     <div class="panel-heading">
-                        <h5 class="panel-title">Add Category</h5>
+                        <h5 class="panel-title"><?php echo $page_title; ?></h5>
                     </div>
 
                     <div class="panel-body">
