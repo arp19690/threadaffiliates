@@ -22,14 +22,29 @@ class Products extends CI_Controller
         $this->cron_list_products();
     }
 
-    public function cron_list_products()
+    public function cron_list_products($type = NULL)
     {
         $data = array();
         $model = new Common_model();
-//        $result = $model->fetchSelectedData('*', TABLE_DAILY_CRON);
-        $result = $model->getAllDataFromJoin("*", TABLE_DAILY_CRON . " as dc", array(TABLE_PRODUCTS . " as p" => "dc.dc_product_unique_code = p.product_unique_code"), "LEFT");
+        $where_cond_arr = array();
+        $page_title = "All Products";
+
+        switch ($type)
+        {
+            case "amazon":
+                $where_cond_arr["dc_type"] = "amazon";
+                $page_title = "Amazon Products";
+                break;
+            case "flipkart":
+                $where_cond_arr["dc_type"] = "flipkart";
+                $page_title = "Flipkart Products";
+                break;
+        }
+
+        $result = $model->getAllDataFromJoin("*", TABLE_DAILY_CRON . " as dc", array(TABLE_PRODUCTS . " as p" => "dc.dc_product_unique_code = p.product_unique_code"), "LEFT", $where_cond_arr);
 
         $data["data"] = $result;
+        $data["page_title"] = $page_title;
         $this->template->write_view("content", "products/cron-list-products", $data);
         $this->template->render();
     }
