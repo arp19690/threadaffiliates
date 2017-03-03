@@ -56,6 +56,8 @@ class Products extends CI_Controller
             $arr = $this->input->post();
             $model = new Common_model();
             $dc_id = $model->insertData(TABLE_DAILY_CRON, array("dc_category_id" => $arr["category_id"], "dc_product_unique_code" => trim($arr["product_code"]), "dc_type" => $arr["dc_type"]));
+
+            // updating the products info
             $this->fetch_cron_product_info($dc_id);
         }
         else
@@ -72,34 +74,17 @@ class Products extends CI_Controller
 
     public function fetch_cron_product_info($dc_id)
     {
-        $amazon_helper = new AmazonHelper();
-        $amazon_helper->auto_populate();
-        $model = new Common_model();
-        $data = $model->fetchSelectedData("*", TABLE_DAILY_CRON, array("dc_id" => $dc_id));
-        if (!empty($data))
+        try
         {
-            $arr = $data[0];
-
-            try
-            {
-                // updating the products info
-                if ($arr["dc_type"] == "amazon")
-                {
-                    $amazon_helper = new AmazonHelper();
-                    $amazon_helper->auto_populate(array("dc_id" => $dc_id));
-                }
-                else if ($arr["dc_type"] == "flipkart")
-                {
-                    $flipkart_helper = new FlipkartHelper();
-                    $flipkart_helper->auto_populate(array("dc_id" => $dc_id));
-                }
-
-                $this->session->set_flashdata("success", "Product info updated successfully");
-            } catch (Exception $e)
-            {
-                $this->session->set_flashdata("error", "Error: " . $e->getMessage());
-            }
+            // updating the products info
+            $autorun_helper = new AutorunHelper();
+            $autorun_helper->auto_populate(array("dc_id" => $dc_id));
+            $this->session->set_flashdata("success", "Product info updated successfully");
+        } catch (Exception $e)
+        {
+            $this->session->set_flashdata("error", "Error: " . $e->getMessage());
         }
+
         redirect(base_url_admin("products/cron_list_products"));
     }
 
