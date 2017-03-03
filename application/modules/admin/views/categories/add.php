@@ -31,8 +31,8 @@
                             <fieldset class="content-group">
 
                                 <div class="form-group">
-                                    <label class="control-label col-lg-2">Parent Category</label>
-                                    <div class="col-lg-10">
+                                    <label class="control-label col-lg-4">Parent Category</label>
+                                    <div class="col-lg-8">
                                         <select name="parent_category_id" class="form-control">
                                             <option value="">None</option>
                                             <?php
@@ -43,8 +43,8 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label col-lg-2">Category Name</label>
-                                    <div class="col-lg-10">
+                                    <label class="control-label col-lg-4">Category Name</label>
+                                    <div class="col-lg-8">
                                         <input type="text" name="category_name" class="form-control" value="<?php echo @$data["category_name"]; ?>" required="required"/>
                                     </div>
                                 </div>
