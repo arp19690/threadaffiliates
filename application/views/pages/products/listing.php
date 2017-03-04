@@ -35,7 +35,7 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                             ?>
                             <div class="item">
                                 <div class="product-preview clearfix">
-                                    <div class="preview text-center">
+                                    <div class="preview">
                                         <a href="<?php echo base_url("p/" . $value["product_url_key"]); ?>" title="<?php echo stripslashes($value["product_title"]); ?>">
                                             <img src="<?php echo $value["product_image_url"]; ?>" data-original="<?php echo $value["product_image_url"]; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="first-image img-responsive lazy">
                                             <img src="<?php echo $value["product_image_url"]; ?>" data-original="<?php echo $value["product_image_url"]; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="second-img img-responsive lazy" />
