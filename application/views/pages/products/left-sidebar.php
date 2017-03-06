@@ -21,12 +21,6 @@ $menu_data = $custom_model->create_menu();
                         ?>
                         <li><a href="<?php echo base_url("c/" . $value["category_url_key"] . "/" . $cvalue["category_url_key"]); ?>" style="padding-left: 20px;"><span><?php echo stripslashes($cvalue["category_name"]); ?></span></a></li>
                         <?php
-                        foreach ($cvalue["children"] as $tmpvalue)
-                    {
-                        ?>
-                        <li><a href="<?php echo base_url("c/" . $cvalue["category_url_key"] . "/" . $tmpvalue["category_url_key"]); ?>" style="padding-left: 40px;"><span><?php echo stripslashes($tmpvalue["category_name"]); ?></span></a></li>
-                        <?php
-                    }
                     }
                 }
                 ?>
