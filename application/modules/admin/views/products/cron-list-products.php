@@ -33,16 +33,15 @@
                     </div>
 
                     <div class="panel-body">
-                        <table class="table datatable-pagination dataTable no-footer text-center">
+                        <table class="table datatable-pagination dataTable no-footer">
                             <thead>
-                                <tr>
+                                <tr class="text-center">
                                     <th>Product Code</th>
                                     <th>Product Name</th>
                                     <th>Category</th>
                                     <th>Price</th>
                                     <th>Brand</th>
-                                    <th>Color</th>
-                                    <th>Size</th>
+                                    <th>Attributes</th>
                                     <th>Last Updated</th>
                                     <th>Action</th>
                                 </tr>
@@ -55,12 +54,12 @@
                                     $category_path = str_replace("Home/", "", strip_tags($custom_model->create_breadcrumb($value["product_id"])));
                                     $category_path = str_replace("/" . stripslashes($value["product_title"]), "", $category_path);
                                     ?>
-                                    <tr>
+                                    <tr class="text-left">
                                         <td>
                                             <p style="margin: 0;"><?php echo $value["dc_product_unique_code"]; ?></p>
                                             <p style="margin: 0;"><small><strong><?php echo ucwords($value["dc_type"]); ?></strong></small></p>
                                         </td>
-                                        <td>
+                                        <td style="max-width: 200px;">
                                             <?php
                                             if (!empty($value["product_url_key"]))
                                             {
@@ -76,11 +75,13 @@
                                             }
                                             ?>
                                         </td>
-                                        <td><?php echo stripslashes($category_path); ?></td>
+                                        <td style="max-width: 200px;"><?php echo stripslashes($category_path); ?></td>
                                         <td><?php echo number_format($value["product_price_min"], 2); ?></td>
                                         <td><?php echo stripslashes($value["product_brand"]); ?></td>
-                                        <td><?php echo stripslashes($value["product_color"]); ?></td>
-                                        <td><?php echo stripslashes($value["product_size"]); ?></td>
+                                        <td>
+                                            <p><strong>Color: </strong><?php echo (!empty($value["product_color"]) ? stripslashes($value["product_color"]) : "NA"); ?></p>
+                                            <p><strong>Size: </strong><?php echo (!empty($value["product_size"]) ? stripslashes($value["product_size"]) : "NA"); ?></p>
+                                        </td>
                                         <td><?php echo $value["updated_on"]; ?></td>
                                         <td>
                                             <?php
@@ -97,6 +98,7 @@
                                                 <?php
                                             }
                                             ?>
+                                            <p><a href="<?php echo base_url_admin("products/cron_edit_product/" . $value["product_id"]) ?>" class="btn btn-success btn-xs">Edit</a></p>
                                             <p><a href="<?php echo base_url_admin("products/delete_product/" . $value["dc_product_unique_code"]) ?>" class="text-danger" onclick="return confirm('Sure you want to delete?');">Delete</a></p>
                                         </td>
                                     </tr>
