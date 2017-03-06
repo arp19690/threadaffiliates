@@ -78,6 +78,7 @@ $path = $controller . "/" . $action;
         <meta name="twitter:title" content="<?php echo $meta_title; ?>">
         <meta name="twitter:description" content="<?php echo $meta_description; ?>">
 
+        <link href="<?php echo IMAGES_PATH; ?>/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <!-- CSS ================================================== -->
         <link href="<?php echo CSS_PATH; ?>/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />  
         <link href="<?php echo CSS_PATH; ?>/font-awesome.css" rel="stylesheet" type="text/css" media="all" /> 
