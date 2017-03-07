@@ -188,50 +188,6 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                     });
 
                     jQuery(function ($) {
-                        var productCarousel = $(".thumb-carousel");
-                        if (productCarousel.length > 0)
-                            productCarousel.each(function () {
-                                var items = 4,
-                                        itemsDesktop = 4,
-                                        itemsDesktopSmall = 3,
-                                        itemsTablet = 3,
-                                        itemsMobile = 3;
-                                var rtl = false;
-                                if ($("body").hasClass("rtl"))
-                                    rtl = true;
-                                $(this).owlCarousel({
-                                    responsiveClass: true,
-                                    responsive: {
-                                        1550: {
-                                            items: items
-                                        },
-                                        1199: {
-                                            items: itemsDesktop
-                                        },
-                                        991: {
-                                            items: itemsDesktopSmall
-                                        },
-                                        481: {
-                                            items: itemsTablet
-                                        },
-                                        318: {
-                                            items: itemsMobile
-                                        }
-                                    },
-                                    rtl: rtl,
-                                    autoPlay: false,
-                                    nav: true,
-                                    dots: false,
-                                    loop: true,
-                                    pagination: false,
-                                    rewindNav: true,
-                                    navigationText: ["", ""],
-                                    scrollPerPage: false,
-                                    margin: 10,
-                                    slideSpeed: 500
-                                })
-                            });
-
                         $('.img-thumb > a').click(function (event) {
                             $('#ProductPhotoImg').attr('src', $(this).attr('data-image'));
 
