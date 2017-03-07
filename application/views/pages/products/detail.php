@@ -3,6 +3,7 @@
     .product-type{display: none; color: #bcbcbc;}
     .actions:hover .product-type{display: block;}
     .img-responsive{width: auto;margin: auto;}
+    .add-to-cart-btn{color: #000000;}
 </style>
 
 <?php
@@ -35,9 +36,13 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                             </div> 
                             <div class="short-description"><p><?php echo stripslashes($product_data["product_description"]); ?></p></div>
                             <div class="quantity-cart" style="min-height: 100px;">
+                                <div class="actions" style="margin-right: 20px;">
+                                    <a rel="nofollow" href="<?php echo $product_data["product_url_short"]; ?>" target="_blank" class="btn add-to-cart-btn cart-button">View Details</a>
+                                </div>
+
                                 <div class="actions">
-                                    <a rel="nofollow" href="<?php echo $product_data["product_url_short"]; ?>" target="_blank" class="btn add-to-cart-btn cart-button lnr lnr-cart">Buy Now</a>
-                                    <p class="product-type text-center"><small>from <?php echo ucwords($product_data["product_type"]); ?></small></p>
+                                    <a rel="nofollow" href="<?php echo $product_data["product_url_short"]; ?>" target="_blank" class="btn add-to-cart-btn cart-button">Add to cart</a>
+                                    <p class="product-type text-center"><small>on <?php echo ucwords($product_data["product_type"]); ?></small></p>
                                 </div>
                             </div>    
 
@@ -163,87 +168,87 @@ echo isset($breadcrumb) ? $breadcrumb : "";
 
 <script src="<?php echo JS_PATH; ?>/jquery.zoom.min.js" type="text/javascript"></script>
 <script type="text/javascript">
-                $(document).ready(function () {
-                    thumbnails = $('img[src*="/products/"]').not(':first');
-                    if (thumbnails.size()) {
-                        thumbnails.bind('click', function () {
-                            var image = $(this).attr('src').split('?')[0].replace(/(_[0-9x]+\.)|(_\d+x\.)|(_thumb\.)|(_small\.)|(_compact\.)|(_medium\.)|(_large\.)|(_grande\.)/, '.');
-                            if (typeof variantImages[image] !== 'undefined') {
-                                productOptions.forEach(function (value, i) {
-                                    optionValue = variantImages[image]['option-' + i];
-                                    if (optionValue !== null && $('.single-option-selector:eq(' + i + ') option').filter(function () {
-                                        return $(this).text() === optionValue
-                                    }).length) {
-                                        $('.single-option-selector:eq(' + i + ')').val(optionValue).trigger('change');
-                                    }
-                                });
-                            }
-                        });
-                    }
-                });
+                    $(document).ready(function () {
+                        thumbnails = $('img[src*="/products/"]').not(':first');
+                        if (thumbnails.size()) {
+                            thumbnails.bind('click', function () {
+                                var image = $(this).attr('src').split('?')[0].replace(/(_[0-9x]+\.)|(_\d+x\.)|(_thumb\.)|(_small\.)|(_compact\.)|(_medium\.)|(_large\.)|(_grande\.)/, '.');
+                                if (typeof variantImages[image] !== 'undefined') {
+                                    productOptions.forEach(function (value, i) {
+                                        optionValue = variantImages[image]['option-' + i];
+                                        if (optionValue !== null && $('.single-option-selector:eq(' + i + ') option').filter(function () {
+                                            return $(this).text() === optionValue
+                                        }).length) {
+                                            $('.single-option-selector:eq(' + i + ')').val(optionValue).trigger('change');
+                                        }
+                                    });
+                                }
+                            });
+                        }
+                    });
 
-                jQuery(function ($) {
-                    var productCarousel = $(".thumb-carousel");
-                    if (productCarousel.length > 0)
-                        productCarousel.each(function () {
-                            var items = 4,
-                                    itemsDesktop = 4,
-                                    itemsDesktopSmall = 3,
-                                    itemsTablet = 3,
-                                    itemsMobile = 3;
-                            var rtl = false;
-                            if ($("body").hasClass("rtl"))
-                                rtl = true;
-                            $(this).owlCarousel({
-                                responsiveClass: true,
-                                responsive: {
-                                    1550: {
-                                        items: items
+                    jQuery(function ($) {
+                        var productCarousel = $(".thumb-carousel");
+                        if (productCarousel.length > 0)
+                            productCarousel.each(function () {
+                                var items = 4,
+                                        itemsDesktop = 4,
+                                        itemsDesktopSmall = 3,
+                                        itemsTablet = 3,
+                                        itemsMobile = 3;
+                                var rtl = false;
+                                if ($("body").hasClass("rtl"))
+                                    rtl = true;
+                                $(this).owlCarousel({
+                                    responsiveClass: true,
+                                    responsive: {
+                                        1550: {
+                                            items: items
+                                        },
+                                        1199: {
+                                            items: itemsDesktop
+                                        },
+                                        991: {
+                                            items: itemsDesktopSmall
+                                        },
+                                        481: {
+                                            items: itemsTablet
+                                        },
+                                        318: {
+                                            items: itemsMobile
+                                        }
                                     },
-                                    1199: {
-                                        items: itemsDesktop
-                                    },
-                                    991: {
-                                        items: itemsDesktopSmall
-                                    },
-                                    481: {
-                                        items: itemsTablet
-                                    },
-                                    318: {
-                                        items: itemsMobile
-                                    }
-                                },
-                                rtl: rtl,
-                                autoPlay: false,
-                                nav: true,
-                                dots: false,
-                                loop: true,
-                                pagination: false,
-                                rewindNav: true,
-                                navigationText: ["", ""],
-                                scrollPerPage: false,
-                                margin: 10,
-                                slideSpeed: 500
-                            })
-                        });
+                                    rtl: rtl,
+                                    autoPlay: false,
+                                    nav: true,
+                                    dots: false,
+                                    loop: true,
+                                    pagination: false,
+                                    rewindNav: true,
+                                    navigationText: ["", ""],
+                                    scrollPerPage: false,
+                                    margin: 10,
+                                    slideSpeed: 500
+                                })
+                            });
 
-                    $('.img-thumb > a').click(function (event) {
-                        $('#ProductPhotoImg').attr('src', $(this).attr('data-image'));
+                        $('.img-thumb > a').click(function (event) {
+                            $('#ProductPhotoImg').attr('src', $(this).attr('data-image'));
 
-                        $('.img-thumb > a').removeClass('shown');
-                        $(this).addClass('shown');
+                            $('.img-thumb > a').removeClass('shown');
+                            $(this).addClass('shown');
 
-                        $('#ProductPhotoImg').attr('data-zoom', $(this).attr('data-image'));
+                            $('#ProductPhotoImg').attr('data-zoom', $(this).attr('data-image'));
 //                                $('#ProductPhoto').zoom({
 //                                    url: $(this).find('#ProductPhotoImg').attr('data-zoom')
 //                                });
 
-                        event.preventDefault();
-                    });
+                            event.preventDefault();
+                        });
 
 //                            $('#ProductPhoto').zoom({
 //                                url: $(this).find('#ProductPhotoImg').attr('data-zoom')
 //                            });
 
-                });
+                    });
 </script> 
