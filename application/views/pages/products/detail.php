@@ -4,6 +4,7 @@
     .actions:hover .product-type{display: block;}
     .img-responsive{width: auto;margin: auto;}
     .add-to-cart-btn{color: #000000;}
+    .g-ad{margin-top: 40px;}
 </style>
 
 <?php
@@ -19,13 +20,38 @@ echo isset($breadcrumb) ? $breadcrumb : "";
             <meta itemprop="url" content="<?php echo current_url(); ?>">
             <meta itemprop="image" content="<?php echo $product_data["product_image_url"]; ?>">
             <div class="row">
-                <div class="product-img-box pb-left-column col-xs-12 col-sm-5 ">     	
+                <div class="product-img-box nosidebar-page col-xs-12 col-sm-6 col-md-6 col-lg-6 clearfix">  
+                    <div class="more-view-wrapper thumb-widget"> 
+                        <div class="bx-wrapper">
+                            <div class="bx-viewport">
+                                <ul class="slides" id="ProductThumbs">
+                                    <?php
+                                    $i = 1;
+                                    $images_arr = array_unique(json_decode($product_data["product_images_json"]));
+                                    foreach ($images_arr as $imgval)
+                                    {
+                                        ?>
+                                        <li class="img-thumb thumb_products bx-clone">
+                                            <a data-image-id="<?php echo $product_data["product_unique_code"] . "-" . $i; ?>" data-image="<?php echo $imgval; ?>" href="<?php echo $imgval; ?>" class="product-thumb-img lazy" rel="product-gallery">
+                                                <img class="img-responsive" src="<?php echo $imgval; ?>" alt="<?php echo stripslashes($product_data["product_title"]); ?>">
+                                            </a>
+                                        </li>
+                                        <?php
+                                        $i++;
+                                    }
+                                    ?>
+                                </ul>
+                            </div>
+                            <!--<div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href="#">Prev</a><a class="bx-next" href="#">Next</a></div></div>-->
+                        </div>  	
+                    </div>
+
                     <div class="product-photo-container" id="ProductPhoto">
-                        <img class="img-responsive lazy" id="ProductPhotoImg" src="<?php echo $product_data["product_image_url"]; ?>" data-original="<?php echo $product_data["product_image_url"]; ?>" data-zoom="<?php echo $product_data["product_image_url"]; ?>" data-image-id="<?php echo $product_data["product_unique_code"]; ?>">
+                        <img class="img-responsive lazy" id="ProductPhotoImg" src="<?php echo $product_data["product_image_url"]; ?>" data-original="<?php echo $product_data["product_image_url"]; ?>" data-zoom="<?php echo $product_data["product_image_url"]; ?>" data-image-id="<?php echo $product_data["product_unique_code"]; ?>" alt="<?php echo stripslashes($product_data["product_title"]); ?>">
                     </div>
                 </div>
 
-                <div class="product-shop pb-right-column col-xs-12 col-sm-7">
+                <div class="product-shop pb-right-column col-xs-12 col-sm-6 col-md-6 col-lg-6">
                     <div class="product-item">
                         <h1 class="product-title" itemprop="name" content="<?php echo stripslashes($product_data["product_title"]); ?>"><?php echo stripslashes($product_data["product_title"]); ?></h1>
                         <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
@@ -65,7 +91,7 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                 </div>   
             </div>
 
-            <div class="clearfix"><?php echo get_google_ad(); ?></div>
+            <div class="clearfix g-ad"><?php echo get_google_ad(); ?></div>
 
             <?php
             if (!empty($related_products))
@@ -168,26 +194,27 @@ echo isset($breadcrumb) ? $breadcrumb : "";
 
 <script src="<?php echo JS_PATH; ?>/jquery.zoom.min.js" type="text/javascript"></script>
 <script type="text/javascript">
-                    $(document).ready(function () {
-                        thumbnails = $('img[src*="/products/"]').not(':first');
-                        if (thumbnails.size()) {
-                            thumbnails.bind('click', function () {
-                                var image = $(this).attr('src').split('?')[0].replace(/(_[0-9x]+\.)|(_\d+x\.)|(_thumb\.)|(_small\.)|(_compact\.)|(_medium\.)|(_large\.)|(_grande\.)/, '.');
-                                if (typeof variantImages[image] !== 'undefined') {
-                                    productOptions.forEach(function (value, i) {
-                                        optionValue = variantImages[image]['option-' + i];
-                                        if (optionValue !== null && $('.single-option-selector:eq(' + i + ') option').filter(function () {
-                                            return $(this).text() === optionValue
-                                        }).length) {
-                                            $('.single-option-selector:eq(' + i + ')').val(optionValue).trigger('change');
-                                        }
-                                    });
-                                }
-                            });
-                        }
-                    });
-
                     jQuery(function ($) {
+                        var num_slides = 3;
+                        if ($(window).width() <= 1199)
+                            num_slides = 3;
+                        if ($(window).width() <= 991)
+                            num_slides = 3;
+                        if ($(window).width() <= 768)
+                            num_slides = 3;
+                        if ($(window).width() <= 480)
+                            num_slides = 2;
+                        if ($(window).width() <= 400)
+                            num_slides = 1;
+                        $('.thumb-widget .slides').bxSlider({
+                            mode: 'vertical',
+                            minSlides: num_slides,
+                            maxSlides: num_slides,
+                            pager: false,
+                            controls: true,
+                            slideMargin: 10
+                        });
+
                         $('.img-thumb > a').click(function (event) {
                             $('#ProductPhotoImg').attr('src', $(this).attr('data-image'));
 
@@ -198,13 +225,11 @@ echo isset($breadcrumb) ? $breadcrumb : "";
 //                                $('#ProductPhoto').zoom({
 //                                    url: $(this).find('#ProductPhotoImg').attr('data-zoom')
 //                                });
-
                             event.preventDefault();
                         });
 
 //                            $('#ProductPhoto').zoom({
 //                                url: $(this).find('#ProductPhotoImg').attr('data-zoom')
 //                            });
-
                     });
 </script> 
