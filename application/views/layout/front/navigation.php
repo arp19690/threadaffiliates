@@ -8,7 +8,9 @@ switch ($type)
         ?>
         <div class="menu-wrap hidden-lg hidden-md">
             <nav id="off-canvas-menu">
-                <div id="off-canvas-menu-title"><span class="close-button" id="close-button"></span></div>
+                <div id="off-canvas-menu-title" class="text-center">
+                    <img src="<?php echo IMAGES_PATH . "/logo-circle.png" ?>" alt="<?php echo SITE_NAME; ?>" width="40" style="max-width: 40px;"/>
+                </div>
                 <ul class="nav nav-pills nav-stacked level0">
                     <li class="mega  active"><a href="<?php echo base_url(); ?>">Home</a></li>
                     <?php

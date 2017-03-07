@@ -72,6 +72,38 @@ class Products extends CI_Controller
         }
     }
 
+    public function cron_edit_product($product_id)
+    {
+        $model = new Common_model();
+        if ($this->input->post())
+        {
+            $arr = $this->input->post();
+            $model->updateData(TABLE_PRODUCTS, array("product_category_id" => $arr["category_id"]), array("product_id" => $product_id));
+            $this->session->set_flashdata("success", "Product updated successfully");
+            redirect(base_url_admin("products/cron_list_products"));
+        }
+        else
+        {
+            $data = array();
+            $product_data = $model->fetchSelectedData("*", TABLE_PRODUCTS, array("product_id" => $product_id));
+            if (!empty($product_data))
+            {
+                $custom_model = new Custom_model();
+                $categories = $custom_model->create_menu();
+                $categories_option_html = create_category_select_option($categories, 0, $product_data[0]["product_category_id"]);
+                $data["page_title"] = stripslashes($product_data[0]["product_title"]);
+                $data["categories_option_html"] = $categories_option_html;
+                $data["product_data"] = $product_data[0];
+                $this->template->write_view("content", "products/cron-edit-product", $data);
+                $this->template->render();
+            }
+            else
+            {
+                display_404_page();
+            }
+        }
+    }
+
     public function fetch_cron_product_info($dc_id)
     {
         try

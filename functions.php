@@ -31,12 +31,12 @@ function custom_parse_url($url, $utm_source_code = UTM_SOURCE_CODE)
     if (isset($parsed_url['query']))
     {
         // Has query params
-        $url = $parsed_url . '&' . $utm_source_code;
+        $url = $url . '&' . $utm_source_code;
     }
     else
     {
         // Has no query params
-        $url = $parsed_url . '?' . $utm_source_code;
+        $url = $url . '?' . $utm_source_code;
     }
     return $url;
 }
