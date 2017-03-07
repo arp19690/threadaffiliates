@@ -121,9 +121,9 @@ width: 970px !important;
   .product-img-box{
     width: 50% !important;
   }
-  .quantity-cart .actions,.quantity-cart .wishlist.wishlist-btn.product-btn {
+/*  .quantity-cart .actions,.quantity-cart .wishlist.wishlist-btn.product-btn {
     margin-left: 15px !important;
-  }
+  }*/
   
   .options-button {
     display: inline-block;

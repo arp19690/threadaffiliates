@@ -5,6 +5,11 @@
     .img-responsive{width: auto;margin: auto;}
     .add-to-cart-btn{color: #000000;}
     .g-ad{margin-top: 40px;}
+    .slides>li>a>img{border: 1px solid #f4f2f2;}
+    .quantity-cart .actions{float: none;}
+    .quantity-cart .actions > a{min-width: 170px;}
+    .quantity-cart .actions:first-of-type{margin-bottom: 10px;}
+    .quantity-cart{min-height: 150px;}
 </style>
 
 <?php
@@ -42,7 +47,6 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                                     ?>
                                 </ul>
                             </div>
-                            <!--<div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href="#">Prev</a><a class="bx-next" href="#">Next</a></div></div>-->
                         </div>  	
                     </div>
 
@@ -61,11 +65,11 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                                 <span id="ProductPrice" class="price money" itemprop="price" content="<?php echo number_format($product_data["product_price_min"], 2); ?>">Rs. <?php echo number_format($product_data["product_price_min"], 2); ?></span>
                             </div> 
                             <div class="short-description"><p><?php echo stripslashes($product_data["product_description"]); ?></p></div>
-                            <div class="quantity-cart" style="min-height: 100px;">
-                                <div class="actions" style="margin-right: 20px;">
+                            <div class="quantity-cart">
+                                <div class="actions">
                                     <a rel="nofollow" href="<?php echo $product_data["product_url_short"]; ?>" target="_blank" class="btn add-to-cart-btn cart-button">View Details</a>
                                 </div>
-
+                                <br/>
                                 <div class="actions">
                                     <a rel="nofollow" href="<?php echo $product_data["product_url_short"]; ?>" target="_blank" class="btn add-to-cart-btn cart-button">Add to cart</a>
                                     <p class="product-type text-center"><small>on <?php echo ucwords($product_data["product_type"]); ?></small></p>
@@ -194,42 +198,42 @@ echo isset($breadcrumb) ? $breadcrumb : "";
 
 <script src="<?php echo JS_PATH; ?>/jquery.zoom.min.js" type="text/javascript"></script>
 <script type="text/javascript">
-                    jQuery(function ($) {
-                        var num_slides = 3;
-                        if ($(window).width() <= 1199)
-                            num_slides = 3;
-                        if ($(window).width() <= 991)
-                            num_slides = 3;
-                        if ($(window).width() <= 768)
-                            num_slides = 3;
-                        if ($(window).width() <= 480)
-                            num_slides = 2;
-                        if ($(window).width() <= 400)
-                            num_slides = 1;
-                        $('.thumb-widget .slides').bxSlider({
-                            mode: 'vertical',
-                            minSlides: num_slides,
-                            maxSlides: num_slides,
-                            pager: false,
-                            controls: true,
-                            slideMargin: 10
-                        });
+                jQuery(function ($) {
+                    var num_slides = 3;
+                    if ($(window).width() <= 1199)
+                        num_slides = 3;
+                    if ($(window).width() <= 991)
+                        num_slides = 3;
+                    if ($(window).width() <= 768)
+                        num_slides = 3;
+                    if ($(window).width() <= 480)
+                        num_slides = 2;
+                    if ($(window).width() <= 400)
+                        num_slides = 1;
+                    $('.thumb-widget .slides').bxSlider({
+                        mode: 'vertical',
+                        minSlides: num_slides,
+                        maxSlides: num_slides,
+                        pager: false,
+                        controls: true,
+                        slideMargin: 10
+                    });
 
-                        $('.img-thumb > a').click(function (event) {
-                            $('#ProductPhotoImg').attr('src', $(this).attr('data-image'));
+                    $('.img-thumb > a').click(function (event) {
+                        $('#ProductPhotoImg').attr('src', $(this).attr('data-image'));
 
-                            $('.img-thumb > a').removeClass('shown');
-                            $(this).addClass('shown');
+                        $('.img-thumb > a').removeClass('shown');
+                        $(this).addClass('shown');
 
-                            $('#ProductPhotoImg').attr('data-zoom', $(this).attr('data-image'));
+                        $('#ProductPhotoImg').attr('data-zoom', $(this).attr('data-image'));
 //                                $('#ProductPhoto').zoom({
 //                                    url: $(this).find('#ProductPhotoImg').attr('data-zoom')
 //                                });
-                            event.preventDefault();
-                        });
+                        event.preventDefault();
+                    });
 
 //                            $('#ProductPhoto').zoom({
 //                                url: $(this).find('#ProductPhotoImg').attr('data-zoom')
 //                            });
-                    });
+                });
 </script> 

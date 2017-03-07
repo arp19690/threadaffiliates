@@ -130,9 +130,10 @@
 .short-description {
   clear: both;
   display: inline-block;
-  margin-top: 35px;
+  margin: 15px 0;
+  /*margin-top: 35px;*/
   width: 100%;
-  margin-bottom: 60px;
+  /*margin-bottom: 60px;*/
   letter-spacing: 0.3px;
 }
 .quantity-cart .add-to-cart-btn.lnr-cart::before {
