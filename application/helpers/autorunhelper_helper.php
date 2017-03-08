@@ -242,14 +242,17 @@ class AutorunHelper
     public function update_all_url_analytics()
     {
         $model = new Common_model();
-        $data = $model->fetchSelectedData("product_id, product_short_url", TABLE_PRODUCTS, array("product_status" => "1", "product_short_url !=" => ""), "ps_updated_at");
+        $data = $model->fetchSelectedData("product_id, product_url_short", TABLE_PRODUCTS, array("product_status" => "1", "product_url_short !=" => ""), "product_updated_at");
         foreach ($data as $value)
         {
-            $url_analytics = $this->URLShortener->get_analytics($value["product_short_url"]);
+            $url_analytics = $this->URLShortener->get_analytics($value["product_url_short"]);
             try
             {
                 $clicks = $url_analytics["analytics"]["allTime"]["shortUrlClicks"];
-                $this->store_product_clicks($value["product_id"], $clicks);
+                if (!empty($clicks))
+                {
+                    $this->store_product_clicks($value["product_id"], $clicks);
+                }
             } catch (Exception $e)
             {
                 echo "Error: " . $e->getMessage() . "\n";
