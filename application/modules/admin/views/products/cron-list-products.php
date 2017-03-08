@@ -58,6 +58,16 @@
                                         <td>
                                             <p style="margin: 0;"><?php echo $value["dc_product_unique_code"]; ?></p>
                                             <p style="margin: 0;"><small><strong><?php echo ucwords($value["dc_type"]); ?></strong></small></p>
+                                            <?php
+                                            if($value["product_status"]=="1")
+                                            {
+                                                echo '<p class="text-success">Active</p>';
+                                            }
+                                            else
+                                            {
+                                                echo '<p class="text-danger">Inactive</p>';
+                                            }
+                                            ?>
                                         </td>
                                         <td style="max-width: 200px;">
                                             <?php
