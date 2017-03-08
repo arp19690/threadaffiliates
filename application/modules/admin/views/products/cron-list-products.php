@@ -94,6 +94,7 @@
                                         </td>
                                         <td>
                                             <p><strong>Views: </strong><?php echo number_format($value["ps_views"]); ?></p>
+                                            <p><strong>URL Clicks: </strong><?php echo number_format($value["ps_clicks"]); ?></p>
                                         </td>
                                         <td><?php echo $value["updated_on"]; ?></td>
                                         <td>
