@@ -224,4 +224,38 @@ class AutorunHelper
         return TRUE;
     }
 
+    public function store_product_clicks($product_id, $clicks)
+    {
+        $model = new Common_model();
+        $is_exists = $model->fetchSelectedData("ps_id", TABLE_PRODUCTS_STATS, array("ps_product_id" => $product_id));
+        if (empty($is_exists))
+        {
+            $model->insertData(TABLE_PRODUCTS_STATS, array("ps_product_id" => $product_id, "ps_clicks" => $clicks));
+        }
+        else
+        {
+            $model->updateData(TABLE_PRODUCTS_STATS, array("ps_clicks" => $clicks), array("ps_product_id" => $product_id, "ps_id" => $is_exists[0]["ps_id"]));
+        }
+        return TRUE;
+    }
+
+    public function update_all_url_analytics()
+    {
+        $model = new Common_model();
+        $data = $model->fetchSelectedData("product_id, product_short_url", TABLE_PRODUCTS, array("product_status" => "1", "product_short_url !=" => ""));
+        foreach ($data as $value)
+        {
+            $url_analytics = $this->URLShortener->get_analytics($value["product_short_url"]);
+            try
+            {
+                $clicks = $url_analytics["analytics"]["allTime"]["shortUrlClicks"];
+                $this->store_product_clicks($value["product_id"], $clicks);
+            } catch (Exception $e)
+            {
+                echo "Error: " . $e->getMessage() . "\n";
+            }
+        }
+        return TRUE;
+    }
+
 }
