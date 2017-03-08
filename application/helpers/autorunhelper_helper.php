@@ -77,6 +77,7 @@ class AutorunHelper
                                 "product_image_url" => addslashes($product_display_image),
                                 "product_images_json" => empty($product_other_images) ? NULL : json_encode($product_other_images),
                                 "product_url_key" => $product_url_key,
+                                "product_status" => "1",
                                 "product_type" => "amazon"
                             );
 
@@ -153,6 +154,7 @@ class AutorunHelper
                             "product_images_json" => empty($product_other_images) ? NULL : json_encode($product_other_images),
                             "product_offers_json" => empty($product_offers) ? NULL : json_encode($product_offers),
                             "product_url_key" => $product_url_key,
+                            "product_status" => "1",
                             "product_type" => "flipkart"
                         );
 
