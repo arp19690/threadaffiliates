@@ -37,4 +37,11 @@ class Crons extends CI_Controller
         $autorun_helper->find_blank_images();
     }
 
+    public function update_short_url_clicks()
+    {
+        $autorun_helper = new AutorunHelper();
+        $autorun_helper->update_all_url_analytics();
+        echo "All Short URL analytics have been updated.\n";
+    }
+
 }
