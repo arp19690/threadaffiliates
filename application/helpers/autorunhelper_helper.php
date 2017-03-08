@@ -77,6 +77,7 @@ class AutorunHelper
                                 "product_image_url" => addslashes($product_display_image),
                                 "product_images_json" => empty($product_other_images) ? NULL : json_encode($product_other_images),
                                 "product_url_key" => $product_url_key,
+                                "product_status" => "1",
                                 "product_type" => "amazon"
                             );
 
@@ -153,6 +154,7 @@ class AutorunHelper
                             "product_images_json" => empty($product_other_images) ? NULL : json_encode($product_other_images),
                             "product_offers_json" => empty($product_offers) ? NULL : json_encode($product_offers),
                             "product_url_key" => $product_url_key,
+                            "product_status" => "1",
                             "product_type" => "flipkart"
                         );
 
@@ -183,6 +185,78 @@ class AutorunHelper
 
 //            Adding a sleep of 2 seconds
             sleep(2);
+        }
+        return TRUE;
+    }
+
+    public function find_blank_images()
+    {
+        $model = new Common_model();
+        $data = $model->fetchSelectedData("product_id, product_images_json", TABLE_PRODUCTS, array("product_image_url" => ""));
+        foreach ($data as $value)
+        {
+            $data_arr = array("product_status" => "0");
+            $product_images_json = json_decode($value["product_images_json"]);
+            if (!empty($product_images_json))
+            {
+                if (!empty($product_images_json[0]))
+                {
+                    $data_arr = array("product_image_url" => stripslashes($product_images_json[0]), "product_status" => "1");
+                }
+            }
+            $model->updateData(TABLE_PRODUCTS, $data_arr, array("product_id" => $value["product_id"]));
+        }
+        echo "Successfully disabled products with blank images.\n";
+    }
+
+    public function store_product_views($product_id)
+    {
+        $model = new Common_model();
+        $is_exists = $model->fetchSelectedData("ps_id, ps_views", TABLE_PRODUCTS_STATS, array("ps_product_id" => $product_id));
+        if (empty($is_exists))
+        {
+            $model->insertData(TABLE_PRODUCTS_STATS, array("ps_product_id" => $product_id, "ps_views" => "1"));
+        }
+        else
+        {
+            $model->updateData(TABLE_PRODUCTS_STATS, array("ps_views" => $is_exists[0]["ps_views"] + 1), array("ps_id" => $is_exists[0]["ps_id"]));
+        }
+        return TRUE;
+    }
+
+    public function store_product_clicks($product_id, $clicks)
+    {
+        $model = new Common_model();
+        $is_exists = $model->fetchSelectedData("ps_id", TABLE_PRODUCTS_STATS, array("ps_product_id" => $product_id));
+        if (empty($is_exists))
+        {
+            $model->insertData(TABLE_PRODUCTS_STATS, array("ps_product_id" => $product_id, "ps_clicks" => $clicks));
+        }
+        else
+        {
+            $model->updateData(TABLE_PRODUCTS_STATS, array("ps_clicks" => $clicks), array("ps_product_id" => $product_id, "ps_id" => $is_exists[0]["ps_id"]));
+        }
+        return TRUE;
+    }
+
+    public function update_all_url_analytics()
+    {
+        $model = new Common_model();
+        $data = $model->fetchSelectedData("product_id, product_url_short", TABLE_PRODUCTS, array("product_status" => "1", "product_url_short !=" => ""), "product_updated_at");
+        foreach ($data as $value)
+        {
+            $url_analytics = $this->URLShortener->get_analytics($value["product_url_short"]);
+            try
+            {
+                $clicks = $url_analytics["analytics"]["allTime"]["shortUrlClicks"];
+                if (!empty($clicks))
+                {
+                    $this->store_product_clicks($value["product_id"], $clicks);
+                }
+            } catch (Exception $e)
+            {
+                echo "Error: " . $e->getMessage() . "\n";
+            }
         }
         return TRUE;
     }

@@ -61,4 +61,10 @@ class URLShortener
         return json_decode($result, true);
     }
 
+    function get_analytics($short_url)
+    {
+        $data = $this->send($short_url . "&projection=FULL", FALSE);
+        return$data;
+    }
+
 }

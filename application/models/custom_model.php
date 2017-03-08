@@ -25,7 +25,7 @@ class Custom_model extends CI_Model
 
     public function get_parent_category_info($parent_category_id, $output_data)
     {
-        $data = Custom_model::get_menu_data(array("category_id" => $parent_category_id), "category_id");
+        $data = $this->get_menu_data(array("category_id" => $parent_category_id), "category_id");
         if (!empty($data))
         {
             $output_data[] = $data[0];
@@ -36,20 +36,21 @@ class Custom_model extends CI_Model
 
     public function get_product_info($product_id)
     {
-        $tmp_data = NULL;
+        $tmp_data = array();
         $model = new Common_model();
         $product_info = $model->fetchSelectedData("product_category_id, product_title", TABLE_PRODUCTS, array("product_id" => $product_id));
         if (!empty($product_info))
         {
-            $menu_data = Custom_model::get_menu_data(array("category_status" => 1, "category_id" => $product_info[0]["product_category_id"]), "category_id");
+            $menu_data = $this->get_menu_data(array("category_status" => 1, "category_id" => $product_info[0]["product_category_id"]), "category_id");
             if (!empty($menu_data))
             {
                 if ($menu_data[0]["category_parent_id"] != NULL)
                 {
                     $tmp_data = array_reverse($this->get_parent_category_info($menu_data[0]["category_parent_id"], array()));
-                    $tmp_data[] = $product_info[0];
                 }
+                $tmp_data[] = $menu_data[0];
             }
+            $tmp_data[] = $product_info[0];
         }
         return $tmp_data;
     }

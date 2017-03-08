@@ -13,9 +13,9 @@ class Crons extends CI_Controller
 
     public function fetch($type = "flipkart")
     {
+        $autorun_helper = new AutorunHelper();
         try
         {
-            $autorun_helper = new AutorunHelper();
             $where_cond_arr = array("is_deleted" => 0, "updated_on <=" => date("Y-m-d H:i:s", time() - (CRON_THRESHOLD_HOURS * 60 * 60)));
             switch ($type)
             {
@@ -27,11 +27,21 @@ class Crons extends CI_Controller
                     break;
             }
             $autorun_helper->auto_populate($where_cond_arr);
-            echo 'done';
+            echo "Product details fetched and updated successfully.\n";
         } catch (Exception $e)
         {
             echo 'Caught exception: ', $e->getMessage(), "\n";
         }
+
+        // now finding blank images and disabling the product
+        $autorun_helper->find_blank_images();
+    }
+
+    public function update_short_url_clicks()
+    {
+        $autorun_helper = new AutorunHelper();
+        $autorun_helper->update_all_url_analytics();
+        echo "All Short URL analytics have been updated.\n";
     }
 
 }
