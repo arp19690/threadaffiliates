@@ -209,4 +209,19 @@ class AutorunHelper
         echo "Successfully disabled products with blank images.\n";
     }
 
+    public function store_product_views($product_id)
+    {
+        $model = new Common_model();
+        $is_exists = $model->fetchSelectedData("ps_id, ps_views", TABLE_PRODUCTS_STATS, array("ps_product_id" => $product_id));
+        if (empty($is_exists))
+        {
+            $model->insertData(TABLE_PRODUCTS_STATS, array("ps_product_id" => $product_id, "ps_views" => "1"));
+        }
+        else
+        {
+            $model->updateData(TABLE_PRODUCTS_STATS, array("ps_views" => $is_exists[0]["ps_views"] + 1), array("ps_id" => $is_exists[0]["ps_id"]));
+        }
+        return TRUE;
+    }
+
 }

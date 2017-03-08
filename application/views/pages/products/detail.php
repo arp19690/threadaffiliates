@@ -237,3 +237,11 @@ echo isset($breadcrumb) ? $breadcrumb : "";
 //                            });
                 });
 </script> 
+
+<?php
+if (USER_IP != "127.0.0.1")
+{
+// Updating product views counter
+    $autorun_helper = new AutorunHelper();
+    $autorun_helper->store_product_views($product_data["product_id"]);
+}
