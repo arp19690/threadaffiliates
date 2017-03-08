@@ -44,10 +44,15 @@ class Admin extends CI_Controller
         $total_amazon_products = $model->getTotalCount("product_id", TABLE_PRODUCTS, array("product_type" => "amazon"))[0]["totalcount"];
         $total_flipkart_products = $model->getTotalCount("product_id", TABLE_PRODUCTS, array("product_type" => "flipkart"))[0]["totalcount"];
 
+        $total_product_views = $model->fetchSelectedData("SUM(ps_views) as total_views", TABLE_PRODUCTS_STATS)[0]["total_views"];
+        $total_product_clicks = $model->fetchSelectedData("SUM(ps_clicks) as total_clicks", TABLE_PRODUCTS_STATS)[0]["total_clicks"];
+
         $data = array(
             "total_products" => $total_products,
             "total_amazon_products" => $total_amazon_products,
             "total_flipkart_products" => $total_flipkart_products,
+            "total_product_views" => $total_product_views,
+            "total_product_clicks" => $total_product_clicks,
         );
 
         $this->template->write_view("content", "index/dashboard", $data);
