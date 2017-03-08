@@ -40,8 +40,8 @@
                                     <th>Product Name</th>
                                     <th>Category</th>
                                     <th>Price</th>
-                                    <th>Brand</th>
                                     <th>Attributes</th>
+                                    <th>Statistics</th>
                                     <th>Last Updated</th>
                                     <th>Action</th>
                                 </tr>
@@ -59,7 +59,7 @@
                                             <p style="margin: 0;"><?php echo $value["dc_product_unique_code"]; ?></p>
                                             <p style="margin: 0;"><small><strong><?php echo ucwords($value["dc_type"]); ?></strong></small></p>
                                             <?php
-                                            if($value["product_status"]=="1")
+                                            if ($value["product_status"] == "1")
                                             {
                                                 echo '<p class="text-success">Active</p>';
                                             }
@@ -87,10 +87,13 @@
                                         </td>
                                         <td style="max-width: 200px;"><?php echo stripslashes($category_path); ?></td>
                                         <td><?php echo number_format($value["product_price_min"], 2); ?></td>
-                                        <td><?php echo stripslashes($value["product_brand"]); ?></td>
                                         <td>
                                             <p><strong>Color: </strong><?php echo (!empty($value["product_color"]) ? stripslashes($value["product_color"]) : "NA"); ?></p>
                                             <p><strong>Size: </strong><?php echo (!empty($value["product_size"]) ? stripslashes($value["product_size"]) : "NA"); ?></p>
+                                            <p><strong>Brand: </strong><?php echo stripslashes($value["product_brand"]); ?></p>
+                                        </td>
+                                        <td>
+                                            <p><strong>Views: </strong><?php echo number_format($value["ps_views"]); ?></p>
                                         </td>
                                         <td><?php echo $value["updated_on"]; ?></td>
                                         <td>
