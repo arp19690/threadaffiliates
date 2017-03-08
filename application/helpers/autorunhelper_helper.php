@@ -189,4 +189,15 @@ class AutorunHelper
         return TRUE;
     }
 
+    public function find_blank_images()
+    {
+        $model = new Common_model();
+        $data = $model->fetchSelectedData("product_id", TABLE_PRODUCTS, array("product_image_url" => ""));
+        foreach ($data as $value)
+        {
+            $model->updateData(TABLE_PRODUCTS, array("product_status" => "0"), array("product_id" => $value["product_id"]));
+        }
+        echo "Found blank images and disabled the product successfully.\n";
+    }
+
 }
