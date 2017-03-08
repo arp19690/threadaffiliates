@@ -192,12 +192,21 @@ class AutorunHelper
     public function find_blank_images()
     {
         $model = new Common_model();
-        $data = $model->fetchSelectedData("product_id", TABLE_PRODUCTS, array("product_image_url" => ""));
+        $data = $model->fetchSelectedData("product_id, product_images_json", TABLE_PRODUCTS, array("product_image_url" => ""));
         foreach ($data as $value)
         {
-            $model->updateData(TABLE_PRODUCTS, array("product_status" => "0"), array("product_id" => $value["product_id"]));
+            $data_arr = array("product_status" => "0");
+            $product_images_json = json_decode($value["product_images_json"]);
+            if (!empty($product_images_json))
+            {
+                if (!empty($product_images_json[0]))
+                {
+                    $data_arr = array("product_image_url" => stripslashes($product_images_json[0]), "product_status" => "1");
+                }
+            }
+            $model->updateData(TABLE_PRODUCTS, $data_arr, array("product_id" => $value["product_id"]));
         }
-        echo "Found blank images and disabled the product successfully.\n";
+        echo "Successfully disabled products with blank images.\n";
     }
 
 }
