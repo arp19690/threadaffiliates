@@ -10,6 +10,7 @@
     .quantity-cart .actions > a{min-width: 170px;}
     .quantity-cart .actions:first-of-type{margin-bottom: 10px;}
     .quantity-cart{min-height: 150px;}
+    .content-aside{padding-right: 45px;}
 </style>
 
 <?php
