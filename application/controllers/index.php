@@ -18,7 +18,7 @@ class Index extends CI_Controller
         $custom_model = new Custom_model();
 
         $home_decor_products = $custom_model->get_all_products_for_category(10);
-        $most_viewed = $model->fetchSelectedData("*", TABLE_PRODUCTS, array("product_status" => 1), "rand()", "rand()", "0,12");
+        $most_viewed = $model->getAllDataFromJoin("p.*", TABLE_PRODUCTS . " as p", array(TABLE_PRODUCTS_STATS . " as ps" => "p.product_id = ps.ps_product_id"), "INNER", array("product_status" => 1), "ps_views, ps_clicks", "DESC", "0,12");
         $featured_products = $model->fetchSelectedData("*", TABLE_PRODUCTS, array("product_status" => 1, "product_featured" => 1), "rand()", "rand()", "0,12");
 
         $page_title = "Home - " . SITE_NAME;
