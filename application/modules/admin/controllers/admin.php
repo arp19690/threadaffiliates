@@ -10,12 +10,12 @@ class Admin extends CI_Controller
     {
         parent::__construct();
         $this->template->set_template('admin');
-        $this->admin_id = $this->session->userdata("admin_id");
+        $this->admin_id = $this->session->userdata["admin_id"];
     }
 
     public function index()
     {
-        if (!$this->session->userdata("admin_id"))
+        if (!$this->session->userdata["admin_id"])
         {
             if ($this->input->post())
             {
@@ -62,7 +62,7 @@ class Admin extends CI_Controller
     public function logout()
     {
         $AdminLogin_auth = new AdminLogin_auth();
-        $AdminLogin_auth->logout($this->session->userdata("admin_id"));
+        $AdminLogin_auth->logout($this->session->userdata["admin_id"]);
     }
 
     public function changepassword()
