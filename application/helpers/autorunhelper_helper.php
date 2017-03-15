@@ -14,8 +14,6 @@ class AutorunHelper
         $this->ci = & get_instance();
         $this->ci->load->database();
         $this->ci->load->model('Common_model');
-        $this->ci->load->helper("URLShortener");
-        $this->URLShortener = new URLShortener();
     }
 
     public function auto_populate($where_cond_arr = array())
@@ -85,10 +83,6 @@ class AutorunHelper
                             $is_exists = $model->is_exists("product_id", TABLE_PRODUCTS, array("product_unique_code" => $product_unique_code));
                             if (empty($is_exists))
                             {
-                                // Now let's shorten the URL
-                                $shortened_url = $this->URLShortener->shorten($product_url_long);
-                                $insert_arr["product_url_short"] = $shortened_url;
-
                                 $model->insertData(TABLE_PRODUCTS, $insert_arr);
                             }
                             else
@@ -162,10 +156,6 @@ class AutorunHelper
                         $is_exists = $model->is_exists("product_id", TABLE_PRODUCTS, array("product_unique_code" => $product_unique_code));
                         if (empty($is_exists))
                         {
-                            // Now let's shorten the URL
-                            $shortened_url = $this->URLShortener->shorten($product_url_long);
-                            $insert_arr["product_url_short"] = $shortened_url;
-
                             $model->insertData(TABLE_PRODUCTS, $insert_arr);
                         }
                         else
@@ -235,28 +225,6 @@ class AutorunHelper
         else
         {
             $model->updateData(TABLE_PRODUCTS_STATS, array("ps_clicks" => $clicks), array("ps_product_id" => $product_id, "ps_id" => $is_exists[0]["ps_id"]));
-        }
-        return TRUE;
-    }
-
-    public function update_all_url_analytics()
-    {
-        $model = new Common_model();
-        $data = $model->fetchSelectedData("product_id, product_url_short", TABLE_PRODUCTS, array("product_status" => "1", "product_url_short !=" => ""), "product_updated_at");
-        foreach ($data as $value)
-        {
-            $url_analytics = $this->URLShortener->get_analytics($value["product_url_short"]);
-            try
-            {
-                $clicks = $url_analytics["analytics"]["allTime"]["shortUrlClicks"];
-                if (!empty($clicks))
-                {
-                    $this->store_product_clicks($value["product_id"], $clicks);
-                }
-            } catch (Exception $e)
-            {
-                echo "Error: " . $e->getMessage() . "\n";
-            }
         }
         return TRUE;
     }
