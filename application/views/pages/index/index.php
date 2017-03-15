@@ -90,117 +90,111 @@
         </div>
     </div>
 
-    <?php
-    if (!empty($most_viewed))
-    {
-        ?>
-        <div class="shopify-section">
-            <div class="section-products productfilter-section">
-                <div class="container">
-                    <div class="home-row row fullwidth">  
-                        <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12"> 
-                            <div class="home-block">
-                                <div class="block-content">
-                                    <div class="jms-tab">
-                                        <ul class="nav nav-tabs" role="tablist">
-                                            <li class="active"><a href="#best-sellers" data-toggle="tab" class="button">Most Viewed</a></li>
-                                        </ul>  
-                                        <span class="small-star"><i class="fa fa-star-o" aria-hidden="true"></i></span>
-                                    </div> 
-                                    <div class="tab-content">
-                                        <div id="best-sellers" class="tab-pane active" role="tabpanel">      
-                                            <div class="product-tab-carousel">
-                                                <?php
-                                                foreach ($most_viewed as $value)
-                                                {
-                                                    ?>
-                                                    <div class="item">
-                                                        <div class="product-preview clearfix">
-                                                            <div class="preview">
-                                                                <a href="<?php echo base_url("p/" . stripslashes($value["product_url_key"])); ?>">
-                                                                    <img src="<?php echo $value['product_image_url']; ?>" data-original="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="first-image img-responsive lazy">
-                                                                    <img src="<?php echo $value['product_image_url']; ?>" data-original="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="second-image img-responsive lazy">
-                                                                </a>
-                                                                <div class="wrapper-label"></div>
-                                                            </div> 
+    <div class="shopify-section">
+        <div class="section-products productfilter-section">
+            <div class="container">
+                <div class="home-row row fullwidth">  
+                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12"> 
+                        <div class="home-block">
+                            <div class="block-content">
+                                <div class="jms-tab">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="active"><a href="#smartphones" data-toggle="tab" class="button">Smartphones</a></li>
+                                        <li><a href="#cameras" data-toggle="tab" class="button">Cameras</a></li>
+                                        <li><a href="#home-decors" data-toggle="tab" class="button">Home Decor</a></li>
+                                    </ul>  
+                                    <span class="small-star"><i class="fa fa-star-o" aria-hidden="true"></i></span>
+                                </div> 
+                                <div class="tab-content">
+                                    <div id="smartphones" class="tab-pane active" role="tabpanel">      
+                                        <div class="product-tab-carousel">
+                                            <?php
+                                            foreach ($smartphone_products as $value)
+                                            {
+                                                ?>
+                                                <div class="item">
+                                                    <div class="product-preview  clearfix">
+                                                        <div class="preview">
+                                                            <a href="<?php echo base_url("p/" . stripslashes($value["product_url_key"])); ?>">
+                                                                <img src="<?php echo $value['product_image_url']; ?>" data-original="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="first-image img-responsive lazy">
+                                                                <img src="<?php echo $value['product_image_url']; ?>" data-original="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="second-img img-responsive lazy" />
+                                                            </a>
+                                                            <div class="wrapper-label"></div>
+                                                        </div> 
 
-                                                            <div class="product-info clearfix">
-                                                                <a class="product-title" href="<?php echo base_url("p/" . stripslashes($value["product_url_key"])); ?>"><?php echo stripslashes($value["product_title"]); ?></a>
-                                                                <div class="content_price"><span class="price"><span class="money">Rs. <?php echo number_format($value["product_price_min"], 2); ?></span></span></div>
-                                                            </div>
+                                                        <div class="product-info clearfix">
+                                                            <a class="product-title" href="<?php echo base_url("p/" . stripslashes($value["product_url_key"])); ?>"><?php echo stripslashes($value["product_title"]); ?></a>
+                                                            <div class="content_price"><span class="price"><span class="money">Rs. <?php echo number_format($value["product_price_min"], 2); ?></span></span></div>
                                                         </div>
                                                     </div>
-                                                    <?php
-                                                }
-                                                ?>
-                                            </div>
+                                                </div>
+                                                <?php
+                                            }
+                                            ?>
                                         </div>
-                                    </div>  
-                                </div>
+                                    </div>
+                                    <div id="cameras" class="tab-pane" role="tabpanel">      
+                                        <div class="product-tab-carousel">
+                                            <?php
+                                            foreach ($camera_products as $value)
+                                            {
+                                                ?>
+                                                <div class="item">
+                                                    <div class="product-preview  clearfix">
+                                                        <div class="preview">
+                                                            <a href="<?php echo base_url("p/" . stripslashes($value["product_url_key"])); ?>">
+                                                                <img src="<?php echo $value['product_image_url']; ?>" data-original="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="first-image img-responsive lazy">
+                                                                <img src="<?php echo $value['product_image_url']; ?>" data-original="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="second-img img-responsive lazy" />
+                                                            </a>
+                                                            <div class="wrapper-label"></div>
+                                                        </div> 
+
+                                                        <div class="product-info clearfix">
+                                                            <a class="product-title" href="<?php echo base_url("p/" . stripslashes($value["product_url_key"])); ?>"><?php echo stripslashes($value["product_title"]); ?></a>
+                                                            <div class="content_price"><span class="price"><span class="money">Rs. <?php echo number_format($value["product_price_min"], 2); ?></span></span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <?php
+                                            }
+                                            ?>
+                                        </div>
+                                    </div>
+                                    <div id="home-decors" class="tab-pane" role="tabpanel">      
+                                        <div class="product-tab-carousel">
+                                            <?php
+                                            foreach ($home_decor_products as $value)
+                                            {
+                                                ?>
+                                                <div class="item">
+                                                    <div class="product-preview  clearfix">
+                                                        <div class="preview">
+                                                            <a href="<?php echo base_url("p/" . stripslashes($value["product_url_key"])); ?>">
+                                                                <img src="<?php echo $value['product_image_url']; ?>" data-original="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="first-image img-responsive lazy">
+                                                                <img src="<?php echo $value['product_image_url']; ?>" data-original="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="second-img img-responsive lazy" />
+                                                            </a>
+                                                            <div class="wrapper-label"></div>
+                                                        </div> 
+
+                                                        <div class="product-info clearfix">
+                                                            <a class="product-title" href="<?php echo base_url("p/" . stripslashes($value["product_url_key"])); ?>"><?php echo stripslashes($value["product_title"]); ?></a>
+                                                            <div class="content_price"><span class="price"><span class="money">Rs. <?php echo number_format($value["product_price_min"], 2); ?></span></span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <?php
+                                            }
+                                            ?>
+                                        </div>
+                                    </div>
+                                </div>  
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <?php
-    }
-
-    if (!empty($home_decor_products))
-    {
-        ?>
-        <div class="shopify-section">
-            <div class="section-products productfilter-section">
-                <div class="container">
-                    <div class="home-row row fullwidth">  
-                        <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12"> 
-                            <div class="home-block">
-                                <div class="block-content">
-                                    <div class="jms-tab">
-                                        <ul class="nav nav-tabs" role="tablist">
-                                            <li class="active"><a href="#home-decors" data-toggle="tab" class="button">Home Decor</a></li>
-                                        </ul>  
-                                        <span class="small-star"><i class="fa fa-star-o" aria-hidden="true"></i></span>
-                                    </div> 
-                                    <div class="tab-content">
-                                        <div id="home-decors" class="tab-pane active" role="tabpanel">      
-                                            <div class="product-tab-carousel">
-                                                <?php
-                                                foreach ($home_decor_products as $value)
-                                                {
-                                                    ?>
-                                                    <div class="item">
-                                                        <div class="product-preview  clearfix">
-                                                            <div class="preview">
-                                                                <a href="<?php echo base_url("p/" . stripslashes($value["product_url_key"])); ?>">
-                                                                    <img src="<?php echo $value['product_image_url']; ?>" data-original="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="first-image img-responsive lazy">
-                                                                    <img src="<?php echo $value['product_image_url']; ?>" data-original="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="second-img img-responsive lazy" />
-                                                                </a>
-                                                                <div class="wrapper-label"></div>
-                                                            </div> 
-
-                                                            <div class="product-info clearfix">
-                                                                <a class="product-title" href="<?php echo base_url("p/" . stripslashes($value["product_url_key"])); ?>"><?php echo stripslashes($value["product_title"]); ?></a>
-                                                                <div class="content_price"><span class="price"><span class="money">Rs. <?php echo number_format($value["product_price_min"], 2); ?></span></span></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <?php
-                                                }
-                                                ?>
-                                            </div>
-                                        </div>
-                                    </div>  
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <?php
-    }
-    ?>
+    </div>
 </div>
 
 <script type="text/javascript">
