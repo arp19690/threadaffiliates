@@ -122,20 +122,23 @@ class Products extends CI_Controller
 
     public function buynow($product_url_key)
     {
+        echo '<p style="width:100%;margin-top:50px;font-family:sans-serif;font-size:20px;text-align:center;">Loading....</p>';
         $model = new Common_model();
         $product_data = $model->fetchSelectedData("product_id, product_url_long", TABLE_PRODUCTS, array("product_url_key" => $product_url_key));
         if (!empty($product_data))
         {
-            echo '<p style="width:100%;margin-top:50px;font-family:sans-serif;font-size:18px;text-align:center;">Loading....</p>';
-            $product_id = $product_data[0]["product_id"];
-            $is_exists = $model->fetchSelectedData("ps_id, ps_clicks", TABLE_PRODUCTS_STATS, array("ps_product_id" => $product_id));
-            if (empty($is_exists))
+            if (!isset($this->session->userdata["admin_id"]))
             {
-                $model->insertData(TABLE_PRODUCTS_STATS, array("ps_product_id" => $product_id, "ps_clicks" => "1"));
-            }
-            else
-            {
-                $model->updateData(TABLE_PRODUCTS_STATS, array("ps_clicks" => $is_exists[0]["ps_clicks"] + 1), array("ps_product_id" => $product_id, "ps_id" => $is_exists[0]["ps_id"]));
+                $product_id = $product_data[0]["product_id"];
+                $is_exists = $model->fetchSelectedData("ps_id, ps_clicks", TABLE_PRODUCTS_STATS, array("ps_product_id" => $product_id));
+                if (empty($is_exists))
+                {
+                    $model->insertData(TABLE_PRODUCTS_STATS, array("ps_product_id" => $product_id, "ps_clicks" => "1"));
+                }
+                else
+                {
+                    $model->updateData(TABLE_PRODUCTS_STATS, array("ps_clicks" => $is_exists[0]["ps_clicks"] + 1), array("ps_product_id" => $product_id, "ps_id" => $is_exists[0]["ps_id"]));
+                }
             }
 
             redirect($product_data[0]["product_url_long"]);
