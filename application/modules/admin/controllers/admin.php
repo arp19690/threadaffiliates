@@ -10,12 +10,15 @@ class Admin extends CI_Controller
     {
         parent::__construct();
         $this->template->set_template('admin');
-        $this->admin_id = $this->session->userdata["admin_id"];
+        if (isset($this->session->userdata["admin_id"]))
+        {
+            $this->admin_id = $this->session->userdata["admin_id"];
+        }
     }
 
     public function index()
     {
-        if (!$this->session->userdata["admin_id"])
+        if (!isset($this->session->userdata["admin_id"]))
         {
             if ($this->input->post())
             {
