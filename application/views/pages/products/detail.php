@@ -68,11 +68,11 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                             <div class="short-description"><p><?php echo stripslashes($product_data["product_description"]); ?></p></div>
                             <div class="quantity-cart">
                                 <div class="actions">
-                                    <a rel="nofollow" href="<?php echo $product_data["product_url_short"]; ?>" target="_blank" class="btn add-to-cart-btn cart-button">View Details</a>
+                                    <a rel="nofollow" href="<?php echo base_url("buy-now/" . $product_data["product_url_key"]); ?>" target="_blank" class="btn add-to-cart-btn cart-button">View Details</a>
                                 </div>
                                 <br/>
                                 <div class="actions">
-                                    <a rel="nofollow" href="<?php echo $product_data["product_url_short"]; ?>" target="_blank" class="btn add-to-cart-btn cart-button">Add to cart</a>
+                                    <a rel="nofollow" href="<?php echo base_url("buy-now/" . $product_data["product_url_key"]); ?>" target="_blank" class="btn add-to-cart-btn cart-button">Add to cart</a>
                                     <p class="product-type text-center"><small>on <?php echo ucwords($product_data["product_type"]); ?></small></p>
                                 </div>
                             </div>    

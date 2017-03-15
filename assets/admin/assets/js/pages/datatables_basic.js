@@ -45,6 +45,7 @@ $(function() {
     // Alternative pagination
     $('.datatable-pagination').DataTable({
         pagingType: "simple",
+        stateSave: true,
         language: {
             paginate: {'next': 'Next &rarr;', 'previous': '&larr; Prev'}
         }
