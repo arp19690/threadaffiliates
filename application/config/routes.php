@@ -49,6 +49,7 @@ $route['c/(:any)/(:any)/(:any)'] = 'products/get_category_products/$1/$2/$3';
 $route['c/(:any)/(:any)'] = 'products/get_category_products/$1/$2';
 $route['c/(:any)'] = 'products/get_category_products/$1';
 $route['p/(:any)'] = 'products/get_product_details/$1';
+$route['buy-now/(:any)'] = 'products/buynow/$1';
 $route['search'] = 'products/search';
 
 /* End of file routes.php */

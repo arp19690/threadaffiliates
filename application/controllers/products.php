@@ -66,7 +66,7 @@ class Products extends CI_Controller
         $model = new Common_model();
         $custom_model = new Custom_model();
         // fetching products with status 1 and other relevant where condition
-        $fetch_fields = "product_id, product_image_url, product_title, product_price_min, product_images_json, product_unique_code, product_description, product_url_short, product_category_id,product_type";
+        $fetch_fields = "product_id, product_image_url, product_title, product_price_min, product_images_json, product_unique_code, product_description, product_url_key, product_category_id,product_type";
         $product_where_cond = array("product_status" => 1, "category_status" => 1, "product_url_key" => $product_url_key);
         $product_data = $model->getAllDataFromJoin($fetch_fields, TABLE_PRODUCTS . " as p", array(TABLE_CATEGORIES . " as c" => "c.category_id = p.product_category_id"), "INNER", $product_where_cond);
         if (!empty($product_data))
@@ -113,6 +113,32 @@ class Products extends CI_Controller
             $data['product_data'] = $product_data;
             $this->template->write_view("content", "pages/products/listing", $data);
             $this->template->render();
+        }
+        else
+        {
+            display_404_page();
+        }
+    }
+
+    public function buynow($product_url_key)
+    {
+        $model = new Common_model();
+        $product_data = $model->fetchSelectedData("product_id, product_url_long", TABLE_PRODUCTS, array("product_url_key" => $product_url_key));
+        if (!empty($product_data))
+        {
+            echo '<p style="width:100%;margin-top:50px;font-family:sans-serif;font-size:18px;text-align:center;">Loading....</p>';
+            $product_id = $product_data[0]["product_id"];
+            $is_exists = $model->fetchSelectedData("ps_id, ps_clicks", TABLE_PRODUCTS_STATS, array("ps_product_id" => $product_id));
+            if (empty($is_exists))
+            {
+                $model->insertData(TABLE_PRODUCTS_STATS, array("ps_product_id" => $product_id, "ps_clicks" => "1"));
+            }
+            else
+            {
+                $model->updateData(TABLE_PRODUCTS_STATS, array("ps_clicks" => $is_exists[0]["ps_clicks"] + 1), array("ps_product_id" => $product_id, "ps_id" => $is_exists[0]["ps_id"]));
+            }
+
+            redirect($product_data[0]["product_url_long"]);
         }
         else
         {
