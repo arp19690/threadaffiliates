@@ -10,6 +10,7 @@
     .quantity-cart .actions > a{min-width: 170px;}
     .quantity-cart .actions:first-of-type{margin-bottom: 10px;}
     .quantity-cart{min-height: 150px;}
+    .content-aside{padding-right: 45px;}
 </style>
 
 <?php
@@ -67,11 +68,11 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                             <div class="short-description"><p><?php echo stripslashes($product_data["product_description"]); ?></p></div>
                             <div class="quantity-cart">
                                 <div class="actions">
-                                    <a rel="nofollow" href="<?php echo $product_data["product_url_short"]; ?>" target="_blank" class="btn add-to-cart-btn cart-button">View Details</a>
+                                    <a rel="nofollow" href="<?php echo base_url("buy-now/" . $product_data["product_url_key"]); ?>" target="_blank" class="btn add-to-cart-btn cart-button">View Details</a>
                                 </div>
                                 <br/>
                                 <div class="actions">
-                                    <a rel="nofollow" href="<?php echo $product_data["product_url_short"]; ?>" target="_blank" class="btn add-to-cart-btn cart-button">Add to cart</a>
+                                    <a rel="nofollow" href="<?php echo base_url("buy-now/" . $product_data["product_url_key"]); ?>" target="_blank" class="btn add-to-cart-btn cart-button">Add to cart</a>
                                     <p class="product-type text-center"><small>on <?php echo ucwords($product_data["product_type"]); ?></small></p>
                                 </div>
                             </div>    
@@ -198,48 +199,48 @@ echo isset($breadcrumb) ? $breadcrumb : "";
 
 <script src="<?php echo JS_PATH; ?>/jquery.zoom.min.js" type="text/javascript"></script>
 <script type="text/javascript">
-                jQuery(function ($) {
-                    var num_slides = 3;
-                    if ($(window).width() <= 1199)
-                        num_slides = 3;
-                    if ($(window).width() <= 991)
-                        num_slides = 3;
-                    if ($(window).width() <= 768)
-                        num_slides = 3;
-                    if ($(window).width() <= 480)
-                        num_slides = 2;
-                    if ($(window).width() <= 400)
-                        num_slides = 1;
-                    $('.thumb-widget .slides').bxSlider({
-                        mode: 'vertical',
-                        minSlides: num_slides,
-                        maxSlides: num_slides,
-                        pager: false,
-                        controls: true,
-                        slideMargin: 10
-                    });
+                    jQuery(function ($) {
+                        var num_slides = 3;
+                        if ($(window).width() <= 1199)
+                            num_slides = 3;
+                        if ($(window).width() <= 991)
+                            num_slides = 3;
+                        if ($(window).width() <= 768)
+                            num_slides = 3;
+                        if ($(window).width() <= 480)
+                            num_slides = 2;
+                        if ($(window).width() <= 400)
+                            num_slides = 1;
+                        $('.thumb-widget .slides').bxSlider({
+                            mode: 'vertical',
+                            minSlides: num_slides,
+                            maxSlides: num_slides,
+                            pager: false,
+                            controls: true,
+                            slideMargin: 10
+                        });
 
-                    $('.img-thumb > a').click(function (event) {
-                        $('#ProductPhotoImg').attr('src', $(this).attr('data-image'));
+                        $('.img-thumb > a').click(function (event) {
+                            $('#ProductPhotoImg').attr('src', $(this).attr('data-image'));
 
-                        $('.img-thumb > a').removeClass('shown');
-                        $(this).addClass('shown');
+                            $('.img-thumb > a').removeClass('shown');
+                            $(this).addClass('shown');
 
-                        $('#ProductPhotoImg').attr('data-zoom', $(this).attr('data-image'));
+                            $('#ProductPhotoImg').attr('data-zoom', $(this).attr('data-image'));
 //                                $('#ProductPhoto').zoom({
 //                                    url: $(this).find('#ProductPhotoImg').attr('data-zoom')
 //                                });
-                        event.preventDefault();
-                    });
+                            event.preventDefault();
+                        });
 
 //                            $('#ProductPhoto').zoom({
 //                                url: $(this).find('#ProductPhotoImg').attr('data-zoom')
 //                            });
-                });
+                    });
 </script> 
 
 <?php
-if (USER_IP != "127.0.0.1")
+if (USER_IP != "127.0.0.1" && !isset($this->session->userdata["admin_id"]))
 {
 // Updating product views counter
     $autorun_helper = new AutorunHelper();

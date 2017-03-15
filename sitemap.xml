@@ -4,7 +4,6 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
   <loc>http://store.threadcrafts.in/</loc>
@@ -52,6 +51,26 @@
 </url>
 <url>
   <loc>http://store.threadcrafts.in/c/electronics</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/c/electronics/personal-care-appliances</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/c/electronics/personal-care-appliances/shavers</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/c/electronics/personal-care-appliances/oral-hygiene</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/c/electronics/personal-care-appliances/hair-dryers</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/c/electronics/health-care-devices</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
@@ -127,63 +146,83 @@
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/biba-girls-dress-kw1876hturquoise-and-pink5</loc>
+  <loc>http://store.threadcrafts.in/c/baby-products</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/it2m-11-round-designer-wall-clock-with-glass-for-home-kitchen-living-room-bedroom-silent-non-ticking-movement</loc>
+  <loc>http://store.threadcrafts.in/c/baby-products/toys-games</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/femella-fashions-black-sequin-cape-midi-dress-ds-731732-1381-blk-l</loc>
+  <loc>http://store.threadcrafts.in/c/baby-products/toys-games/bath-toys</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/luke-and-lilly-chhota-bheem-fame-chutki-printed-cotton-round-neck-baby-girls-</loc>
+  <loc>http://store.threadcrafts.in/c/baby-products/toys-games/play-rings</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/mud-pie-baby-girls-newborn-my-1st-tutu-pink-0-3-months</loc>
+  <loc>http://store.threadcrafts.in/c/baby-products/baby-care</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/aapno-rajasthan-kundan-work-round-shaped-marble-peacock-motif-clock-1524-cm-x-1524-cm</loc>
+  <loc>http://store.threadcrafts.in/c/baby-products/baby-care/diapers</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/newport-mens-slim-jeans-890754203821326871331932w-x-34lsuper-stone-blue</loc>
+  <loc>http://store.threadcrafts.in/c/baby-products/baby-care/wipes</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/exclusivelane-6-inch-terracotta-handpainted-warli-matki-shaped-vase-in-red-flower-vase-decorative-item-for-living-room-gifts-items</loc>
+  <loc>http://store.threadcrafts.in/p/apple-watch-38mm-nike-series-2-space-gray-aluminum-case-with-blackvolt-nike-sport-band</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/femella-fashions-grey-pique-sleeveless-midi-dress-ds-2113068-1326-bwg-l-</loc>
+  <loc>http://store.threadcrafts.in/p/apple-watch-series-2-38mm-aluminum-sport-band-space-gray-aluminum-case-with-black-sport-band-space-gray-aluminum-case-with-black-sport-band</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/cherokee-mens-casual-trouser-890724242437826432729332w-x-30lgrey</loc>
+  <loc>http://store.threadcrafts.in/p/apple-watch-sport-42mm-gold-aluminum-case-with-midnight-blue-sport-band-mlc72</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/little-kangaroos-baby-girls-t-shirt-pl-11871green6-months</loc>
+  <loc>http://store.threadcrafts.in/p/ishin-faux-georgette-womens-saree-ishinsb-8019black</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/swagger-coin-wall-clock-unique-wall-clock-brass-round-wall-clock-vintage-wall-clock</loc>
+  <loc>http://store.threadcrafts.in/p/vaamsi-womens-chiffon-saree-with-blouse-piecerolex3101blue</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/exclusivelane-6-inch-terracotta-handpainted-warli-round-shaped-vase-in-white-flower-vase-decorative-item-for-living-room-gifts-items</loc>
+  <loc>http://store.threadcrafts.in/p/oneplus-3t-gunmetal-6gb64gb</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/vareesha-brown-wooden-ladder-with-terracotta-pots-with-sheesham-wooden-frame-unique-wall-hanging-wall-shelf-racks-wall-dcor-gifts</loc>
+  <loc>http://store.threadcrafts.in/p/apple-iphone-7-black-32gb</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/exclusivelane-dhokra-warli-name-plate-with-handwritten-fonts-home-daccor-gate-plate-wall-hangings-wall-daccor-gift-items</loc>
+  <loc>http://store.threadcrafts.in/p/apple-iphone-7-jet-black-128gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/apple-iphone-7-rose-gold-32gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/apple-iphone-7-gold-32gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/oneplus-3t-soft-gold-6gb64gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/oneplus-2-sandstone-black-64gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/unravel-india-warli-hand-painted-teracotta-hanging-bell-yellow</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
@@ -195,19 +234,23 @@
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/unravel-india-warli-painted-wooden-tray</loc>
+  <loc>http://store.threadcrafts.in/p/exclusivelane-6-inch-terracotta-handpainted-warli-matki-shaped-vase-in-red-flower-vase-decorative-item-for-living-room-gifts-items</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/karigaari-wrought-iron-set-of-5-warli-ladies</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/exclusivelane-warli-handpainted-miniature-terracotta-pot-94-cm-x-94-cm-x-889-cm-yellow-set-of-3-el-004-002ch</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/exclusivelane-dhokra-warli-name-plate-with-handwritten-fonts-home-daccor-gate-plate-wall-hangings-wall-daccor-gift-items</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://store.threadcrafts.in/p/ethnic-multicoloured-warli-painted-wooden-cutlery-holder-with-dhokra-work-lady</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/unravel-india-warli-hand-painted-teracotta-hanging-bell-yellow</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/indikala-terracotta-warli-handpainted-salt-pepper-shaker-with-tray</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
@@ -219,67 +262,11 @@
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/exclusivelane-terracotta-warli-handpainted-pots-yellow-set-of-3-home-dcor-wall-decoratives-vases-gift-items-rakhsha-bandhan-gifts</loc>
+  <loc>http://store.threadcrafts.in/p/exclusivelane-6-inch-terracotta-handpainted-warli-round-shaped-vase-in-white-flower-vase-decorative-item-for-living-room-gifts-items</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/c/men/top-wear</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/c/men/bottom-wear</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/c/women/ethnic-wear</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/c/women/western-wear</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/c/kids/boys</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/c/kids/girls</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/c/smartphones/motorola</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/c/smartphones/htc</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/c/smartphones/xiaomi</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/c/smartphones/google</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/c/smartphones/apple</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/c/smartphones/oneplus</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/c/smartphones/samsung</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/c/smartwatches/apple</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/c/smartwatches/go-noise</loc>
+  <loc>http://store.threadcrafts.in/p/unravel-india-warli-painted-wooden-tray</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
@@ -299,11 +286,7 @@
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/ishin-faux-georgette-womens-saree-ishinsb-8019black</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/Trendz-Womens-Cotton-Silk-SareeGreen-290</loc>
+  <loc>http://store.threadcrafts.in/p/trendz-womens-cotton-silk-sareegreen</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
@@ -312,110 +295,6 @@
 </url>
 <url>
   <loc>http://store.threadcrafts.in/p/trendz-womens-georgette-saree-tznaayeshapink</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/vaamsi-womens-chiffon-saree-with-blouse-piecerolex3101blue</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/pepe-jeans-london-mens-t-shirt-8907557186268pimk100001largenavy</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/allen-solly-mens-casual-shirt-8907587100616amsf317g01673400l07white-with-red</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/symbol-mens-casual-shirt-ss17-checks3sred</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/puma-mens-round-neck-synthetic-t-shirt-405782694180851601701largepuma-black</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/marks-spencer-mens-casual-shirt-00000038090137176ix-largeyellow-mix</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/symbol-mens-casual-shirt-ss-17-fil-a-filmpeach</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/van-heusen-mens-polo-8907566794126vhkp317m02361mediumblue-with-white</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/marks-spencer-mens-casual-shirt-00000046089437176kmediumblue-mix</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/people-mens-t-shirt-8907496224250p10101091006001x-largewhite</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/wrangler-mens-t-shirt-8907222965976w20202j036gamediumnavy</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/levis-mens-polo-690219422101517474-0029x-largeblue</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/aropostale-mens-t-shirt-ae1009688404largeheritage-navy8907538332615</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/adidas-mens-round-neck-cotton-t-shirt-4057288905165bk7104x-largeblack</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/peter-england-mens-polo-8907609076622pkp31700147xx-largemedium-green-with-blue</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/flying-machine-mens-t-shirt-8907378980892fmts9652xx-largered</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/lee-mens-cotton-t-shirt-8907222946920l24393cb06haxxx-largeblue</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/pepe-jeans-london-mens-t-shirt-8907557187548pimk100009xx-largedk-denim</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/levis-mens-t-shirt-690193532043729855-0001xx-largeblue</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/flying-machine-mens-t-shirt-8907378979889fmts9646smallblue</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/levis-mens-casual-shirt-690219425175317620-0053x-largeblue</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/levis-mens-casual-shirt-690219418647532907-0004largered</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/colorplus-mens-polo-8907397762738cmkt13567-n7greenlarge</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/levis-mens-polo-690219495679529917-0000largeblue</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/manyavar-mens-knee-long-cotton-kurta-8903035068705ml11805-307-lmaroon</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/symbol-mens-casual-shirt-ss-17-30slublpink</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
@@ -447,179 +326,7 @@
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/flying-machine-mens-polo-8907378989079fmts9726mediumblue</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
   <loc>http://store.threadcrafts.in/p/wrangler-mens-t-shirt-8907222963262w20141j03d63largewhite</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/under-armour-dread-alarm-fight-mens-round-neck-t-shirt-1292601-002x-largeglacier-gray-</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/people-mens-t-shirt-8907496224762p10101091045100smallblack</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/people-mens-polo-8907496173114pmkpo01cr317711x-largenasturtium-and-navy</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/blackberrys-mens-polo-8907196972932bt-frank42saffron</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/aropostale-mens-polo-ae1009108102largeheritage-navy8907538346490</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/manyavar-mens-knee-long-cotton-kurta-8903035068354ml11803-306-xxlnavy-blue</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/us-polo-association-mens-polo-8907378921178usts5325blue</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/colorplus-mens-casual-shirt-8907397814307cmsq25969-y3yellowxx-large</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/louis-philippe-mens-casual-shirt-8907545569554lysf317s1030042medium-blue-with-black-</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/vbirds-dark-black-mens-cotton-army-cargo-pants</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/symbol-mens-slim-fit-casual-trousers-30w-x-33ltan</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/arrow-sports-mens-casual-trousers-8907259822914atrs673036w-x-34lnavy</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/van-heusen-sport-mens-formal-trousers-8907355990043vssr316s0735534w-x-32lmedium-green-and-green</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/united-colors-of-benetton-mens-casual-trouser-890397503004615a4ctwb1018i01v5036w-x-32lsteel-grey</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/bloos-jeans-mens-chino-trousers-28</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/symbol-mens-slim-fit-casual-trousers-symlttwl2132w-x-33lolive</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/ruggers-mens-casual-trousers-890754220867840001606678434w-x-33lstone</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/aropostale-mens-casual-trousers-ae8597053mediummed-grey97443204</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/van-heusen-sport-mens-formal-trousers-8907271383219vstf315s0894136w-x-32lsky-blue</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/symbol-mens-slim-fit-casual-trousers-symlttwl3132w-x-33ltaupe</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/vego-mens-casual-cotton-three-forth-5836983031navy38</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/status-quo-mens-casual-trousers-8903591810909trk-260largeecru</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/john-miller-mens-casual-trousers-89073723538451vt0166130maroon</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/excalibur-mens-formal-trousers-890724201184425958495734w-x-34ldark-grey</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/cherokee-mens-casual-trousers-890724202278925883069332blue</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/people-mens-casual-trousers-8903880800413pmwcb26cr21621930w-x-34lbright-navy</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/ruggers-mens-casual-trousers-890754222796940001608717832w-x-33lkhaki</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/routeen-mens-poly-cotton-tfmdobcd108s630-black-30</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/aropostale-mens-casual-trousers-ae8597428mediumdark-blue97443301</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/cherokee-mens-casual-trousers-890724202283325883069334olive</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/lee-mens-casual-trousers-8907222542832letr258134w-x-33ldark-olive</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/white-mens-casual-shorts-stylish-three-fourth-half-pant-in-linen-cotton-size-30-32-34-36-white-36</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/people-mens-straight-fit-casual-trousers-8907496108987p1010105936411530w-x-33lmedium-grey-melange</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/duke-stardust-mens-casualtrouser</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/indigo-nation-mens-casual-trousers-890737238371213t0159132w-x-32lblue</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/newport-mens-slim-jeans-890754203944926872188834w-x-34ldark-stone-blue</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/urban-district-mens-slim-fit-jeans-udbd30232w-x-34ldark-blue</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/newport-mens-slim-jeans-890754203918026872185332w-x-34ldark-stone-blue</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/united-colors-of-benetton-mens-slim-fit-jeans-890397515879516p4u4yz1049i32w-x-33lblue</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/symbol-mens-slim-fit-jeans-5089130w-x-33lice-blue</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/levis-mens-65504-skinny-fit-jeans690116302011628912-000034w-x-34lblack</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/studio-nexx-mens-denim-regular-fit-jeans-black-size-36</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
@@ -692,6 +399,10 @@
 </url>
 <url>
   <loc>http://store.threadcrafts.in/p/miss-chase-womens-cotton-skater-dress-mcs14d01-28-62blackmedium</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/femella-fashions-grey-pique-sleeveless-midi-dress-ds-2113068-1326-bwg-l-</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
@@ -775,6 +486,10 @@
   <changefreq>daily</changefreq>
 </url>
 <url>
+  <loc>http://store.threadcrafts.in/p/femella-fashions-black-sequin-cape-midi-dress-ds-731732-1381-blk-l</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
   <loc>http://store.threadcrafts.in/p/allen-solly-womens-cotton-pleated-dress-awdr316c06720dark-blue-with-whitexs</loc>
   <changefreq>daily</changefreq>
 </url>
@@ -847,10 +562,6 @@
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/barbie-baby-girls-blouse-blafa161314001blush-pink-and-off-white1218</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
   <loc>http://store.threadcrafts.in/p/barbie-baby-girls-blouse-blafa161315002sunshine-yellow-and-off-white1824</loc>
   <changefreq>daily</changefreq>
 </url>
@@ -859,7 +570,7 @@
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/luke-and-lilly-chhota-bheem-kids-printed-round-neck-soft-cotton-sleeveless-t-shirt-for-baby-girls-pack-of-3</loc>
+  <loc>http://store.threadcrafts.in/p/biba-girls-dress-kw1876hturquoise-and-pink5</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
@@ -867,123 +578,7 @@
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/lilliput-juicy-stripes-2-pcs-set-8907264109970green12-18-months</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/texture-tired-skirt8903822301886</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/lilliput-early-lemurs-romper-8907264143356beige6-9-months</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/ritzy-shorts8903822290623</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/fox-baby-girls-skirt-denim-and-sky3-6-months350578</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/palm-tree-baby-girls-polo-132040881672-c101bright-white24m</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/fox-baby-girls-t-shirt-fuschia3-6-months327567</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/nauti-nati-baby-girls-outfit-and-clothing-set-nss16-351orange6-12m</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/mesh-frill-dress8903822301619</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/lilliput-baby-girls-2-pcs-set-8907264068451pink9-12-months</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/fox-baby-girls-tank-top-vest-saladin6-12-months347780</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/nauti-nati-baby-girls-dress-naw14-658navy1y</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/palm-tree-baby-girls-t-shirt-132030610564-1303white130312-18-months</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/fox-baby-girls-shorts-stone-melange18-24-months310537</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/gini-jony-baby-girls-waist-coat-112320560982-5100denimx-wash9-12-months</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/fox-baby-girls-dress-light-red-melange18-24-months357645</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/little-kangaroos-baby-girls-overalls-11590navysmall</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/little-kangaroos-baby-boys-t-shirt-pack-of-3-pl-11874multi-color3-months</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/gini-jony-baby-girls-blouse-top-122030110860-1297lemon-zest9-12-months</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/nauti-nati-baby-girls-t-shirt-nss16-714white-and-pink18-24-months</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/palm-tree-baby-girls-dress-132253168552-1370pink6-12-months</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/nauti-nati-baby-girls-dress-nss15-850red-and-white18-24-months</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/lilliput-three-friends-set-8907264145435blue6-9-months</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/little-kangaroos-baby-girls-t-shirt-pl-11460yellow6-months</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/lilliput-baby-girls-2-pcs-set-8907264069052green9-12-months</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/nauti-nati-baby-girls-clothing-set-nss16-980pink6-12m</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/mud-pie-baby-girls-birthday-tutu-multi-9-12-months</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/gini-jony-baby-girls-dress-122253168826-1202white12-18-months</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/lilliput-kingfisher-bird-2-pcs-set-8907264118941green12-18-months</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/little-kangaroos-baby-girls-clothing-set-pack-of-3-11506redsmall</loc>
+  <loc>http://store.threadcrafts.in/p/luke-and-lilly-chhota-bheem-fame-chutki-printed-cotton-round-neck-baby-girls-</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
@@ -991,27 +586,375 @@
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/lilliput-baby-girls-t-shirts-8907264053693blue18-24-months</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/lilliput-baby-girls-shorts-8903822293563red3-6-months</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/gini-jony-baby-girls-blouse-top-122030110860-1265lavender9-12-months</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/flying-machine-mens-t-shirt-8907378987150fmts9700x-largeblue</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
   <loc>http://store.threadcrafts.in/p/peter-england-mens-formal-shirt-8907609282047psh3170167444medium-pink-with-blue</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/oneplus-3t-gunmetal-6gb64gb</loc>
+  <loc>http://store.threadcrafts.in/p/little-kangaroos-baby-boys-clothing-set-set-of-2-11308gold6-months</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/little-kangaroos-baby-boys-clothing-set-pack-of-3-11801navy6-months</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/little-kangaroos-baby-boys-clothing-set-pack-of-2-11805pink6-months</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/little-kangaroos-baby-boys-clothing-set-pack-of-2-11308sea-green3-months</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/luke-and-lilly-chhota-bheem-printed-round-neck-cotton-t-shirt-for-baby-boys-pack-of-7</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/femella-fashions-maroon-front-slit-maxi-dress-ds-2171124-1336-mar-m-</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/cherokee-boys-shirt-263651403burgundy11-12-years</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/popcorn-boys-t-shirt-hst-2167red2-3-years</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/cherokee-boys-t-shirt-263648992green3-4-years</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/chhota-bheem-boys-t-shirt-pack-of-3-8904157860185-5-6-years</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/cherokee-boys-t-shirt-263576141blue7-8-years</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/united-colors-of-benetton-boys-polo-16a3089c0065i10fmyellowm</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/pokemon-boys-t-shirt-ts4fkypokblack34</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/cherokee-boys-shirt-263649291red3-4-years</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/cherokee-boys-shirt-261543986light-blue03y</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/cherokee-boys-shorts-400014566750blue07y</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/gini-jony-boys-shorts-121010162350-c152mojare-desert08</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/multi-color-pure-cotton-half-phant-combo-pack-of-5-pieces</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/marvel-boys-t-shirt-acvso-14grey-melange9-10-years</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/cherokee-boys-t-shirt-267233049navy7-8-years</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/cloth-theory-boys-t-shirt-ctri2multi-colored3-4-years-pack-of-3</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/612-league-boys-shorts-ils16i13004red5-6-years</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/status-quo-cubs-boys-t-shirt-cb-rn-744yellow-and-blue32</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/united-colors-of-benetton-boys-shirt-16a5popc0196i101elwhite</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/kuchipoo-boys-t-shirt-half-sleeves-4-pcs-track-pant-2-pcs-890354164455multicolor7-8-yrs</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/esteem-brand-print-and-stripped-girls-innerwear-drawer-panties-pack-of-10-pcs-7-8-years</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/marvel-boys-t-shirt-acvso-10grey8-9-years</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/new-day-boys-cotton-t-shirt-multicoloured-pack-of-five</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/uspa-kids-boys-t-shirt-ujts5983classic-blueel-hs</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/status-quo-cubs-boys-t-shirt-cb-rn-623-hsyellow-and-black-print32</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/zacharias-kids-care-capri-pack-of-3-mix-color-mix-print</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/marvel-boys-t-shirt-acvso-29-blue-and-grey9-10-years</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/maniac-boys-half-sleeve-t-shirts-ml-boys-hs-orange-13-14yorange13-14-years</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/star-wars-boys-t-shirt-sw1ebt207white-and-black5-6-years</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/goodway-junior-boy-pack-of-5-mom-dad-printed-t-shirts-theme-4</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/mighty-raju-boys-t-shirt-ggapp-mr21b-multicolor3-4-years</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/ninja-hattori-boys-t-shirt-hst-2133orange4-5-years</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/inkovy-mens-full-sleeves-hoodie-inkovy-hood-full-black-mblack</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/scott-mens-basic-cotton-round-neck-half-sleeve-solid-t-shirts-pack-of-3-3rn-bl-wh-gr-m</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/tees-collection-mens-stylish-half-zip-flap-collar-full-sleeve-t-shirt-blacktcdzf001-medium</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/campus-sutra-mens-cotton-t-shirt-ss16prmrnfstrimplnchgrblmcharcoalmedium</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/aarbee-mens-cotton-t-shirt-combo-of-2-aarbee-full-sleeve-blue-grey-l-grey-and-blue-large</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/katso-mens-raglan-neck-full-sleeve-cotton-t-shirt</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/alan-jones-clothing-mens-cotton-printed-t-shirtstc-spm-bck-m-black-medium</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/ghpc-mens-cotton-stand-collar-casual-shirtcs62312white40</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/koolpals-cotton-blend-casual-shirt-kpmsfp0442obblue42</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/campus-sutra-men-printed-full-sleeves-sheldon-t-shirtsss16melrnfssldmsfgphbrm</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/katso-mens-cotton-hooded-cotton-t-shirt-katso-hood-full-black-m</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/american-crew-polo-no3-applique-white-t-shirt-xl-ac021r-xl</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/american-crew-mens-polo-collar-black-t-shirt-m-ac025p-m</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/ruggers-mens-t-shirt-8907542246434400016106138mediumwhite-and-navy</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/united-colors-of-benetton-mens-polo-890397524403016a3fscj4012imblue-a48</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/highlander-mens-casual-shirt-13110001483359hlsh009021smallorange</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/gritstones-mens-button-front-t-shirt-gsfshnlyblk1blackmedium</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/united-colors-of-benetton-mens-t-shirt-890397522119216a3cmcj1164imblue-a48</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/spark-mens-premium-rich-cotton-polo-t-shirt-11spk1l-blue</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/symbol-mens-polo-ss16plk2x-largemaroon</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/pepperclub-mens-cotton-t-shirt-maroonvneckhenley-mblack-40</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/wrangler-mens-t-shirt-8907222664657w150066198yzx-largeblack</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/maniac-mens-full-sleeve-v-neck-cotton-tshirts-pack-of-3multicolorml-dbl-v-fs-rednblacknnavy-xl</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/highlander-mens-casual-shirt-13110001456039hlsh008837smallcoffee</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/flying-machine-mens-casual-shirt-8907259953175fmsh6866smallwhite</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/elaborado-mens-t-shirt-black-medium-eais5032bl2</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/gritstones-mens-round-neck-t-shirt-gs60212hsblk-1black-x-large</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/aropostale-mens-t-shirt-ae08580404mediumheritage-navy10007237</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/fashion-freak-full-sleeve-t-shirt-for-men-cross-pattern-style-grey-black-colour-medium</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/pepperclub-mens-cotton-round-neck-full-sleeve-tshirt-with-striped-sleeves-and-pocket</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/izinc-mens-cotton-t-shirtizinc-credark-greyl</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/koolpals-mens-formal-shirt-blue40</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/us-polo-mens-casual-shirt-8907378315038ussh4317largeblack-</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/tsx-mens-cotton-t-shirt-tsx-henbton-c-mbluemedium</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/levis-mens-casual-shirt-690103253284921983-0048largemulticolor</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/hot-pepper-mens-cotton-t-shirt-doublerib-indigo-m-indigo-medium</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/dennison-mens-formal-shirt-ss-16-16542royal-blue</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/sulpher-mens-solid-casual-pink-shirt-slcsh10045-m</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/united-colors-of-benetton-mens-polo-890397515954916p3009j5001imtrue-red</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/symbol-mens-all-over-printed-polo-ss16plk15mediumwhite</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/levis-mens-t-shirt-690103265949216960-0100largeblue</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/global-rang-mens-denim-shirt-denim-plain-a-lblue42</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/mark-taylor-mens-formal-shirt-16110001482976mtsh01666140white</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/mark-taylor-mens-formal-shirt-16110001482977mtsh01666142white</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/albert-and-james-mens-t-shirt-pack-of-3-aj1001red-royal-blue-and-light-grey42</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/highlander-mens-casual-shirt-13110001462366hlsh008880mediumdark-blue</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/symbol-mens-t-shirt-aw16plk29largenavy</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/okane-mens-cotton-t-shirt-ts-90104-blue-l-blue-l</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/xessentia-mens-t-shirt-xpo2crewx-largelight-blue-and-white</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/aarbee-mens-cotton-t-shirt-henley-combo3lblack-white-and-grey</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/ruggers-mens-casual-shirt-8907542197453400016053685largeblue</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/united-colors-of-benetton-mens-polo-890397512960316p3inpj0007imnavy</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/symbol-mens-formal-fil-a-fil-slim-fit-shirt-symfilafil3942royal</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/pepe-jeans-mens-polo-8903872895427pm540725-3largeorange</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/symbol-mens-formal-checks-slim-fit-shirt-symch2des10140black</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
@@ -1028,30 +971,6 @@
 </url>
 <url>
   <loc>http://store.threadcrafts.in/p/apple-iphone-7-plus-jet-black-128gb</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/apple-iphone-7-black-32gb</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/apple-iphone-7-jet-black-128gb</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/apple-iphone-7-rose-gold-32gb</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/apple-iphone-7-gold-32gb</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/oneplus-3t-soft-gold-6gb64gb</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/oneplus-2-sandstone-black-64gb</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
@@ -1087,11 +1006,887 @@
   <changefreq>daily</changefreq>
 </url>
 <url>
+  <loc>http://store.threadcrafts.in/p/moto-g-plus-4th-gen-white-32-gb-upgradable-to-android-70-nougat</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/moto-g-plus-4th-gen-black-32-gb-upgradable-to-android-70-nougat</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/moto-g-plus-4th-gen-white-16-gb-upgradable-to-android-70-nougat</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/apple-iphone-6-space-grey-32gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/apple-iphone-6s-rose-gold-32gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/apple-iphone-6s-space-grey-32gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/apple-iphone-se-space-grey-16gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/apple-iphone-se-gold-64gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/apple-iphone-7-plus-rose-gold-128gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/apple-iphone-6s-plus-space-grey-16gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/apple-iphone-6s-rose-gold-16gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/apple-iphone-6s-plus-rose-gold-64gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/apple-iphone-6s-plus-silver-64gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/apple-ipad-mini-16gb-wifi-black-slate</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/apple-ipad-pro-mlq42hna-tablet-97-inch-128gb-wi-fi-3g-silver</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/apple-iphone-7-128gb-jet-black</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-on5-pro-gold</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-j7-gold</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-on7-pro-black</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-j7-prime-sm-g610f-gold-16gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-on8-gold</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-j7-prime-black-16gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-j1-ace-white</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-s7-edge-sm-g935f-black-pearl-128-gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-j5-prime-sm-g570f-black</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-j5-sm-j500f-gold-8gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-j2-ace-gold-8-gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-j1-ace-sm-j110-black</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-j7-2016-edition-sm-j710f-gold-16gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-j5-prime-sm-g570f-gold</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-s7-sm-g930f-32-gb-black-onyx</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-j2-6-2016-edition-silver-8gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-a9-pro-gold</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-j120-black</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-j7-new-2016-edition-white-16-gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-j2-ace-silver-8-gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-a5-2016-16-gb-gold</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-a7-2016-dual-sim-sm-a710fzkfins-black</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-e5-black-16gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-s7-edge-sm-g935f-smart-phone-32-gb-black-onyx</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-s7-edge-sm-g935f-smart-phone-32-gb-blue-coral</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-grand-2-charcoal-gray</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-note-5-n920g-silver-titanium-32gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-a7-sm-a710fzdfins-gold</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-a5-6-4g-lte-16gb-black</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-s6-edge-black-sapphire-32gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-j120-white</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-note-edge-black</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-s6-edge-pearl-white-32gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-s6-edge-plus-32gb-black-sapphire</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-note-5-ds-gold-platinum-32gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-a5-2016-white</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-grand-neo-plus-gt-i9060i-midnight-black-8gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-s5-shimmery-white</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-s6-edge-gold-platinum-64gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-a7-sm-a700fzk-midnight-black</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-e7-white-16gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-a7-sm-a700fd-pearl-white</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-note-5-n920g-black-sapphire-32gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-s7-edge-sm-g935f-pink-gold-32gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-e7-blue</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-note-5-ds-black-sapphire-32gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/samsung-galaxy-alpha-sm-g850y-charcoal-black</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/htc-desire-728-purple-myst</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/htc-one-x9-smart-phone-carbon-grey</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/htc-desire-526g-plus-glossy-black-16gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/htc-one-m8-eye-silver</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/htc-one-m8-eye-rose-gold</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/htc-desire-526g-plus-glacier-blue</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/htc-one-x9-smart-phone-topaz-gold</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/htc-10-gold-32gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/htc-one-m8-eye-grey</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/htc-desire-816-white</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/htc-one-dual-sim-silver</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/htc-10-carbon-grey-32gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/htc-10-4gb-ram-topaz-gold-32gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/htc-one-x-plus-64gb-black-64gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/xiaomi-mi-max-prime-gold-128gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/xiaomi-redmi-note-3-gold-16gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/google-pixel-quite-black-32gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/google-pixel-very-silver-128gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/google-pixel-xl-quite-black-32gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/google-pixel-xl-very-silver-32-gb</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/noise-edge-black-bluetooth-smart-watch-with-camera-sim-card-support</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/noise-urge-bluetooth-smart-watch-with-camera-sim-card-support</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/noise-impulse-bluetooth-smart-watch</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/noise-edge-smartwatch-ram-128m-rom-64m-external-support-max-32gb-tf-cardandroid-44inbuilt-camerawhite</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/orignal-u8-smartwatch</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/apple-watch-nike-series-2-space-gray-aluminum-case-with-blackcool-gray-nike-sport-band</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/apple-watch-sport-42mm-space-black-stainless-steel-case-with-black-sport-band</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/apple-watch-sport-38mm-silver-aluminum-case-with-white-sport-band</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/apple-watch-42mm-nike-series-2-silver-aluminum-case-with-flat-silvervolt-nike-sport-band</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/apple-42mm-space-black-stainless-steel-case-with-black-sport-band-mlc82hna</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/philips-hp8317-kerashine-jojoba-straightener</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/philips-hp864346-ms-fresher-philips-essential-dryer-and-straightener-pinkblack</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/vega-ease-curl-vhch-02-25mm-barrel</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/philips-hp8302-essential-selfie-straightener-black</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/nova-1200-watts-hair-dryer-nhp-8100</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/philips-hp810046-hair-dryer-purple</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/nova-nhp-8200-240v-1800-watts-hair-dryer</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/nova-nhd-2806-1200-watts-foldable-hair-dryer</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/nova-nhs-800-professional-straightener-and-curler-with-nova-hair-dryer-combo</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/homeoculture-set-of-hair-puff-volumizer-banana-bumpits-and-tictic</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/vega-smooth-curl-vhch-03-19mm-barrel</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/syska-hd3600i-ionic-function-1500w-hair-dryer-white-pink</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/vega-vhch-04-long-curl-hair-curling-iron-multicolor</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/vega-vhsh-09-aura-flat-hair-straightener-pink</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/philips-hp831400-straightenerblack</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/dolphy-professional-wall-mounted-hair-dryer-hd-002</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/ozomax-beauty-crown-hair-dryer-gray</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/wahl-05001-024-travel-straight-hair-strightener</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/babyliss-as551e-paris-brosse-rotative-rotating-brush-black</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/oster-hd11-hair-dryer-pink</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/veet-sensitive-touch-electric-trimmer-for-women</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/philips-bg102515-body-groomer-black</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/philips-aquatouch-s505006-electric-shaver</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/philips-at60015-aquatouch-wet-and-dry-electric-shaver</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/philips-bg10511-body-groomer</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/braun-series-3-3040-rechargeable-wet-dry-electric-foil-shaver</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/philips-aquatouch-s542006-shaver</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/philips-qs614015-waterproof-styler-and-shaver-blacksilverorange</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/syska-shr626-acu-sharp-reciprocating-shaver-black</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/philips-brt38215-bikini-trimmer-whitepink</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/philips-bre20100-satinelle-essential-epilator</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/braun-silk-epil-5-5-541-wet-dry-cordless-epilator-with-4-extras</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/philips-bre21000-satinelle-legs-arms-advanced-epilator-blue</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/braun-face-810-facial-epilator-facial-cleansing-brush-with-micro-oscillations</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/braun-silk-epil-9-9-558-wet-dry-cordless-epilator-with-5-extras-including-face-epilator</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/braun-silk-epil-7-7-561-wet-dry-cordless-epilator-with-6-extras</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/nova-nht-1047-pro-skin-advance-trimmer-blue</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/scholl-diamond-crystals-velvet-smooth-express-pedi</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/kemei-km-2013-rechargeable-beard-moustache-hair-clipper-trimmer-for-men</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/thread-it-facial-hair-remover</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/philips-nt1150-nose-trimmer-black</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/oral-b-cross-action-power-toothbrush-color-may-vary</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/philips-hp8659-kerashine-essential-care-air-styler-not-straightener-blackgolden</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/tiny-deal-facial-hair-epilator-remover-tool</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/philips-bt100015-100-pro-skin-trimmer-blueblack</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/wooum-electric-hair-beard-trimmer-3030-white</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/philips-qg3347-multi-grooming-kit-black</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/right-choice-6-8-mm-thick-tempered-glass-weight-scale</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/maxel-ak-2002-lady-shaver</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/syska-hs6811-super-glam-hair-straightener-redblack</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/omron-hem-7120-automatic-blood-pressure-monitor</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/mcp-house-of-quirk-round-thick-tempered-glass-electronic-digital-body-weight-weighing-scale</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/healthgenie-3-in-1-steam-sauna-vaporizer-regular-pink</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/jj-one-touch-select-simple-glucometer-vial-of-10-strips-free</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/dr-morepen-bg-03-gluco-one-glucometer-25-strips-multicolor</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/facial-sauna-vaporiser-and-nose-steamer-3-in-1-steam-inhaler</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/healthsense-ps-117-glass-top-digital-personal-body-weighing-scale-blackgray</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/omron-hem-7113-automatic-blood-pressure-monitor</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/healthsense-ps-126-ultralite-personal-scale-cherry</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/unique-gadget-8mm-thick-tempered-glass-digital-weighing-scale</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/accu-chek-active-blood-glucose-meter-kit-multicolor-vial-of-10-strips-free</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/accu-chek-active-strips-100-50x2-multicolor</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/newnik-v108-vaporizer</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/detek-009-digital-lcd-electronic-weighing-scale</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/drtrust-blood-pressure-monitor-silver-line</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/healthgenie-hd-221-digital-weighing-scale</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/equinox-eb-9300-weighing-scale</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/mcp-manipol-body-massager-full-body-muscles-relief-fat-burning</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/equinox-br-9201-analog-weighing-scale</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/dr-morepen-hw-03-senior-hot-water-bottle</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/venus-electronic-bathroom-scale-36-cm-x-34-cm-x-6-cm-purple</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/omron-hem-7132-blood-pressure-monitor</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/mini-usb-electric-massager-assorted-colormodel-xy3199</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/omron-hbf-212-body-composition-monitor</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/weighing-scale-digital-heavy-duty-handgripped-portable-for-various-use50kg</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/metro-electronic-pocket-scale-mh-series-200gm</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/healthgenie-hd-221-digital-weighing-scale-silver-pattern</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/omron-hn-283-digital-body-weight-scale</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/omron-high-volume-nebulizer-compressor-ne-c25s-nebulizer</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/jsb-hf05-leg-and-foot-massager-silver-black</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/choicemmed-md300c2d-pulse-oximeter</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/omron-ne-c803-compressor-nebulizer</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/equinox-br-9015-analog-weighing-scale</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/healthsense-soft-grip-personal-scale-ps-135</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/jsb-hf28-compact-portable-foot-massager</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/citizen-ch-432-blood-pressure-monitor</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/omron-karada-scan-body-composition-monitor-hbf-701</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/easy-ice-knee-pain-relieving-cold-hot-therapy-pack-with-belt-eik514-color-may-vary</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/healthgenie-bp-monitor-digital-upper-arm-bpm-02-with-irregular-heart-beat-indicator-24-months-warranty</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/jsb-hf15-facial-massager-with-3-attachments</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/rossmax-tg380-flexi-tip-thermometer</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/square-shape-thick-glass-weighing-machine-digital-glass-bathroom-weight-scale-measurement</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/rossmax-gb101-aneroid-blood-pressure-monitor</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/healthgenie-digital-upper-arm-blood-pressure-monitor-bp-monitor-bpm01-fully-automatic-irregular-heartbeat-detector-batteries-included-2-year-warranty</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/drmorepen-cn06-compressor-nebulizer</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/ozomax-3-in-1-steamer-cum-vaporizer-nozzle-inhaler-facial-sauna-model-elda</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/jsb-03-body-massager-white-blue</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/activeheat-knee-orthosis-with-electric-heating-universal</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/healthgenie-bp-monitor-digital-upper-arm-bpm-03-automatic-with-irregular-heart-beat-indicator-24-months-warranty</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/dr-morepen-breathe-free-vp03-vaporizer</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/omron-hem-6131-automatic-wrist-blood-pressure-monitor</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/equinox-eb-eq-90-weighing-scale</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/dr-morepen-st03-dual-head-stethoscope</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/healthgenie-digital-weighing-scale-hd-221-black-dotted-with-back-light</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/omron-hem-6121-automatic-wrist-blood-pressure-monitor</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/choicemmed-md300c2-pulse-oximeter</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/vioheat-electric-heat-belt-universal-size</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/ozomax-full-body-magnetic-professional-massager-17-in-1-electric-massage</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/jsb-hf18-3d-pedometer</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/jsb-h03-electric-heating-pad-with-waist-belt-white</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/healthgenie-dual-aluminum-non-chill-stethoscope-hg-201b-black</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/choicemmed-fingertip-pulse-oximeter</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/healthgenie-digital-weighing-scale-hd-221-never-quit-black</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/gardner-bender-gadgetbucket-digital-electronic-weighing-scale-personal-weigh-scale-6mm</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/optima-vaporizer</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/panasonic-ev2510k-handheld-massager-black</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/omron-hgm-112-glucometer-vial-of-10-strips-free</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/omron-hem-7130-blood-pressure-monitor</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/omron-hem-7130-l-blood-pressure-monitor</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/omron-hem-7121-blood-pressure-monitor</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/omron-hem-7112-blood-pressure-monitor</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/healthgeniedigitalweighingscalehd-221silver-brushedmetalic-latest-collection-with-back-light</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/detek-stress-relief-head-massager</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/omron-digital-thermometer-model-mc-246</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/omron-hn-286-digital-weight-scale</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
   <loc>http://store.threadcrafts.in/p/jaipuri-haat-parrot-mirror-work-door-hanging-metal-tapestry-artificial-beads-set-of-2</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://store.threadcrafts.in/p/kalash-ganpati-shubh-labh-toran-bandanwar-door-hanging</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/aapno-rajasthan-kundan-work-round-shaped-marble-peacock-motif-clock-1524-cm-x-1524-cm</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
@@ -1103,7 +1898,7 @@
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/royalscart-boistrous-colors-analog-wall-clock</loc>
+  <loc>http://store.threadcrafts.in/p/royalscart-boisterous-wood-analog-wall-clock-30-cm-x-3-cm-x-30-cm</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
@@ -1123,7 +1918,11 @@
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/royalscart-painting-analog-wall-clock</loc>
+  <loc>http://store.threadcrafts.in/p/indikala-terracotta-warli-handpainted-salt-pepper-shaker-with-tray</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://store.threadcrafts.in/p/royalscart-painting-wood-analog-wall-clock-30-cm-x-3-cm-x-30-cm-ktwc136</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
@@ -1151,6 +1950,10 @@
   <changefreq>daily</changefreq>
 </url>
 <url>
+  <loc>http://store.threadcrafts.in/p/it2m-11-round-designer-wall-clock-with-glass-for-home-kitchen-living-room-bedroom-silent-non-ticking-movement</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
   <loc>http://store.threadcrafts.in/p/mesleep-vintage-wall-clock-with-glass</loc>
   <changefreq>daily</changefreq>
 </url>
@@ -1167,7 +1970,7 @@
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://store.threadcrafts.in/p/Jaipuri-haat-Decorative-Ganesh-door-Hanging-Set-of-4-846</loc>
+  <loc>http://store.threadcrafts.in/p/jaipuri-haat-decorative-ganesh-door-hanging-set-of-4</loc>
   <changefreq>daily</changefreq>
 </url>
 <url>
@@ -1200,182 +2003,6 @@
 </url>
 <url>
   <loc>http://store.threadcrafts.in/p/hanging-pot-planters-brown-colour-4-qty-srisai-naturals</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/ecraftindia-blue-crystal-studded-decorative-wooden-wall-clock</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/cartoonpur-round-large-designer-decorative-colourful-palm-prints-wall-clock-ticking-11-inch-wall-clock-for-home-bedroom-living-room-kitchen</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/cartoonpur-round-large-designer-decorative-language-of-music-wall-clock-ticking-11-inch-wall-clock-for-home-bedroom-living-room-kitchen</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/sehaz-artworks-moon-num-asymmetric-wood-wall-clock-27-cm-x-27-cm-x-4-cm-green</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/it2m-11-round-vintage-motor-bike-designer-wall-clock-with-glass</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/it2m-11-round-kids-wall-clock-for-home-living-room-bedroom-with-glass-non-ticking-sweeping-movement</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/it2m-11-round-kids-cars-wall-clock-for-home-living-room-bedroom-with-glass-non-ticking-sweeping-movement</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/swagger-peacock-wall-clock-analog-wall-clock-vintage-wall-clock-ethnic-wall-clock-antique-wall-clock</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/cartoonpur-round-large-designer-decorative-vintage-bicycle-wall-clock-ticking-11-inch-wall-clock-for-home-bedroom-living-room-kitchen</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/blacksmith-aluminium-multi-round-wall-clock-black-nbs-29</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/decorative-wall-clock-swinging-pendulum-for-room-or-office-colored-with-dark-brown-large-23-cm-x-7-cm-x-53-cm</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/cartoonpur-analog-white-round-11-inch-cute-owls-on-branch-silent-movement-non-ticking-kids-wall-clock-with-glass</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/it2m-11-round-wall-clock-with-glass-for-home-living-room-bedroom-kitchen-non-ticking-sweeping-movement-white-body</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/mesleep-wink-wall-clock-with-glass</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/karigaari-wrought-iron-set-of-5-warli-ladies</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/cartoonpur-round-large-designer-decorative-girl-in-skirt-wall-clock-ticking-11-inch-wall-clock-for-home-bedroom-living-room-kitchen</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/it2m-11-quartz-round-designer-wall-clock-with-glass-non-ticking-sweeping-movement</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/it2m-11-round-wall-clock-with-glass-for-home-bedroom-living-room-kitchen-non-ticking-sweeping-movement</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/cartoonpur-round-large-designer-decorative-cute-checks-wall-clock-ticking-11-inch-wall-clock-for-home-bedroom-living-room-kitchen</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/cartoonpur-round-large-designer-decorative-wooden-look-wall-clock-ticking-11-inch-wall-clock-for-home-bedroom-living-room-kitchen</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/wooden-peacock-emboss-painting-wall-clock-multicolor</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/blacksmith-aluminium-butterfly-wall-clock-red</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/purpledip-designer-wall-clock-in-vintage-chic-style-diameter-11-inch</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/swagger-8-inch-double-side-vintage-wall-clock-victorian-royal-station-clock-platform-analog-wall-clock-with-copper-plating-copper-finish</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/blacksmith-aluminum-bird-love-wall-clock-black</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/swagger-8-inches-brass-finish-double-sided-victorian-station-clock-vintage-wall-clock-antique-clock</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/jaipuri-haat-elephant-mirror-work-door-hanging-metal-tapestry-artificial-beads-set-of-2</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/tied-ribbons-photo-frames-for-table-65inch-x-75-inchmulticolor-resin</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/tiedribbons-table-mounted-photo-frame-95-inch-x-69-inch-blue</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/tied-ribbons-21st-birthday-gift-wooden-photo-frame68-inch-x-87-inch</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/wens-joyful-collage-mdf-and-glass-photo-frame-335-cm-x-385-cm-x-115-cm-brown-set-of-9</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/wens-5-picture-mdf-photo-frame-17-inch-x-17-inch-brown</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/cartoonpur-round-large-designer-decorative-love-birds-wall-clock-non-ticking-silent-11-inch-wall-clock-for-home-bedroom-living-room-kitchen</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/swagger-8-inch-dial-vintage-wall-clock-black-station-clock-antique-clock-like-brass-wall-clock-victoria-royal-double-side-clock-double-sided-wall-clock</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/set-of-2-hosley-wall-sconces-40cm-long-with-8-glass-cup-candle-holders-and-bonus-tealight-candles</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/ecraftindia-beautiful-colorful-senary-view-wooden-wall-clock</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/jaipurcrafts-decorative-6-inches-victoria-station-clock-6in-</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/palmtree-baby-girls-shorts-132220110607-1397yellow18-24-months</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/gini-jony-baby-girls-dress-112250560450-5100denimx-wash9-12-months</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/palm-tree-baby-girls-dress-132250310435-1329midnight-navy-132918-24-months</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/mud-pie-baby-girls-whale-dress-red-9-12-months</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/lilliput-baby-girls-t-shirts-8907264053471multi9-12-months</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/lilliput-baby-girls-t-shirts-8907264052788yellow12-18-months</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://store.threadcrafts.in/p/gini-jony-baby-girls-shorts-122175188805-1282green9-12-months</loc>
   <changefreq>daily</changefreq>
 </url>
 </urlset>

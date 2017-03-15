@@ -39,9 +39,9 @@
                                     <th>Product Code</th>
                                     <th>Product Name</th>
                                     <th>Category</th>
-                                    <th>Price</th>
                                     <th>Attributes</th>
-                                    <th>Statistics</th>
+                                    <th>Views</th>
+                                    <th>Clicks</th>
                                     <th>Last Updated</th>
                                     <th>Action</th>
                                 </tr>
@@ -86,15 +86,14 @@
                                             ?>
                                         </td>
                                         <td style="max-width: 200px;"><?php echo stripslashes($category_path); ?></td>
-                                        <td><?php echo number_format($value["product_price_min"], 2); ?></td>
                                         <td>
+                                            <p><strong>Price: </strong><?php echo number_format($value["product_price_min"], 2); ?></p>
                                             <p><strong>Color: </strong><?php echo (!empty($value["product_color"]) ? stripslashes($value["product_color"]) : "NA"); ?></p>
                                             <p><strong>Size: </strong><?php echo (!empty($value["product_size"]) ? stripslashes($value["product_size"]) : "NA"); ?></p>
                                             <p><strong>Brand: </strong><?php echo stripslashes($value["product_brand"]); ?></p>
                                         </td>
-                                        <td>
-                                            <p><strong>Views: </strong><?php echo number_format($value["ps_views"]); ?></p>
-                                        </td>
+                                        <td><p><?php echo number_format($value["ps_views"]); ?></p></td>
+                                        <td><p><?php echo number_format($value["ps_clicks"]); ?></p></td>
                                         <td><?php echo $value["updated_on"]; ?></td>
                                         <td>
                                             <?php

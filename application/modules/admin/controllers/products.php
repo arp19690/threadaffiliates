@@ -10,8 +10,8 @@ class Products extends CI_Controller
     {
         parent::__construct();
         $this->template->set_template('admin');
-        $this->admin_id = $this->session->userdata("admin_id");
-        if (!$this->session->userdata("admin_id"))
+        $this->admin_id = $this->session->userdata["admin_id"];
+        if (!$this->session->userdata["admin_id"])
         {
             redirect(base_url_admin("logout"));
         }
@@ -41,7 +41,7 @@ class Products extends CI_Controller
                 break;
         }
 
-        $result = $model->getAllDataFromJoin("dc.*, p.*, ps.ps_views", TABLE_DAILY_CRON . " as dc", array(TABLE_PRODUCTS . " as p" => "dc.dc_product_unique_code = p.product_unique_code", TABLE_PRODUCTS_STATS . " as ps" => "ps_product_id = p.product_id"), "LEFT", $where_cond_arr);
+        $result = $model->getAllDataFromJoin("dc.*, p.*, ps.ps_views, ps.ps_clicks", TABLE_DAILY_CRON . " as dc", array(TABLE_PRODUCTS . " as p" => "dc.dc_product_unique_code = p.product_unique_code", TABLE_PRODUCTS_STATS . " as ps" => "ps_product_id = p.product_id"), "LEFT", $where_cond_arr);
 
         $data["data"] = $result;
         $data["page_title"] = $page_title;
