@@ -15,6 +15,14 @@ class Products extends CI_Controller
     {
         $model = new Common_model();
         $custom_model = new Custom_model();
+        $limit = "0, " . PAGINATION_LIMIT;
+        if ($this->input->get("page"))
+        {
+            $page_num = $this->input->get("page");
+            $limit_start = ($page_num * PAGINATION_LIMIT) + 1;
+            $limit_end = ($page_num * PAGINATION_LIMIT) + PAGINATION_LIMIT;
+            $limit = $limit_start . ", " . $limit_end;
+        }
 
         // fetching category_ids from their category_url_key
         $where_cond = array("category_status" => 1, "category_url_key" => $parent_category);
@@ -44,10 +52,12 @@ class Products extends CI_Controller
         }
 
         $product_data = array();
+        $total_products_count = 0;
         if (!empty($product_category_arr))
         {
             $where_str = "product_status = 1 AND product_category_id IN (" . implode(", ", $product_category_arr) . ")";
-            $product_data = $custom_model->get_products_list("p.*", $where_str);
+            $product_data = $custom_model->get_products_list("p.*", $where_str, "rand()", $limit);
+            $total_products_count = $custom_model->get_total_products_count($where_str);
         }
 
         // now we render the data here
@@ -57,6 +67,7 @@ class Products extends CI_Controller
         $data['meta_title'] = $data["page_title"];
         $data['breadcrumb'] = $breadcrumb;
         $data['product_data'] = $product_data;
+        $data['total_products_count'] = $total_products_count;
         $this->template->write_view("content", "pages/products/listing", $data);
         $this->template->render();
     }

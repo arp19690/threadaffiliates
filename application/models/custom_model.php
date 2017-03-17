@@ -161,6 +161,15 @@ class Custom_model extends CI_Model
         return $records;
     }
 
+    public function get_total_products_count($where_str)
+    {
+        $sql = "SELECT count(p.product_id) as totalcount FROM " . TABLE_PRODUCTS . " as p "
+                . "INNER JOIN " . TABLE_CATEGORIES . " as c on c.category_id = p.product_category_id "
+                . "WHERE " . $where_str;
+        $records = $this->db->query($sql)->result_array();
+        return $records[0]["totalcount"];
+    }
+
     public function search_keyword($keyword)
     {
         $keyword = strtolower($keyword);

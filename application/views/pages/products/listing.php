@@ -65,6 +65,8 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                     }
                     ?>
                 </div>
+
+                <?php $this->load->view("pages/products/pagination"); ?>
             </div>
         </div>
     </div>
