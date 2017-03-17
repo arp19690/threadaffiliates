@@ -19,8 +19,8 @@ class Products extends CI_Controller
         if ($this->input->get("page"))
         {
             $page_num = $this->input->get("page");
-            $limit_start = ($page_num * PAGINATION_LIMIT) + 1;
-            $limit_end = ($page_num * PAGINATION_LIMIT) + PAGINATION_LIMIT;
+            $limit_start = (($page_num - 1) * PAGINATION_LIMIT) + 1;
+            $limit_end = (($page_num - 1) * PAGINATION_LIMIT) + PAGINATION_LIMIT;
             $limit = $limit_start . ", " . $limit_end;
         }
 
