@@ -60,8 +60,13 @@ switch ($type)
                         echo '<div class="dropdown-menu" style="width:992px;"><div class="mega-dropdown-inner"><div class="row">';
                         if (!empty($value["children"]))
                         {
+                            $j = 0;
                             foreach ($value["children"] as $child_value)
                             {
+                                if ($j % 3 == 0)
+                                {
+                                    echo '<div class="clearfix menu-child-wrapper">';
+                                }
                                 ?>
                                 <div class="mega-col-nav col-sm-4">
                                     <div class="mega-inner">
@@ -80,6 +85,11 @@ switch ($type)
                                     </div>
                                 </div>
                                 <?php
+                                $j++;
+                                if ($j % 3 == 0)
+                                {
+                                    echo '</div>';
+                                }
                             }
                         }
                         echo '</div><div class="row"></div></div></div>';

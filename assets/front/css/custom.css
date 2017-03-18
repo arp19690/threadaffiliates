@@ -6,3 +6,5 @@ a.logo-wrapper > img{max-width: 150px;}
 .categories-block{display: inline-block;width: 100%;}
 .product-preview img.second-image{display: none !important;}
 .product-preview:hover img.second-image{display: block !important;}
+.mega-dropdown-inner .menu-child-wrapper{margin-top: 50px;}
+.mega-dropdown-inner .menu-child-wrapper:first-of-type{margin-top: 0;}
