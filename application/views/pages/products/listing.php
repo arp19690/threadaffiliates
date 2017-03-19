@@ -12,7 +12,7 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                 <div class="toolbar filters-panel">
                     <div class="sort-by hidden-xs pull-right">
                         <div class="fillter-row">
-                            <label>Sort by</label>
+                            <label>Sort by :</label>
                             <select name="sort" id="SortBy">
                                 <option value="<?php echo add_get_parameter("sort", "random", current_url()); ?>">Random</option>
                                 <option value="<?php echo add_get_parameter("sort", "most-popular", current_url()); ?>">Most Popular</option>
