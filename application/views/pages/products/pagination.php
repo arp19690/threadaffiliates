@@ -7,7 +7,7 @@
             for ($i = 1; $i <= $total_products_count; $i = $i + PAGINATION_LIMIT)
             {
                 $new_url = add_get_parameter("page", $j, current_url());
-                if (current_url() == $new_url && $j == 1)
+                if (current_url() == $new_url)
                 {
                     echo '<li class="active"><span>' . $j . '</span></li>';
                 }

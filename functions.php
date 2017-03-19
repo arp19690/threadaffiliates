@@ -2,8 +2,9 @@
 
 function add_get_parameter($arg, $value, $current_url)
 {
-    $_GET[$arg] = $value;
-    $new_get_params_str = http_build_query($_GET);
+    $get_params = $_GET;
+    $get_params[$arg] = $value;
+    $new_get_params_str = http_build_query($get_params);
 
     $explode_current_url = explode("?", $current_url);
     $new_url = $explode_current_url[0] . "?" . $new_get_params_str;
