@@ -63,6 +63,7 @@ class AutorunHelper
                             $product_brand = $item_details->ItemAttributes->Brand;
                             $product_color = $item_details->ItemAttributes->Color;
                             $product_url_key = strtolower(get_unique_product_url_key($product_title));
+                            $product_wishlist_url = $item_details->ItemLinks->ItemLink[0]->URL;
 
                             $insert_arr = array(
                                 "product_category_id" => $product_category_id,
@@ -78,6 +79,7 @@ class AutorunHelper
                                 "product_image_url" => addslashes($product_display_image),
                                 "product_images_json" => json_encode(empty($product_other_images) ? array($product_display_image) : array_unique($product_other_images)),
                                 "product_url_key" => $product_url_key,
+                                "product_wishlist_url" => $product_wishlist_url,
                                 "product_status" => "1",
                                 "product_type" => "amazon"
                             );
