@@ -1,5 +1,35 @@
 <?php
 
+function get_orderby_for_category_listing($case)
+{
+    $orderby = "rand()";
+    switch ($case)
+    {
+        case "random":
+            $orderby = "rand()";
+            break;
+        case "most-popular":
+            $orderby = "ps_views DESC";
+            break;
+        case "alpha-asc":
+            $orderby = "product_title ASC";
+            break;
+        case "alpha-desc":
+            $orderby = "product_title DESC";
+            break;
+        case "price-asc":
+            $orderby = "product_price_min ASC";
+            break;
+        case "price-desc":
+            $orderby = "product_price_min DESC";
+            break;
+        default :
+            $orderby = "rand()";
+            break;
+    }
+    return $orderby;
+}
+
 function clean_string($string)
 {
     $string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.

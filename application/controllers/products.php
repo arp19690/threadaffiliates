@@ -15,6 +15,8 @@ class Products extends CI_Controller
     {
         $model = new Common_model();
         $custom_model = new Custom_model();
+
+//        Defining limit for products
         $limit = "0, " . PAGINATION_LIMIT;
         if ($this->input->get("page"))
         {
@@ -23,6 +25,9 @@ class Products extends CI_Controller
             $limit_end = (($page_num - 1) * PAGINATION_LIMIT) + PAGINATION_LIMIT;
             $limit = $limit_start . ", " . $limit_end;
         }
+
+//        Defining orderby for product
+        $order_by = get_orderby_for_category_listing($this->input->get("sort"));
 
         // fetching category_ids from their category_url_key
         $where_cond = array("category_status" => 1, "category_url_key" => $parent_category);
@@ -56,7 +61,7 @@ class Products extends CI_Controller
         if (!empty($product_category_arr))
         {
             $where_str = "product_status = 1 AND product_category_id IN (" . implode(", ", $product_category_arr) . ")";
-            $product_data = $custom_model->get_products_list("p.*", $where_str, "rand()", $limit);
+            $product_data = $custom_model->get_products_list("p.*", $where_str, $order_by, $limit);
             $total_products_count = $custom_model->get_total_products_count($where_str);
         }
 

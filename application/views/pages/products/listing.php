@@ -9,23 +9,21 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                 <?php $this->load->view("pages/products/left-sidebar"); ?>
             </div>
             <div class="col-sm-8 col-md-9 col-lg-9 col-xs-12 content-center">
-<!--                <div class="toolbar filters-panel">
+                <div class="toolbar filters-panel">
                     <div class="sort-by hidden-xs pull-right">
                         <div class="fillter-row">
                             <label>Sort by</label>
                             <select name="SortBy" id="SortBy">
-                                <option value="manual">Featured</option>
-                                <option value="best-selling">Best Selling</option>
-                                <option value="title-ascending">Alphabetically, A-Z</option>
-                                <option value="title-descending">Alphabetically, Z-A</option>
-                                <option value="price-ascending">Price, low to high</option>
-                                <option value="price-descending">Price, high to low</option>
-                                <option value="created-descending">Date, new to old</option>
-                                <option value="created-ascending">Date, old to new</option>
+                                <option value="random">Random</option>
+                                <option value="most-popular">Most Popular</option>
+                                <option value="alpha-asc">Alphabetically, A-Z</option>
+                                <option value="alpha-desc">Alphabetically, Z-A</option>
+                                <option value="price-asc">Price, low to high</option>
+                                <option value="price-desc">Price, high to low</option>
                             </select>
                         </div>
                     </div>
-                </div>-->
+                </div>
                 <div id="products-list" class="grid-mode row products-sidebar">
                     <?php
                     if (!empty($product_data))
