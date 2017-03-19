@@ -46,6 +46,8 @@ $path = $controller . "/" . $action;
         <link rel="canonical" href="<?php echo current_url(); ?>">
         <meta name="theme-color" content="#f45b4f">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="keywords" content="<?php echo $meta_keywords; ?>" />
+        <meta name="description" content="<?php echo $meta_description; ?>" />
         <title><?php echo $meta_title; ?></title>
 
         <!-- Social meta ================================================== -->

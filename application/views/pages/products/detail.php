@@ -72,7 +72,7 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                                 if (!empty($product_data["product_wishlist_url"]))
                                 {
                                     ?>
-                                    <p class="add-to-wish"><a href="<?php echo $product_data["product_wishlist_url"]; ?>" title="Add to wishlist" target="_blank"><span class="jmsf jmsf-heart-1"></span>&nbsp;Add to wishlist</a></p>
+                                <p class="add-to-wish"><a href="<?php echo $product_data["product_wishlist_url"]; ?>" title="Add to wishlist" target="_blank" rel="nofollow"><span class="jmsf jmsf-heart-1"></span>&nbsp;Add to wishlist</a></p>
                                     <?php
                                 }
                                 ?>
