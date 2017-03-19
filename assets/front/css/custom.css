@@ -2,7 +2,12 @@
 .product-preview .preview > a{display: inline-block;overflow: hidden;height: 240px;}
 .product-info .product-title{text-overflow: ellipsis;word-wrap: break-word;overflow: hidden;max-height: 3.6em;}
 .product-preview .preview > a > img{max-height: 100%;width: auto;}
-a.logo-wrapper > img{max-width: 150px;}
+a.logo-wrapper > img{max-width: 180px;}
 .categories-block{display: inline-block;width: 100%;}
 .product-preview img.second-image{display: none !important;}
 .product-preview:hover img.second-image{display: block !important;}
+.mega-dropdown-inner .menu-child-wrapper{margin-top: 50px;}
+.mega-dropdown-inner .menu-child-wrapper:first-of-type{margin-top: 0;}
+.wrapper-label{color: #ffffff;left: 0;position: absolute;top: 0;z-index: 2;padding: 0 8px;font-size: 12px;}
+.wrapper-label.amazon{background-color: #E65631;}
+.wrapper-label.flipkart{background-color: #2874F0;}

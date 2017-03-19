@@ -50,7 +50,10 @@ class AutorunHelper
                             $product_other_images = array();
                             foreach ($item_details->ImageSets->ImageSet as $img_value)
                             {
-                                $product_other_images[] = $img_value->LargeImage->URL;
+                                if (isset($img_value->LargeImage))
+                                {
+                                    $product_other_images[] = $img_value->LargeImage->URL;
+                                }
                             }
                             $product_price_min = $item_details->OfferSummary->LowestNewPrice->Amount / 100;
                             $product_price_max = $item_details->ItemAttributes->ListPrice->Amount / 100;
@@ -60,6 +63,7 @@ class AutorunHelper
                             $product_brand = $item_details->ItemAttributes->Brand;
                             $product_color = $item_details->ItemAttributes->Color;
                             $product_url_key = strtolower(get_unique_product_url_key($product_title));
+                            $product_wishlist_url = $item_details->ItemLinks->ItemLink[0]->URL;
 
                             $insert_arr = array(
                                 "product_category_id" => $product_category_id,
@@ -73,8 +77,9 @@ class AutorunHelper
                                 "product_discount_percent" => floatval($product_discount_percent),
                                 "product_url_long" => addslashes($product_url_long),
                                 "product_image_url" => addslashes($product_display_image),
-                                "product_images_json" => empty($product_other_images) ? NULL : json_encode($product_other_images),
+                                "product_images_json" => json_encode(empty($product_other_images) ? array($product_display_image) : array_unique($product_other_images)),
                                 "product_url_key" => $product_url_key,
+                                "product_wishlist_url" => $product_wishlist_url,
                                 "product_status" => "1",
                                 "product_type" => "amazon"
                             );

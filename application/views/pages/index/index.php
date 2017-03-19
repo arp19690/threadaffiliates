@@ -24,7 +24,7 @@
                                         <a href="<?php echo base_url("p/" . stripslashes($value["product_url_key"])); ?>">
                                             <img src="<?php echo $value['product_image_url']; ?>" data-original="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class=" img-responsive lazy">
                                         </a>
-                                        <div class="wrapper-label"></div>
+                                        <div class="wrapper-label <?php echo strtolower($value["product_type"]); ?>"><?php echo ucwords($value["product_type"]); ?></div>
                                     </div> 
                                     <div class="product-info clearfix">
                                         <a class="product-title" href="<?php echo base_url("p/" . stripslashes($value["product_url_key"])); ?>"><?php echo stripslashes($value["product_title"]); ?></a>
@@ -119,7 +119,7 @@
                                                                 <img src="<?php echo $value['product_image_url']; ?>" data-original="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="first-image img-responsive lazy">
                                                                 <img src="<?php echo $value['product_image_url']; ?>" data-original="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="second-img img-responsive lazy" />
                                                             </a>
-                                                            <div class="wrapper-label"></div>
+                                                            <div class="wrapper-label <?php echo strtolower($value["product_type"]); ?>"><?php echo ucwords($value["product_type"]); ?></div>
                                                         </div> 
 
                                                         <div class="product-info clearfix">
@@ -146,7 +146,7 @@
                                                                 <img src="<?php echo $value['product_image_url']; ?>" data-original="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="first-image img-responsive lazy">
                                                                 <img src="<?php echo $value['product_image_url']; ?>" data-original="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="second-img img-responsive lazy" />
                                                             </a>
-                                                            <div class="wrapper-label"></div>
+                                                            <div class="wrapper-label <?php echo strtolower($value["product_type"]); ?>"><?php echo ucwords($value["product_type"]); ?></div>
                                                         </div> 
 
                                                         <div class="product-info clearfix">
@@ -173,7 +173,7 @@
                                                                 <img src="<?php echo $value['product_image_url']; ?>" data-original="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="first-image img-responsive lazy">
                                                                 <img src="<?php echo $value['product_image_url']; ?>" data-original="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="second-img img-responsive lazy" />
                                                             </a>
-                                                            <div class="wrapper-label"></div>
+                                                            <div class="wrapper-label <?php echo strtolower($value["product_type"]); ?>"><?php echo ucwords($value["product_type"]); ?></div>
                                                         </div> 
 
                                                         <div class="product-info clearfix">

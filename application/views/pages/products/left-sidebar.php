@@ -4,7 +4,7 @@ $menu_data = $custom_model->create_menu();
 ?>
 
 <div class="">
-    <div class="banner-left-sidebar hidden-xs"><?php echo get_google_ad(); ?></div>
+    <div class="banner-left-sidebar visible-xs"><?php echo get_google_ad(); ?></div>
 
     <div class="block categories-block hidden-xs">
         <h3 class="block-title">Categories<span class="layered_close"></span></h3>
@@ -88,5 +88,4 @@ $menu_data = $custom_model->create_menu();
             </div>
         </div>-->
 
-    <div class="banner-left-sidebar"><?php echo get_google_ad(); ?></div>
 </div>

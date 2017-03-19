@@ -147,14 +147,27 @@ class Custom_model extends CI_Model
         return $menu_data;
     }
 
-    public function get_products_list($fields = "p.*", $where_str = "product_status = 1")
+    public function get_products_list($fields = "p.*", $where_str = "product_status = 1", $order_by = "rand()", $limit = NULL)
     {
         $sql = "SELECT " . $fields . " FROM " . TABLE_PRODUCTS . " as p "
                 . "INNER JOIN " . TABLE_CATEGORIES . " as c on c.category_id = p.product_category_id "
-                . "WHERE " . $where_str
-        ;
+                . "WHERE " . $where_str . " ORDER BY " . $order_by;
+
+        if ($limit != NULL)
+        {
+            $sql.=" LIMIT " . $limit;
+        }
         $records = $this->db->query($sql)->result_array();
         return $records;
+    }
+
+    public function get_total_products_count($where_str)
+    {
+        $sql = "SELECT count(p.product_id) as totalcount FROM " . TABLE_PRODUCTS . " as p "
+                . "INNER JOIN " . TABLE_CATEGORIES . " as c on c.category_id = p.product_category_id "
+                . "WHERE " . $where_str;
+        $records = $this->db->query($sql)->result_array();
+        return $records[0]["totalcount"];
     }
 
     public function search_keyword($keyword)

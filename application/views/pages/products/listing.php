@@ -9,7 +9,7 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                 <?php $this->load->view("pages/products/left-sidebar"); ?>
             </div>
             <div class="col-sm-8 col-md-9 col-lg-9 col-xs-12 content-center">
-                <div class="toolbar filters-panel">
+<!--                <div class="toolbar filters-panel">
                     <div class="sort-by hidden-xs pull-right">
                         <div class="fillter-row">
                             <label>Sort by</label>
@@ -25,7 +25,7 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                             </select>
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <div id="products-list" class="grid-mode row products-sidebar">
                     <?php
                     if (!empty($product_data))
@@ -40,7 +40,7 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                                             <img src="<?php echo $value["product_image_url"]; ?>" data-original="<?php echo $value["product_image_url"]; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="first-image img-responsive lazy">
                                             <img src="<?php echo $value["product_image_url"]; ?>" data-original="<?php echo $value["product_image_url"]; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="second-img img-responsive lazy" />
                                         </a>
-                                        <div class="wrapper-label"></div>
+                                        <div class="wrapper-label <?php echo strtolower($value["product_type"]); ?>"><?php echo ucwords($value["product_type"]); ?></div>
                                     </div> 
 
                                     <div class="product-info clearfix">
@@ -65,6 +65,8 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                     }
                     ?>
                 </div>
+
+                <?php $this->load->view("pages/products/pagination"); ?>
             </div>
         </div>
     </div>

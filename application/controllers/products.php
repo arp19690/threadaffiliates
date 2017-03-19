@@ -15,6 +15,14 @@ class Products extends CI_Controller
     {
         $model = new Common_model();
         $custom_model = new Custom_model();
+        $limit = "0, " . PAGINATION_LIMIT;
+        if ($this->input->get("page"))
+        {
+            $page_num = $this->input->get("page");
+            $limit_start = (($page_num - 1) * PAGINATION_LIMIT) + 1;
+            $limit_end = (($page_num - 1) * PAGINATION_LIMIT) + PAGINATION_LIMIT;
+            $limit = $limit_start . ", " . $limit_end;
+        }
 
         // fetching category_ids from their category_url_key
         $where_cond = array("category_status" => 1, "category_url_key" => $parent_category);
@@ -44,10 +52,12 @@ class Products extends CI_Controller
         }
 
         $product_data = array();
+        $total_products_count = 0;
         if (!empty($product_category_arr))
         {
             $where_str = "product_status = 1 AND product_category_id IN (" . implode(", ", $product_category_arr) . ")";
-            $product_data = $custom_model->get_products_list("p.*", $where_str);
+            $product_data = $custom_model->get_products_list("p.*", $where_str, "rand()", $limit);
+            $total_products_count = $custom_model->get_total_products_count($where_str);
         }
 
         // now we render the data here
@@ -57,6 +67,7 @@ class Products extends CI_Controller
         $data['meta_title'] = $data["page_title"];
         $data['breadcrumb'] = $breadcrumb;
         $data['product_data'] = $product_data;
+        $data['total_products_count'] = $total_products_count;
         $this->template->write_view("content", "pages/products/listing", $data);
         $this->template->render();
     }
@@ -66,7 +77,7 @@ class Products extends CI_Controller
         $model = new Common_model();
         $custom_model = new Custom_model();
         // fetching products with status 1 and other relevant where condition
-        $fetch_fields = "product_id, product_image_url, product_title, product_price_min, product_images_json, product_unique_code, product_description, product_url_key, product_category_id,product_type";
+        $fetch_fields = "product_id, product_image_url, product_title, product_price_min, product_images_json, product_unique_code, product_description, product_url_key, product_category_id,product_type, product_wishlist_url";
         $product_where_cond = array("product_status" => 1, "category_status" => 1, "product_url_key" => $product_url_key);
         $product_data = $model->getAllDataFromJoin($fetch_fields, TABLE_PRODUCTS . " as p", array(TABLE_CATEGORIES . " as c" => "c.category_id = p.product_category_id"), "INNER", $product_where_cond);
         if (!empty($product_data))
@@ -76,7 +87,7 @@ class Products extends CI_Controller
             $product_data = $product_data[0];
             $breadcrumb = $custom_model->create_breadcrumb($product_data['product_id']);
 
-            $fetch_fields = "product_id, product_image_url, product_title, product_price_min, product_url_key";
+            $fetch_fields = "product_id, product_image_url, product_title, product_price_min, product_url_key, product_type";
             $related_products = $model->fetchSelectedData($fetch_fields, TABLE_PRODUCTS, array("product_status" => 1, "product_id !=" => $product_data["product_id"], "product_category_id" => $product_data["product_category_id"]), "product_id", "rand()", "0,8");
 
             $page_title = stripslashes($product_data["product_title"]) . " - " . SITE_NAME;
@@ -122,20 +133,23 @@ class Products extends CI_Controller
 
     public function buynow($product_url_key)
     {
+        echo '<p style="width:100%;margin-top:50px;font-family:sans-serif;font-size:20px;text-align:center;">Loading....</p>';
         $model = new Common_model();
         $product_data = $model->fetchSelectedData("product_id, product_url_long", TABLE_PRODUCTS, array("product_url_key" => $product_url_key));
         if (!empty($product_data))
         {
-            echo '<p style="width:100%;margin-top:50px;font-family:sans-serif;font-size:18px;text-align:center;">Loading....</p>';
-            $product_id = $product_data[0]["product_id"];
-            $is_exists = $model->fetchSelectedData("ps_id, ps_clicks", TABLE_PRODUCTS_STATS, array("ps_product_id" => $product_id));
-            if (empty($is_exists))
+            if (!isset($this->session->userdata["admin_id"]))
             {
-                $model->insertData(TABLE_PRODUCTS_STATS, array("ps_product_id" => $product_id, "ps_clicks" => "1"));
-            }
-            else
-            {
-                $model->updateData(TABLE_PRODUCTS_STATS, array("ps_clicks" => $is_exists[0]["ps_clicks"] + 1), array("ps_product_id" => $product_id, "ps_id" => $is_exists[0]["ps_id"]));
+                $product_id = $product_data[0]["product_id"];
+                $is_exists = $model->fetchSelectedData("ps_id, ps_clicks", TABLE_PRODUCTS_STATS, array("ps_product_id" => $product_id));
+                if (empty($is_exists))
+                {
+                    $model->insertData(TABLE_PRODUCTS_STATS, array("ps_product_id" => $product_id, "ps_clicks" => "1"));
+                }
+                else
+                {
+                    $model->updateData(TABLE_PRODUCTS_STATS, array("ps_clicks" => $is_exists[0]["ps_clicks"] + 1), array("ps_product_id" => $product_id, "ps_id" => $is_exists[0]["ps_id"]));
+                }
             }
 
             redirect($product_data[0]["product_url_long"]);

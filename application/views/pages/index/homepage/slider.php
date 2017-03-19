@@ -8,7 +8,7 @@
                 <div class="responisve-container">
                     <div class="slider" >
                         <div class="fs_loader"></div>
-                        <div class="slide slideshow__slide slideshow__slide--1479870870856-0" style="background:url(<?php echo IMAGES_PATH; ?>/sliders/1.jpg) no-repeat left top;background-size:cover;">
+                        <div class="slide slideshow__slide slideshow__slide--1479870870856-0" style="background:url(<?php echo IMAGES_PATH; ?>/sliders/6.jpg) no-repeat left top;background-size:cover;">
                             <div class="jms-slide-content slide-heading" 					
                                  data-position="355,190" 
                                  data-fontsize = "70"					
@@ -40,9 +40,9 @@
                             </div>
                         </div> 
 
-                        <div class="slide slideshow__slide slideshow__slide--1479870870856-1" style="background:url(<?php echo IMAGES_PATH; ?>/sliders/2.jpg) no-repeat left top;background-size:cover;">
+                        <div class="slide slideshow__slide slideshow__slide--1479870870856-1" style="background:url(<?php echo IMAGES_PATH; ?>/sliders/3.jpg) no-repeat left top;background-size:cover;">
                             <div class="jms-slide-content slide-heading" 					
-                                 data-position="355,1060" 
+                                 data-position="355,150" 
                                  data-fontsize = "70"					
                                  data-in="bottom" 
                                  data-out="fade" 
@@ -52,12 +52,12 @@
                                  data-step="0" 
                                  data-special="0"
                                  data-time = "2500"
-                                 style="font-size:70px; color:#ffffff;"					
-                                 >2017 Special
+                                 style="font-size:70px; color:#000000;"					
+                                 ><?php echo date("Y"); ?> Special
                             </div>
 
                             <div class="jms-slide-content slide-text slide-text-1" 					
-                                 data-position="290,1300" 
+                                 data-position="290,150" 
                                  data-fontsize = "25"					
                                  data-in="bottom" 
                                  data-out="fade" 
@@ -67,7 +67,7 @@
                                  data-step="0" 
                                  data-special="0"
                                  data-time = "2000"
-                                 style="font-size:25px; color:#ffffff;"					
+                                 style="font-size:25px; color:#000000;"					
                                  >FASHION TRENDS
                             </div>
                         </div> 
