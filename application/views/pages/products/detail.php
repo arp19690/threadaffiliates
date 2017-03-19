@@ -9,8 +9,9 @@
     .quantity-cart .actions{float: none;}
     .quantity-cart .actions > a{min-width: 170px;}
     .quantity-cart .actions:first-of-type{margin-bottom: 10px;}
-    .quantity-cart{min-height: 150px;}
+    .quantity-cart{min-height: 185px;}
     .content-aside{padding-right: 45px;}
+    .add-to-wish{margin-left: 20px;margin-bottom: 20px;}
 </style>
 
 <?php
@@ -67,6 +68,15 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                             </div> 
                             <div class="short-description"><p><?php echo stripslashes($product_data["product_description"]); ?></p></div>
                             <div class="quantity-cart">
+                                <?php
+                                if (!empty($product_data["product_wishlist_url"]))
+                                {
+                                    ?>
+                                    <p class="add-to-wish"><a href="<?php echo $product_data["product_wishlist_url"]; ?>" title="Add to wishlist" target="_blank"><span class="jmsf jmsf-heart-1"></span>&nbsp;Add to wishlist</a></p>
+                                    <?php
+                                }
+                                ?>
+
                                 <div class="actions">
                                     <a rel="nofollow" href="<?php echo base_url("buy-now/" . $product_data["product_url_key"]); ?>" target="_blank" class="btn add-to-cart-btn cart-button">View Details</a>
                                 </div>
@@ -75,7 +85,7 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                                     <a rel="nofollow" href="<?php echo base_url("buy-now/" . $product_data["product_url_key"]); ?>" target="_blank" class="btn add-to-cart-btn cart-button">Add to cart</a>
                                     <p class="product-type text-center"><small>on <?php echo ucwords($product_data["product_type"]); ?></small></p>
                                 </div>
-                            </div>    
+                            </div>   
 
                             <div class="clearfix">
                                 <div class="actions">
