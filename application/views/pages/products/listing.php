@@ -9,7 +9,7 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                 <?php $this->load->view("pages/products/left-sidebar"); ?>
             </div>
             <div class="col-sm-8 col-md-9 col-lg-9 col-xs-12 content-center">
-                <div class="toolbar filters-panel">
+<!--                <div class="toolbar filters-panel">
                     <div class="sort-by hidden-xs pull-right">
                         <div class="fillter-row">
                             <label>Sort by</label>
@@ -25,7 +25,7 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                             </select>
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <div id="products-list" class="grid-mode row products-sidebar">
                     <?php
                     if (!empty($product_data))
