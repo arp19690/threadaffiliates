@@ -6,26 +6,8 @@
             $j = 1;
             for ($i = 1; $i <= $total_products_count; $i = $i + PAGINATION_LIMIT)
             {
-                $parsed_url = parse_url(current_url());
-                $new_url = $parsed_url["scheme"] . "://" . $parsed_url["host"] . $parsed_url["path"];
-
-                $exploded_query = array();
-                if (isset($parsed_url["query"]))
-                {
-                    $exploded_query = explode("&", $parsed_url["query"]);
-                    foreach ($exploded_query as $ekey => $evalue)
-                    {
-                        $tmpexplode = explode("=", $evalue);
-                        if ($tmpexplode[0] == "page")
-                        {
-                            unset($exploded_query[$ekey]);
-                        }
-                    }
-                }
-                array_push($exploded_query, "page=" . $j);
-                $new_url .= "?" . implode("&", $exploded_query);
-
-                if (current_url() == $new_url || (current_url() == $parsed_url["scheme"] . "://" . $parsed_url["host"] . $parsed_url["path"] && $j == 1))
+                $new_url = add_get_parameter("page", $j, current_url());
+                if (current_url() == $new_url && $j == 1)
                 {
                     echo '<li class="active"><span>' . $j . '</span></li>';
                 }
