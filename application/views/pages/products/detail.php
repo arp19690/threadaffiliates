@@ -135,8 +135,6 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                     </div>    
                 </div>
 
-                <div class="clearfix g-ad"><?php echo get_google_ad(); ?></div>
-
                 <script type="text/javascript">
                     jQuery(function ($) {
                         "use strict";
