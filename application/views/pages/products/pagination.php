@@ -6,8 +6,9 @@
             $j = 1;
             for ($i = 1; $i <= $total_products_count; $i = $i + PAGINATION_LIMIT)
             {
+                $parsed_url = parse_url(current_url());
                 $new_url = add_get_parameter("page", $j, current_url());
-                if (current_url() == $new_url)
+                if (current_url() == $new_url || (current_url() == $parsed_url["scheme"] . "://" . $parsed_url["host"] . $parsed_url["path"] && $j == 1))
                 {
                     echo '<li class="active"><span>' . $j . '</span></li>';
                 }
