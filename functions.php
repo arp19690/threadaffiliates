@@ -1,5 +1,15 @@
 <?php
 
+function add_get_parameter($arg, $value, $current_url)
+{
+    $_GET[$arg] = $value;
+    $new_get_params_str = http_build_query($_GET);
+
+    $explode_current_url = explode("?", $current_url);
+    $new_url = $explode_current_url[0] . "?" . $new_get_params_str;
+    return $new_url;
+}
+
 function get_orderby_for_category_listing($case)
 {
     $orderby = "rand()";

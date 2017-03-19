@@ -151,7 +151,8 @@ class Custom_model extends CI_Model
     {
         $sql = "SELECT " . $fields . " FROM " . TABLE_PRODUCTS . " as p "
                 . "INNER JOIN " . TABLE_CATEGORIES . " as c on c.category_id = p.product_category_id "
-                . "WHERE " . $where_str . " ORDER BY " . $order_by;
+                . "LEFT JOIN product_stats as ps on ps.ps_product_id = p.product_id "
+                . "WHERE " . $where_str . " GROUP BY p.product_id ORDER BY " . $order_by;
 
         if ($limit != NULL)
         {

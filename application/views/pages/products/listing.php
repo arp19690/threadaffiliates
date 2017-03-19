@@ -13,13 +13,13 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                     <div class="sort-by hidden-xs pull-right">
                         <div class="fillter-row">
                             <label>Sort by</label>
-                            <select name="SortBy" id="SortBy">
-                                <option value="random">Random</option>
-                                <option value="most-popular">Most Popular</option>
-                                <option value="alpha-asc">Alphabetically, A-Z</option>
-                                <option value="alpha-desc">Alphabetically, Z-A</option>
-                                <option value="price-asc">Price, low to high</option>
-                                <option value="price-desc">Price, high to low</option>
+                            <select name="sort" id="SortBy">
+                                <option value="<?php echo add_get_parameter("sort", "random", current_url()); ?>">Random</option>
+                                <option value="<?php echo add_get_parameter("sort", "most-popular", current_url()); ?>">Most Popular</option>
+                                <option value="<?php echo add_get_parameter("sort", "alpha-asc", current_url()); ?>">Alphabetically, A-Z</option>
+                                <option value="<?php echo add_get_parameter("sort", "alpha-desc", current_url()); ?>">Alphabetically, Z-A</option>
+                                <option value="<?php echo add_get_parameter("sort", "price-asc", current_url()); ?>">Price, low to high</option>
+                                <option value="<?php echo add_get_parameter("sort", "price-desc", current_url()); ?>">Price, high to low</option>
                             </select>
                         </div>
                     </div>
@@ -70,28 +70,14 @@ echo isset($breadcrumb) ? $breadcrumb : "";
     </div>
 </div>
 
-<script>
-    /*============================================================================
-     Inline JS because collection liquid object is only available
-     on collection pages, and not external JS files
-     ==============================================================================*/
-    Threadcrafts.queryParams = {};
-    if (location.search.length) {
-        for (var aKeyValue, i = 0, aCouples = location.search.substr(1).split('&'); i < aCouples.length; i++) {
-            aKeyValue = aCouples[i].split('=');
-            if (aKeyValue.length > 1) {
-                Threadcrafts.queryParams[decodeURIComponent(aKeyValue[0])] = decodeURIComponent(aKeyValue[1]);
-            }
-        }
-    }
+<script type="text/javascript">
+    $('#SortBy').change(function () {
+        var new_url = $(this).val();
+        window.location.href = new_url;
+    });
 
-    $(function () {
-        $('#SortBy')
-                .val('title-ascending')
-                .bind('change', function () {
-                    Threadcrafts.queryParams.sort_by = jQuery(this).val();
-                    location.search = jQuery.param(Threadcrafts.queryParams);
-                }
-                );
+    $(document).ready(function () {
+        var current_url = '<?php echo current_url(); ?>';
+        $('#SortBy option[value="' + current_url + '"]').attr("selected", "selected");
     });
 </script>
