@@ -54,19 +54,19 @@ function create_category_select_option($data, $i = 0, $selected_category_id = NU
     return $str;
 }
 
-function custom_parse_url($url, $utm_source_code = UTM_SOURCE_CODE)
+function custom_parse_url($url, $append = UTM_SOURCE_CODE)
 {
     $parsed_url = parse_url($url);
 
     if (isset($parsed_url['query']))
     {
         // Has query params
-        $url = $url . '&' . $utm_source_code;
+        $url = $url . '&' . $append;
     }
     else
     {
         // Has no query params
-        $url = $url . '?' . $utm_source_code;
+        $url = $url . '?' . $append;
     }
     return $url;
 }
