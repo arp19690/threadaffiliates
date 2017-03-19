@@ -9,23 +9,21 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                 <?php $this->load->view("pages/products/left-sidebar"); ?>
             </div>
             <div class="col-sm-8 col-md-9 col-lg-9 col-xs-12 content-center">
-<!--                <div class="toolbar filters-panel">
+                <div class="toolbar filters-panel">
                     <div class="sort-by hidden-xs pull-right">
                         <div class="fillter-row">
                             <label>Sort by</label>
-                            <select name="SortBy" id="SortBy">
-                                <option value="manual">Featured</option>
-                                <option value="best-selling">Best Selling</option>
-                                <option value="title-ascending">Alphabetically, A-Z</option>
-                                <option value="title-descending">Alphabetically, Z-A</option>
-                                <option value="price-ascending">Price, low to high</option>
-                                <option value="price-descending">Price, high to low</option>
-                                <option value="created-descending">Date, new to old</option>
-                                <option value="created-ascending">Date, old to new</option>
+                            <select name="sort" id="SortBy">
+                                <option value="<?php echo add_get_parameter("sort", "random", current_url()); ?>">Random</option>
+                                <option value="<?php echo add_get_parameter("sort", "most-popular", current_url()); ?>">Most Popular</option>
+                                <option value="<?php echo add_get_parameter("sort", "alpha-asc", current_url()); ?>">Alphabetically, A-Z</option>
+                                <option value="<?php echo add_get_parameter("sort", "alpha-desc", current_url()); ?>">Alphabetically, Z-A</option>
+                                <option value="<?php echo add_get_parameter("sort", "price-asc", current_url()); ?>">Price, low to high</option>
+                                <option value="<?php echo add_get_parameter("sort", "price-desc", current_url()); ?>">Price, high to low</option>
                             </select>
                         </div>
                     </div>
-                </div>-->
+                </div>
                 <div id="products-list" class="grid-mode row products-sidebar">
                     <?php
                     if (!empty($product_data))
@@ -72,28 +70,14 @@ echo isset($breadcrumb) ? $breadcrumb : "";
     </div>
 </div>
 
-<script>
-    /*============================================================================
-     Inline JS because collection liquid object is only available
-     on collection pages, and not external JS files
-     ==============================================================================*/
-    Threadcrafts.queryParams = {};
-    if (location.search.length) {
-        for (var aKeyValue, i = 0, aCouples = location.search.substr(1).split('&'); i < aCouples.length; i++) {
-            aKeyValue = aCouples[i].split('=');
-            if (aKeyValue.length > 1) {
-                Threadcrafts.queryParams[decodeURIComponent(aKeyValue[0])] = decodeURIComponent(aKeyValue[1]);
-            }
-        }
-    }
+<script type="text/javascript">
+    $('#SortBy').change(function () {
+        var new_url = $(this).val();
+        window.location.href = new_url;
+    });
 
-    $(function () {
-        $('#SortBy')
-                .val('title-ascending')
-                .bind('change', function () {
-                    Threadcrafts.queryParams.sort_by = jQuery(this).val();
-                    location.search = jQuery.param(Threadcrafts.queryParams);
-                }
-                );
+    $(document).ready(function () {
+        var current_url = '<?php echo current_url(); ?>';
+        $('#SortBy option[value="' + current_url + '"]').attr("selected", "selected");
     });
 </script>

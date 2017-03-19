@@ -1,5 +1,46 @@
 <?php
 
+function add_get_parameter($arg, $value, $current_url)
+{
+    $get_params = $_GET;
+    $get_params[$arg] = $value;
+    $new_get_params_str = http_build_query($get_params);
+
+    $explode_current_url = explode("?", $current_url);
+    $new_url = $explode_current_url[0] . "?" . $new_get_params_str;
+    return $new_url;
+}
+
+function get_orderby_for_category_listing($case)
+{
+    $orderby = "rand()";
+    switch ($case)
+    {
+        case "random":
+            $orderby = "rand()";
+            break;
+        case "most-popular":
+            $orderby = "ps_views DESC";
+            break;
+        case "alpha-asc":
+            $orderby = "product_title ASC";
+            break;
+        case "alpha-desc":
+            $orderby = "product_title DESC";
+            break;
+        case "price-asc":
+            $orderby = "product_price_min ASC";
+            break;
+        case "price-desc":
+            $orderby = "product_price_min DESC";
+            break;
+        default :
+            $orderby = "rand()";
+            break;
+    }
+    return $orderby;
+}
+
 function clean_string($string)
 {
     $string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.
@@ -24,19 +65,19 @@ function create_category_select_option($data, $i = 0, $selected_category_id = NU
     return $str;
 }
 
-function custom_parse_url($url, $utm_source_code = UTM_SOURCE_CODE)
+function custom_parse_url($url, $append = UTM_SOURCE_CODE)
 {
     $parsed_url = parse_url($url);
 
     if (isset($parsed_url['query']))
     {
         // Has query params
-        $url = $url . '&' . $utm_source_code;
+        $url = $url . '&' . $append;
     }
     else
     {
         // Has no query params
-        $url = $url . '?' . $utm_source_code;
+        $url = $url . '?' . $append;
     }
     return $url;
 }
