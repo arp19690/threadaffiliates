@@ -10,7 +10,7 @@ if (!isset($meta_description))
 
 if (!isset($meta_logo_image))
 {
-    $meta_logo_image = IMAGES_PATH . "/logo.png";
+    $meta_logo_image = IMAGES_PATH . "/logo-name.png";
     $og_image_arr = array(
         IMAGES_PATH . "/og-images/og-image1.jpg",
         IMAGES_PATH . "/og-images/og-image2.jpg",
@@ -122,7 +122,7 @@ $path = $controller . "/" . $action;
                                     <div class="layout-column col-lg-2 col-md-2 col-sm-12 col-xs-12 navbar-logo pull-left">
                                         <div class="addon-box">
                                             <a href="<?php echo base_url(); ?>" class="logo-wrapper">
-                                                <img src="<?php echo IMAGES_PATH . "/logo.png" ?>" alt="<?php echo SITE_NAME; ?>" width="150">
+                                                <img src="<?php echo IMAGES_PATH; ?>/logo-name.png" alt="<?php echo SITE_NAME; ?>" width="180">
                                             </a>
                                         </div>
                                     </div>

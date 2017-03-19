@@ -53,7 +53,7 @@
                                  data-special="0"
                                  data-time = "2500"
                                  style="font-size:70px; color:#000000;"					
-                                 >2017 Special
+                                 ><?php echo date("Y"); ?> Special
                             </div>
 
                             <div class="jms-slide-content slide-text slide-text-1" 					
