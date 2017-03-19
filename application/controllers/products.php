@@ -87,7 +87,7 @@ class Products extends CI_Controller
             $product_data = $product_data[0];
             $breadcrumb = $custom_model->create_breadcrumb($product_data['product_id']);
 
-            $fetch_fields = "product_id, product_image_url, product_title, product_price_min, product_url_key";
+            $fetch_fields = "product_id, product_image_url, product_title, product_price_min, product_url_key, product_type";
             $related_products = $model->fetchSelectedData($fetch_fields, TABLE_PRODUCTS, array("product_status" => 1, "product_id !=" => $product_data["product_id"], "product_category_id" => $product_data["product_category_id"]), "product_id", "rand()", "0,8");
 
             $page_title = stripslashes($product_data["product_title"]) . " - " . SITE_NAME;

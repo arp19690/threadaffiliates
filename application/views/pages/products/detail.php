@@ -118,7 +118,7 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                                             <img src="<?php echo $rvalue["product_image_url"]; ?>" data-original="<?php echo $rvalue["product_image_url"]; ?>" alt="<?php echo stripslashes($rvalue["product_title"]); ?>" class="first-image img-responsive lazy">
                                             <img src="<?php echo $rvalue["product_image_url"]; ?>" data-original="<?php echo $rvalue["product_image_url"]; ?>" alt="<?php echo stripslashes($rvalue["product_title"]); ?>" class="second-img img-responsive lazy" />
                                         </a>
-                                        <div class="wrapper-label <?php echo strtolower($value["product_type"]); ?>"><?php echo ucwords($value["product_type"]); ?></div>
+                                        <div class="wrapper-label <?php echo strtolower($rvalue["product_type"]); ?>"><?php echo ucwords($rvalue["product_type"]); ?></div>
                                     </div> 
 
                                     <div class="product-info clearfix">
