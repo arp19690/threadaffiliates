@@ -106,9 +106,22 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                 </div>   
             </div>
 
-            <div class="row">
-                <div class="short-description"><p><?php echo stripslashes($product_data["product_description"]); ?></p></div>
-            </div>
+            <?php
+            if (!empty($product_data["product_description"]))
+            {
+                $product_description = str_replace("Product Description", "", stripslashes($product_data["product_description"]));
+                ?>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="short-description">
+                            <h3>Description:</h3>
+                            <p><?php echo $product_description; ?></p>
+                        </div>
+                    </div>
+                </div>
+                <?php
+            }
+            ?>
 
             <div class="clearfix g-ad"><?php echo get_google_ad(); ?></div>
 
