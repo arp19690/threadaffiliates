@@ -24,4 +24,16 @@ class AmazonHelper
         return $response;
     }
 
+    public function get_product_description($product_unique_code)
+    {
+        require_once(APPPATH . "libraries/simple_html_dom.php");
+        $html = new simple_html_dom();
+        $content = file_get_contents("http://www.amazon.in/dp/" . $product_unique_code);
+        $html->load($content);
+
+        $element = $html->find("div#descriptionAndDetails #productDescription", 0);
+        $description = trim($element->innertext);
+        return $description;
+    }
+
 }

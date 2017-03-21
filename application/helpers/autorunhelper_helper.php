@@ -204,6 +204,19 @@ class AutorunHelper
         echo "Successfully disabled products with blank images.\n";
     }
 
+    public function find_blank_descriptions()
+    {
+        $amazon_helper = new AmazonHelper();
+        $model = new Common_model();
+        $data = $model->fetchSelectedData("product_id, product_unique_code", TABLE_PRODUCTS, array("product_description" => NULL));
+        foreach ($data as $value)
+        {
+            $description = addslashes($amazon_helper->get_product_description($value["product_unique_code"]));
+            $model->updateData(TABLE_PRODUCTS, array("product_description" => $description), array("product_id" => $value["product_id"], "product_unique_code" => $value["product_unique_code"]));
+        }
+        echo "Successfully added descriptions for products.\n";
+    }
+
     public function store_product_views($product_id)
     {
         $model = new Common_model();

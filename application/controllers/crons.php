@@ -92,4 +92,10 @@ class Crons extends CI_Controller
         die;
     }
 
+    public function update_product_descriptions()
+    {
+        $autorun_helper = new AutorunHelper();
+        $autorun_helper->find_blank_descriptions();
+    }
+
 }
