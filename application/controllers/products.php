@@ -91,6 +91,8 @@ class Products extends CI_Controller
             $data = array();
             $product_data = $product_data[0];
             $breadcrumb = $custom_model->create_breadcrumb($product_data['product_id']);
+            $meta_description = getNWordsFromString(preg_replace('/\s+/', ' ', trim(strip_tags($product_data["product_description"]))), 50);
+            $meta_description = str_replace("Product Description", "", $meta_description);
 
             $fetch_fields = "product_id, product_image_url, product_title, product_price_min, product_url_key, product_type";
             $related_products = $model->fetchSelectedData($fetch_fields, TABLE_PRODUCTS, array("product_status" => 1, "product_id !=" => $product_data["product_id"], "product_category_id" => $product_data["product_category_id"]), "product_id", "rand()", "0,8");
@@ -99,6 +101,7 @@ class Products extends CI_Controller
             $data["page_title"] = $page_title;
             $data['meta_title'] = $data["page_title"];
             $data['breadcrumb'] = $breadcrumb;
+            $data['meta_description'] = $meta_description;
             $data['meta_og_type'] = "product";
             $data['meta_price_amount'] = $product_data["product_price_min"];
             $data['meta_logo_image'] = $product_data["product_image_url"];

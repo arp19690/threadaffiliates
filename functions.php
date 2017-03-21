@@ -159,7 +159,7 @@ function goBack($steps = '1')
     return 'javascript:history.go(-' . $steps . ');';
 }
 
-function getNWordsFromString($text, $numberOfWords = 20)
+function getNWordsFromString($text, $numberOfWords = 50)
 {
     if ($text != null)
     {

@@ -65,14 +65,14 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                             <link itemprop="availability" href="http://schema.org/In Stock">
                             <div class="prices">              
                                 <span id="ProductPrice" class="price money" itemprop="price" content="<?php echo number_format($product_data["product_price_min"], 2); ?>">Rs. <?php echo number_format($product_data["product_price_min"], 2); ?></span>
-                            </div> 
-                            <div class="short-description"><p><?php echo stripslashes($product_data["product_description"]); ?></p></div>
+                            </div>
+                            <br/>
                             <div class="quantity-cart">
                                 <?php
                                 if (!empty($product_data["product_wishlist_url"]))
                                 {
                                     ?>
-                                <p class="add-to-wish"><a href="<?php echo $product_data["product_wishlist_url"]; ?>" title="Add to wishlist" target="_blank" rel="nofollow"><span class="jmsf jmsf-heart-1"></span>&nbsp;Add to wishlist</a></p>
+                                    <p class="add-to-wish"><a href="<?php echo $product_data["product_wishlist_url"]; ?>" title="Add to wishlist" target="_blank" rel="nofollow"><span class="jmsf jmsf-heart-1"></span>&nbsp;Add to wishlist</a></p>
                                     <?php
                                 }
                                 ?>
@@ -105,6 +105,23 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                     </div>
                 </div>   
             </div>
+
+            <?php
+            if (!empty($product_data["product_description"]))
+            {
+                $product_description = str_replace("Product Description", "", stripslashes($product_data["product_description"]));
+                ?>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="short-description">
+                            <h3>Description:</h3>
+                            <p><?php echo $product_description; ?></p>
+                        </div>
+                    </div>
+                </div>
+                <?php
+            }
+            ?>
 
             <div class="clearfix g-ad"><?php echo get_google_ad(); ?></div>
 
