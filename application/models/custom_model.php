@@ -55,6 +55,24 @@ class Custom_model extends CI_Model
         return $tmp_data;
     }
 
+    public function get_all_products_and_data($fields, $where_str, $order_by = "p.product_id ASC", $limit = NULL)
+    {
+        $sql = 'SELECT ' . $fields . ' 
+                    from `daily_crons` as dc 
+                    left join `products` as p on dc.dc_product_unique_code = p.product_unique_code 
+                    left join `product_stats` as pviews on pviews.ps_product_id = p.product_id and pviews.ps_type = "view" 
+                    left join `product_stats` as pclicks on pclicks.ps_product_id = p.product_id and pclicks.ps_type = "click" 
+                    WHERE ' . $where_str . ' ORDER BY ' . $order_by;
+
+        if ($limit != NULL)
+        {
+            $sql.=" LIMIT " . $limit;
+        }
+        
+        $records = $this->db->query($sql)->result_array();
+        return $records;
+    }
+
     public function create_breadcrumb($id, $type = "product")
     {
         switch ($type)
