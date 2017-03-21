@@ -149,15 +149,8 @@ class Products extends CI_Controller
             if (!isset($this->session->userdata["admin_id"]))
             {
                 $product_id = $product_data[0]["product_id"];
-                $is_exists = $model->fetchSelectedData("ps_id, ps_clicks", TABLE_PRODUCTS_STATS, array("ps_product_id" => $product_id));
-                if (empty($is_exists))
-                {
-                    $model->insertData(TABLE_PRODUCTS_STATS, array("ps_product_id" => $product_id, "ps_clicks" => "1"));
-                }
-                else
-                {
-                    $model->updateData(TABLE_PRODUCTS_STATS, array("ps_clicks" => $is_exists[0]["ps_clicks"] + 1), array("ps_product_id" => $product_id, "ps_id" => $is_exists[0]["ps_id"]));
-                }
+                $autorun_helper = new AutorunHelper();
+                $autorun_helper->store_product_clicks($product_id);
             }
 
             redirect($product_data[0]["product_url_long"]);
