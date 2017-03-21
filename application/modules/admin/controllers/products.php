@@ -25,23 +25,23 @@ class Products extends CI_Controller
     public function cron_list_products($type = NULL)
     {
         $data = array();
-        $model = new Common_model();
-        $where_cond_arr = array();
+        $custom_model = new Custom_model();
+        $where_str = "TRUE";
         $page_title = "All Products";
 
         switch ($type)
         {
             case "amazon":
-                $where_cond_arr["dc_type"] = "amazon";
+                $where_str .= " AND dc_type = 'amazon'";
                 $page_title = "Amazon Products";
                 break;
             case "flipkart":
-                $where_cond_arr["dc_type"] = "flipkart";
+                $where_str .= " AND dc_type = 'flipkart'";
                 $page_title = "Flipkart Products";
                 break;
         }
 
-        $result = $model->getAllDataFromJoin("dc.*, p.*, ps.ps_views, ps.ps_clicks", TABLE_DAILY_CRON . " as dc", array(TABLE_PRODUCTS . " as p" => "dc.dc_product_unique_code = p.product_unique_code", TABLE_PRODUCTS_STATS . " as ps" => "ps_product_id = p.product_id"), "LEFT", $where_cond_arr);
+        $result = $custom_model->get_all_products_and_data("dc.*, p.*, count(pviews.ps_id) as ps_views, count(pclicks.ps_id) as ps_clicks", $where_str);
 
         $data["data"] = $result;
         $data["page_title"] = $page_title;

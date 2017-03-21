@@ -61,7 +61,7 @@ class Products extends CI_Controller
         if (!empty($product_category_arr))
         {
             $where_str = "product_status = 1 AND product_category_id IN (" . implode(", ", $product_category_arr) . ")";
-            $product_data = $custom_model->get_products_list("p.*", $where_str, $order_by, $limit);
+            $product_data = $custom_model->get_all_products_and_data("p.*, count(pviews.ps_id) as ps_views, count(pclicks.ps_id) as ps_clicks", $where_str, $order_by, $limit);
             $total_products_count = $custom_model->get_total_products_count($where_str);
         }
 
@@ -149,15 +149,8 @@ class Products extends CI_Controller
             if (!isset($this->session->userdata["admin_id"]))
             {
                 $product_id = $product_data[0]["product_id"];
-                $is_exists = $model->fetchSelectedData("ps_id, ps_clicks", TABLE_PRODUCTS_STATS, array("ps_product_id" => $product_id));
-                if (empty($is_exists))
-                {
-                    $model->insertData(TABLE_PRODUCTS_STATS, array("ps_product_id" => $product_id, "ps_clicks" => "1"));
-                }
-                else
-                {
-                    $model->updateData(TABLE_PRODUCTS_STATS, array("ps_clicks" => $is_exists[0]["ps_clicks"] + 1), array("ps_product_id" => $product_id, "ps_id" => $is_exists[0]["ps_id"]));
-                }
+                $autorun_helper = new AutorunHelper();
+                $autorun_helper->store_product_clicks($product_id);
             }
 
             redirect($product_data[0]["product_url_long"]);

@@ -15,7 +15,6 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                             <label>Sort by :</label>
                             <select name="sort" id="SortBy">
                                 <option value="<?php echo add_get_parameter("sort", "random", current_url()); ?>">Random</option>
-                                <option value="<?php echo add_get_parameter("sort", "most-popular", current_url()); ?>">Most Popular</option>
                                 <option value="<?php echo add_get_parameter("sort", "alpha-asc", current_url()); ?>">Alphabetically, A-Z</option>
                                 <option value="<?php echo add_get_parameter("sort", "alpha-desc", current_url()); ?>">Alphabetically, Z-A</option>
                                 <option value="<?php echo add_get_parameter("sort", "price-asc", current_url()); ?>">Price, low to high</option>
