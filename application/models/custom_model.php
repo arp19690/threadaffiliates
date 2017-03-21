@@ -55,20 +55,20 @@ class Custom_model extends CI_Model
         return $tmp_data;
     }
 
-    public function get_all_products_and_data($fields, $where_str, $order_by = "p.product_id ASC", $limit = NULL)
+    public function get_all_products_and_data($fields, $where_str, $order_by = "p.product_id ASC", $limit = NULL, $group_by = "p.product_id")
     {
         $sql = 'SELECT ' . $fields . ' 
                     from `daily_crons` as dc 
                     left join `products` as p on dc.dc_product_unique_code = p.product_unique_code 
                     left join `product_stats` as pviews on pviews.ps_product_id = p.product_id and pviews.ps_type = "view" 
                     left join `product_stats` as pclicks on pclicks.ps_product_id = p.product_id and pclicks.ps_type = "click" 
-                    WHERE ' . $where_str . ' ORDER BY ' . $order_by;
+                    WHERE ' . $where_str . ' GROUP BY ' . $group_by . ' ORDER BY ' . $order_by;
 
         if ($limit != NULL)
         {
             $sql.=" LIMIT " . $limit;
         }
-        
+
         $records = $this->db->query($sql)->result_array();
         return $records;
     }
@@ -163,21 +163,6 @@ class Custom_model extends CI_Model
         $model = new Common_model();
         $menu_data = $model->fetchSelectedData("category_id, category_name, category_url_key, category_parent_id", TABLE_CATEGORIES, $where_cond, $order_by);
         return $menu_data;
-    }
-
-    public function get_products_list($fields = "p.*", $where_str = "product_status = 1", $order_by = "rand()", $limit = NULL)
-    {
-        $sql = "SELECT " . $fields . " FROM " . TABLE_PRODUCTS . " as p "
-                . "INNER JOIN " . TABLE_CATEGORIES . " as c on c.category_id = p.product_category_id "
-                . "LEFT JOIN product_stats as ps on ps.ps_product_id = p.product_id "
-                . "WHERE " . $where_str . " GROUP BY p.product_id ORDER BY " . $order_by;
-
-        if ($limit != NULL)
-        {
-            $sql.=" LIMIT " . $limit;
-        }
-        $records = $this->db->query($sql)->result_array();
-        return $records;
     }
 
     public function get_total_products_count($where_str)

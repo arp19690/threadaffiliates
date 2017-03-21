@@ -61,7 +61,7 @@ class Products extends CI_Controller
         if (!empty($product_category_arr))
         {
             $where_str = "product_status = 1 AND product_category_id IN (" . implode(", ", $product_category_arr) . ")";
-            $product_data = $custom_model->get_products_list("p.*", $where_str, $order_by, $limit);
+            $product_data = $custom_model->get_all_products_and_data("p.*, count(pviews.ps_id) as ps_views, count(pclicks.ps_id) as ps_clicks", $where_str, $order_by, $limit);
             $total_products_count = $custom_model->get_total_products_count($where_str);
         }
 
