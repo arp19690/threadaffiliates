@@ -1,6 +1,6 @@
 <div class="home-content">
     <?php
-    $this->load->view("pages/index/homepage/slider");
+    // $this->load->view("pages/index/homepage/slider");
 
     if (!empty($featured_products))
     {
