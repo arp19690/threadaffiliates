@@ -19,9 +19,6 @@ function get_orderby_for_category_listing($case)
         case "random":
             $orderby = "rand()";
             break;
-        case "most-popular":
-            $orderby = "ps_views DESC";
-            break;
         case "alpha-asc":
             $orderby = "product_title ASC";
             break;
