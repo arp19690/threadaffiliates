@@ -47,8 +47,10 @@ class Admin extends CI_Controller
         $total_amazon_products = $model->getTotalCount("product_id", TABLE_PRODUCTS, array("product_type" => "amazon"))[0]["totalcount"];
         $total_flipkart_products = $model->getTotalCount("product_id", TABLE_PRODUCTS, array("product_type" => "flipkart"))[0]["totalcount"];
 
-        $total_product_views = $model->fetchSelectedData("COUNT(ps_id) as total_views", TABLE_PRODUCTS_STATS, array("ps_type" => "view"))[0]["total_views"];
-        $total_product_clicks = $model->fetchSelectedData("COUNT(ps_id) as total_clicks", TABLE_PRODUCTS_STATS, array("ps_type" => "click"))[0]["total_clicks"];
+//        adding spaces randomnly while defining where condition, since it wll make and array and things will get over-written
+        $exclude_bots_where_cond = array("ps_useragent NOT  LIKE" => "%bot%", "ps_useragent  NOT LIKE" => "%crawler%", "ps_useragent NOT   LIKE" => "%Mediapartners-Google%");
+        $total_product_views = $model->fetchSelectedData("COUNT(ps_id) as total_views", TABLE_PRODUCTS_STATS, array_merge($exclude_bots_where_cond, array("ps_type" => "view")))[0]["total_views"];
+        $total_product_clicks = $model->fetchSelectedData("COUNT(ps_id) as total_clicks", TABLE_PRODUCTS_STATS, array_merge($exclude_bots_where_cond, array("ps_type" => "click")))[0]["total_clicks"];
 
         $data = array(
             "total_products" => $total_products,
