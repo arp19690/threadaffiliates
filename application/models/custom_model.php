@@ -59,9 +59,9 @@ class Custom_model extends CI_Model
     {
         $sql = 'SELECT ' . $fields . ' 
                     from `daily_crons` as dc 
-                    left join `products` as p on dc.dc_product_unique_code = p.product_unique_code 
-                    left join `product_stats` as pviews on pviews.ps_product_id = p.product_id and pviews.ps_type = "view" 
-                    left join `product_stats` as pclicks on pclicks.ps_product_id = p.product_id and pclicks.ps_type = "click" 
+                    left join ' . TABLE_PRODUCTS . ' as p on dc.dc_product_unique_code = p.product_unique_code 
+                    left join ' . TABLE_PRODUCTS_STATS . ' as pviews on pviews.ps_product_id = p.product_id and pviews.ps_type = "view" 
+                    left join ' . TABLE_PRODUCTS_STATS . ' as pclicks on pclicks.ps_product_id = p.product_id and pclicks.ps_type = "click" 
                     WHERE ' . $where_str . ' GROUP BY ' . $group_by . ' ORDER BY ' . $order_by;
 
         if ($limit != NULL)
