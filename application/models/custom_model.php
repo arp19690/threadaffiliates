@@ -57,6 +57,7 @@ class Custom_model extends CI_Model
 
     public function get_all_products_and_data($fields, $where_str, $order_by = "p.product_id ASC", $limit = NULL, $group_by = "p.product_id")
     {
+        $where_str.=" AND ps_useragent not like '%bot%' and ps_useragent not like '%crawler%' and ps_useragent not like '%Mediapartners-Google%'";
         $sql = 'SELECT ' . $fields . ' 
                     from `daily_crons` as dc 
                     left join ' . TABLE_PRODUCTS . ' as p on dc.dc_product_unique_code = p.product_unique_code 
