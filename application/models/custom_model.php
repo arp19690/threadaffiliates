@@ -57,12 +57,11 @@ class Custom_model extends CI_Model
 
     public function get_all_products_and_data($fields, $where_str, $order_by = "p.product_id ASC", $limit = NULL, $group_by = "p.product_id")
     {
-        $where_str.=" AND ps_useragent not like '%bot%' and ps_useragent not like '%crawler%' and ps_useragent not like '%Mediapartners-Google%'";
         $sql = 'SELECT ' . $fields . ' 
                     from `daily_crons` as dc 
                     left join ' . TABLE_PRODUCTS . ' as p on dc.dc_product_unique_code = p.product_unique_code 
-                    left join ' . TABLE_PRODUCTS_STATS . ' as pviews on pviews.ps_product_id = p.product_id and pviews.ps_type = "view" 
-                    left join ' . TABLE_PRODUCTS_STATS . ' as pclicks on pclicks.ps_product_id = p.product_id and pclicks.ps_type = "click" 
+                    left join ' . TABLE_PRODUCTS_STATS . ' as pviews on pviews.ps_product_id = p.product_id and pviews.ps_type = "view" AND pviews.ps_useragent not like "%bot%" and pviews.ps_useragent not like "%crawler%" and pviews.ps_useragent not like "%Mediapartners-Google%"
+                    left join ' . TABLE_PRODUCTS_STATS . ' as pclicks on pclicks.ps_product_id = p.product_id and pclicks.ps_type = "click" AND pclicks.ps_useragent not like "%bot%" and pclicks.ps_useragent not like "%crawler%" and pclicks.ps_useragent not like "%Mediapartners-Google%"
                     WHERE ' . $where_str . ' GROUP BY ' . $group_by . ' ORDER BY ' . $order_by;
 
         if ($limit != NULL)
