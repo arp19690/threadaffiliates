@@ -40,7 +40,7 @@
                             </div>
                         </div> 
 
-                        <div class="slide slideshow__slide slideshow__slide--1479870870856-1" style="background:url(<?php echo IMAGES_PATH; ?>/sliders/3.jpg) no-repeat left top;background-size:cover;">
+                        <div class="slide slideshow__slide slideshow__slide--1479870870856-1" style="background:url(<?php echo IMAGES_PATH; ?>/sliders/4.jpg) no-repeat left top;background-size:cover;">
                             <div class="jms-slide-content slide-heading" 					
                                  data-position="355,150" 
                                  data-fontsize = "70"					
@@ -53,7 +53,7 @@
                                  data-special="0"
                                  data-time = "2500"
                                  style="font-size:70px; color:#000000;"					
-                                 ><?php echo date("Y"); ?> Special
+                                 >
                             </div>
 
                             <div class="jms-slide-content slide-text slide-text-1" 					
@@ -68,7 +68,7 @@
                                  data-special="0"
                                  data-time = "2000"
                                  style="font-size:25px; color:#000000;"					
-                                 >FASHION TRENDS
+                                 >
                             </div>
                         </div> 
                     </div>

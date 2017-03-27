@@ -220,30 +220,26 @@ class AutorunHelper
     public function store_product_views($product_id)
     {
         $model = new Common_model();
-        $is_exists = $model->fetchSelectedData("ps_id, ps_views", TABLE_PRODUCTS_STATS, array("ps_product_id" => $product_id));
-        if (empty($is_exists))
-        {
-            $model->insertData(TABLE_PRODUCTS_STATS, array("ps_product_id" => $product_id, "ps_views" => "1"));
-        }
-        else
-        {
-            $model->updateData(TABLE_PRODUCTS_STATS, array("ps_views" => $is_exists[0]["ps_views"] + 1), array("ps_id" => $is_exists[0]["ps_id"]));
-        }
+        $insert_arr = array(
+            "ps_type" => "view",
+            "ps_product_id" => $product_id,
+            "ps_ipaddress" => USER_IP,
+            "ps_useragent" => USER_AGENT
+        );
+        $model->insertData(TABLE_PRODUCTS_STATS, $insert_arr);
         return TRUE;
     }
 
-    public function store_product_clicks($product_id, $clicks)
+    public function store_product_clicks($product_id)
     {
         $model = new Common_model();
-        $is_exists = $model->fetchSelectedData("ps_id", TABLE_PRODUCTS_STATS, array("ps_product_id" => $product_id));
-        if (empty($is_exists))
-        {
-            $model->insertData(TABLE_PRODUCTS_STATS, array("ps_product_id" => $product_id, "ps_clicks" => $clicks));
-        }
-        else
-        {
-            $model->updateData(TABLE_PRODUCTS_STATS, array("ps_clicks" => $clicks), array("ps_product_id" => $product_id, "ps_id" => $is_exists[0]["ps_id"]));
-        }
+        $insert_arr = array(
+            "ps_type" => "click",
+            "ps_product_id" => $product_id,
+            "ps_ipaddress" => USER_IP,
+            "ps_useragent" => USER_AGENT
+        );
+        $model->insertData(TABLE_PRODUCTS_STATS, $insert_arr);
         return TRUE;
     }
 
