@@ -28,6 +28,8 @@ $menu_data = $custom_model->create_menu();
         </div> 	
     </div>
 
+    <div class="block-content"><?php echo get_google_ad(); ?></div>
+
     <!--    <div class="filter-block block">
             <div id="layer-price" class="sidebar-custom sidebar-tag">
                 <div class="widget-title">
