@@ -98,7 +98,7 @@ function get_google_ad($type = "responsive")
                             </script></div>';
                 break;
             case "square":
-                $str = '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                $str = '<div style="margin: 20px 0;"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                             <!-- Threadcrafts Square -->
                             <ins class="adsbygoogle"
                                  style="display:inline-block;width:300px;height:250px"
@@ -106,7 +106,7 @@ function get_google_ad($type = "responsive")
                                  data-ad-slot="4001805724"></ins>
                             <script>
                             (adsbygoogle = window.adsbygoogle || []).push({});
-                            </script>';
+                            </script></div>';
                 break;
         }
     }
