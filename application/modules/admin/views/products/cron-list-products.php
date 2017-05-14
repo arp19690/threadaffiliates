@@ -111,7 +111,7 @@
                                             }
                                             ?>
                                             <p><a href="<?php echo base_url_admin("products/cron_edit_product/" . $value["product_id"]) ?>" class="btn btn-success btn-xs">Edit</a></p>
-                                            <p><a href="<?php echo base_url_admin("products/product_featured_status/" . $value["product_id"] . "/" . ($value["product_featured"] == 1 ? "0" : "1")) ?>" class="btn btn-info btn-xs"><?php echo ($value["product_featured"] == 1 ? "Unfeature" : "Feature") ?></a></p>
+                                            <p><a href="<?php echo base_url_admin("products/product_featured_status/" . $value["product_id"] . "/" . ($value["product_featured"] == 1 ? "0" : "1")) ?>" class="btn btn-<?php echo ($value["product_featured"] == 1 ? "info" : "default") ?> btn-xs"><?php echo ($value["product_featured"] == 1 ? "Unfeature" : "Feature") ?></a></p>
                                             <p><a href="<?php echo base_url_admin("products/delete_product/" . $value["dc_product_unique_code"]) ?>" class="text-danger" onclick="return confirm('Sure you want to delete?');">Delete</a></p>
                                         </td>
                                     </tr>
