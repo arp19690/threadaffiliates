@@ -128,5 +128,13 @@ class Products extends CI_Controller
         $this->session->set_flashdata("success", "Product deleted successfully");
         redirect(base_url_admin("products/cron_list_products"));
     }
+    
+    public function product_featured_status($product_id,$status)
+    {
+        $model = new Common_model();
+        $model->updateData(TABLE_PRODUCTS, array("product_featured" => $status), array("product_id" => $product_id));
+        $this->session->set_flashdata("success", "Product featured status changed");
+        redirect(base_url_admin("products/cron_list_products"));
+    }
 
 }
