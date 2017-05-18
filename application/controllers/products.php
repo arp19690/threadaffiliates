@@ -82,7 +82,7 @@ class Products extends CI_Controller
         $model = new Common_model();
         $custom_model = new Custom_model();
         // fetching products with status 1 and other relevant where condition
-        $fetch_fields = "product_id, product_image_url, product_title, product_price_min, product_images_json, product_unique_code, product_description, product_url_key, product_category_id,product_type, product_wishlist_url";
+        $fetch_fields = "product_id, product_image_url, product_title, product_price_min, product_images_json, product_unique_code, product_description, product_url_key, product_category_id,product_type, product_wishlist_url, product_currency";
         $product_where_cond = array("product_status" => 1, "category_status" => 1, "product_url_key" => $product_url_key);
         $product_data = $model->getAllDataFromJoin($fetch_fields, TABLE_PRODUCTS . " as p", array(TABLE_CATEGORIES . " as c" => "c.category_id = p.product_category_id"), "INNER", $product_where_cond);
         if (!empty($product_data))
