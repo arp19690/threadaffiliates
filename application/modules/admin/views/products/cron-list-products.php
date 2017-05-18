@@ -87,7 +87,7 @@
                                         </td>
                                         <td style="max-width: 200px;"><?php echo stripslashes($category_path); ?></td>
                                         <td>
-                                            <p><strong>Price: </strong><?php echo number_format($value["product_price_min"], 2); ?></p>
+                                            <p><strong>Price: </strong><?php echo get_currency_symbol($value["product_currency"]) . number_format($value["product_price_min"], 2); ?></p>
                                             <p><strong>Color: </strong><?php echo (!empty($value["product_color"]) ? stripslashes($value["product_color"]) : "NA"); ?></p>
                                             <p><strong>Size: </strong><?php echo (!empty($value["product_size"]) ? stripslashes($value["product_size"]) : "NA"); ?></p>
                                             <p><strong>Brand: </strong><?php echo stripslashes($value["product_brand"]); ?></p>

@@ -122,7 +122,7 @@ class Products extends CI_Controller
         {
             $custom_model = new Custom_model();
             $keyword = $this->input->get("q");
-            $product_data = $custom_model->search_keyword($keyword);
+            $product_data = $custom_model->search_keyword($keyword, "INR");
 
             // now we render the data here
             $data = array();
