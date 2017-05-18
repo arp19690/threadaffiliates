@@ -1,5 +1,17 @@
 <?php
 
+function get_currency_symbol($currency_code)
+{
+    $output = "Rs. ";
+    switch ($currency_code)
+    {
+        case "USD":
+            $output = "$";
+            break;
+    }
+    return $output;
+}
+
 function add_get_parameter($arg, $value, $current_url)
 {
     $get_params = $_GET;

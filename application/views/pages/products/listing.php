@@ -43,7 +43,7 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                                     <div class="product-info clearfix">
                                         <a class="product-title" href="<?php echo base_url("p/" . $value["product_url_key"]); ?>"><?php echo stripslashes($value["product_title"]); ?></a>
                                         <div class="content_price">
-                                            <span class="price"><span class="money">Rs. <?php echo number_format($value["product_price_min"], 2); ?></span></span>
+                                            <span class="price"><span class="money"><?php echo get_currency_symbol($value["product_currency"]) . number_format($value["product_price_min"], 2); ?></span></span>
                                         </div>
                                     </div>
                                 </div>

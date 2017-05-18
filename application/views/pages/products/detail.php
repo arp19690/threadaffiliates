@@ -64,7 +64,7 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                             <meta itemprop="priceCurrency" content="INR">
                             <link itemprop="availability" href="http://schema.org/In Stock">
                             <div class="prices">              
-                                <span id="ProductPrice" class="price money" itemprop="price" content="<?php echo number_format($product_data["product_price_min"], 2); ?>">Rs. <?php echo number_format($product_data["product_price_min"], 2); ?></span>
+                                <span id="ProductPrice" class="price money" itemprop="price" content="<?php echo number_format($product_data["product_price_min"], 2); ?>"><?php echo get_currency_symbol($product_data["product_currency"]) . number_format($product_data["product_price_min"], 2); ?></span>
                             </div>
                             <br/>
                             <div class="quantity-cart">
@@ -151,7 +151,7 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                                     <div class="product-info clearfix">
                                         <a class="product-title" href="<?php echo base_url("p/" . $rvalue["product_url_key"]); ?>"><?php echo stripslashes($rvalue["product_title"]); ?></a>
                                         <div class="content_price">
-                                            <span class="price"><span class="money">Rs. <?php echo number_format($rvalue["product_price_min"], 2); ?></span></span>
+                                            <span class="price"><span class="money"><?php echo get_currency_symbol($rvalue["product_currency"]) . number_format($rvalue["product_price_min"], 2); ?></span></span>
                                         </div>
                                     </div>
                                 </div>
