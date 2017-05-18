@@ -46,7 +46,8 @@
                                     <div class="col-lg-8">
                                         <select name="dc_type" class="form-control" required="required">
                                             <option value=""></option>
-                                            <option value="amazon">Amazon</option>
+                                            <option value="amazon">Amazon India</option>
+                                            <option value="amazon_usa">Amazon USA</option>
                                             <option value="flipkart">Flipkart</option>
                                         </select>
                                     </div>
