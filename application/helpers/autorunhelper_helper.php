@@ -33,9 +33,12 @@ class AutorunHelper
             $product_category_id = $value["dc_category_id"];
             $product_unique_code = trim($value["dc_product_unique_code"]);
 
-            if ($value["dc_type"] == "amazon")
+            if ($value["dc_type"] == "amazon" || $value["dc_type"] == "amazon_usa")
             {
-                $product_info = $amazon_helper->get_product_info($product_unique_code);
+                $aws_tag = $value["dc_type"] == "amazon" ? AWS_ASSOCIATE_TAG : AWS_ASSOCIATE_TAG_USA;
+                $country_code = $value["dc_type"] == "amazon" ? "in" : "com";
+
+                $product_info = $amazon_helper->get_product_info($product_unique_code, $aws_tag, $country_code);
                 if (isset($product_info->Items))
                 {
                     if (isset($product_info->Items->Item))
@@ -72,6 +75,7 @@ class AutorunHelper
                                 "product_size" => empty($product_size) ? NULL : addslashes($product_size),
                                 "product_brand" => empty($product_brand) ? NULL : addslashes($product_brand),
                                 "product_color" => empty($product_color) ? NULL : addslashes($product_color),
+                                "product_currency" => $value["dc_type"] == "amazon" ? "INR" : "USD",
                                 "product_price_min" => floatval($product_price_min),
                                 "product_price_max" => floatval($product_price_max),
                                 "product_discount_percent" => floatval($product_discount_percent),
@@ -81,7 +85,7 @@ class AutorunHelper
                                 "product_url_key" => $product_url_key,
                                 "product_wishlist_url" => $product_wishlist_url,
                                 "product_status" => "1",
-                                "product_type" => "amazon"
+                                "product_type" => $value["dc_type"]
                             );
 
                             // If product exists, then update it else insert a new
@@ -208,10 +212,11 @@ class AutorunHelper
     {
         $amazon_helper = new AmazonHelper();
         $model = new Common_model();
-        $data = $model->fetchSelectedData("product_id, product_unique_code", TABLE_PRODUCTS, array("product_description" => NULL));
+        $data = $model->fetchSelectedData("product_id, product_unique_code, product_type", TABLE_PRODUCTS, array("product_description" => NULL));
         foreach ($data as $value)
         {
-            $description = addslashes($amazon_helper->get_product_description($value["product_unique_code"]));
+            $base_url = $value["product_type"] == "amazon" ? "http://www.amazon.in" : "http://www.amazon.com";
+            $description = addslashes($amazon_helper->get_product_description($value["product_unique_code"], $base_url));
             $model->updateData(TABLE_PRODUCTS, array("product_description" => $description), array("product_id" => $value["product_id"], "product_unique_code" => $value["product_unique_code"]));
         }
         echo "Successfully added descriptions for products.\n";

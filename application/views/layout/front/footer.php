@@ -76,6 +76,7 @@
 if (USER_IP != "127.0.0.1")
 {
     ?>
+    <!-- Google Analytics -->
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
@@ -91,6 +92,16 @@ if (USER_IP != "127.0.0.1")
 
         ga('create', 'UA-79425146-1', 'auto');
         ga('send', 'pageview');
+    </script>
+
+    <!-- Smartlook snippet -->
+    <script type="text/javascript">
+        window.smartlook||(function(d) {
+        var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+        var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+        c.charset='utf-8';c.src='//rec.smartlook.com/recorder.js';h.appendChild(c);
+        })(document);
+        smartlook('init', '5f1e8a28ac2f9f36d4e9129d1dab8d13c99a2be1');
     </script>
     <?php
 }

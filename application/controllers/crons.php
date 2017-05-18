@@ -22,6 +22,9 @@ class Crons extends CI_Controller
                 case "amazon":
                     $where_cond_arr["dc_type"] = "amazon";
                     break;
+                case "amazon_usa":
+                    $where_cond_arr["dc_type"] = "amazon_usa";
+                    break;
                 case "flipkart":
                     $where_cond_arr["dc_type"] = "flipkart";
                     break;

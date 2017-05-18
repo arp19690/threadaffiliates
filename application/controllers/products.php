@@ -77,13 +77,13 @@ class Products extends CI_Controller
         $this->template->render();
     }
 
-    public function get_product_details($product_url_key)
+    public function get_product_details($product_url_key, $currency_code = "INR")
     {
         $model = new Common_model();
         $custom_model = new Custom_model();
         // fetching products with status 1 and other relevant where condition
-        $fetch_fields = "product_id, product_image_url, product_title, product_price_min, product_images_json, product_unique_code, product_description, product_url_key, product_category_id,product_type, product_wishlist_url";
-        $product_where_cond = array("product_status" => 1, "category_status" => 1, "product_url_key" => $product_url_key);
+        $fetch_fields = "product_id, product_image_url, product_title, product_price_min, product_images_json, product_unique_code, product_description, product_url_key, product_category_id,product_type, product_wishlist_url, product_currency";
+        $product_where_cond = array("product_status" => 1, "category_status" => 1, "product_url_key" => $product_url_key, "product_currency" => $currency_code);
         $product_data = $model->getAllDataFromJoin($fetch_fields, TABLE_PRODUCTS . " as p", array(TABLE_CATEGORIES . " as c" => "c.category_id = p.product_category_id"), "INNER", $product_where_cond);
         if (!empty($product_data))
         {
@@ -95,7 +95,7 @@ class Products extends CI_Controller
             $meta_description = str_replace("Product Description", "", $meta_description);
 
             $fetch_fields = "product_id, product_image_url, product_title, product_price_min, product_url_key, product_type";
-            $related_products = $model->fetchSelectedData($fetch_fields, TABLE_PRODUCTS, array("product_status" => 1, "product_id !=" => $product_data["product_id"], "product_category_id" => $product_data["product_category_id"]), "product_id", "rand()", "0,8");
+            $related_products = $model->fetchSelectedData($fetch_fields, TABLE_PRODUCTS, array("product_status" => 1, "product_id !=" => $product_data["product_id"], "product_category_id" => $product_data["product_category_id"]), "rand()", "rand()", "0,8");
 
             $page_title = stripslashes($product_data["product_title"]) . " - " . SITE_NAME;
             $data["page_title"] = $page_title;
@@ -122,7 +122,7 @@ class Products extends CI_Controller
         {
             $custom_model = new Custom_model();
             $keyword = $this->input->get("q");
-            $product_data = $custom_model->search_keyword($keyword);
+            $product_data = $custom_model->search_keyword($keyword, "INR");
 
             // now we render the data here
             $data = array();

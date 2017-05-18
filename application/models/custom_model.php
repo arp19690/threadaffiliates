@@ -10,7 +10,7 @@ class Custom_model extends CI_Model
         $this->load->database();
     }
 
-    public function get_all_products_for_category($category_id, $orderby = "rand()", $orderby_type = "rand()", $limit = "0,12")
+    public function get_all_products_for_category($category_id, $currency = NULL, $orderby = "rand()", $orderby_type = "rand()", $limit = "0,12")
     {
         $model = new Common_model();
         $cat_cat_id_arr = $this->get_all_lowest_level_category_ids($category_id);
@@ -18,6 +18,10 @@ class Custom_model extends CI_Model
         foreach ($cat_cat_id_arr as $hdvalue)
         {
             $cat_where_cond["category_id"] = $hdvalue;
+        }
+        if ($currency != NULL)
+        {
+            $cat_where_cond["product_currency"] = $currency;
         }
         $cat_products = $model->getAllDataFromJoin("p.*", TABLE_PRODUCTS . " as p", array(TABLE_CATEGORIES . " as c" => "c.category_id = p.product_category_id"), "INNER", $cat_where_cond, $orderby, $orderby_type, $limit);
         return $cat_products;
@@ -174,19 +178,23 @@ class Custom_model extends CI_Model
         return $records[0]["totalcount"];
     }
 
-    public function search_keyword($keyword)
+    public function search_keyword($keyword, $currency_code = NULL)
     {
         $keyword = strtolower($keyword);
+        $extra_where_str = "true";
+        if ($currency_code != NULL)
+        {
+            $extra_where_str = " p.product_currency = '" . $currency_code . "' ";
+        }
         $sql = "SELECT p.* FROM " . TABLE_PRODUCTS . " as p "
                 . "RIGHT JOIN " . TABLE_CATEGORIES . " as c on c.category_id = p.product_category_id "
-                . "WHERE LOWER(product_title) LIKE ('%" . $keyword . "%') "
+                . "WHERE " . $extra_where_str . " AND (LOWER(product_title) LIKE ('%" . $keyword . "%') "
                 . "OR LOWER(product_description) LIKE ('%" . $keyword . "%') "
                 . "OR LOWER(product_size) LIKE ('%" . $keyword . "%') "
                 . "OR LOWER(product_color) LIKE ('%" . $keyword . "%') "
                 . "OR LOWER(product_brand) LIKE ('%" . $keyword . "%') "
                 . "OR LOWER(category_name) LIKE ('%" . $keyword . "%') "
-                . "OR LOWER(product_unique_code) LIKE ('%" . $keyword . "%') "
-        ;
+                . "OR LOWER(product_unique_code) LIKE ('%" . $keyword . "%')) ";
         $records = $this->db->query($sql)->result_array();
         return $records;
     }

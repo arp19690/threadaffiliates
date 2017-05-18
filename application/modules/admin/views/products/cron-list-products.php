@@ -87,7 +87,7 @@
                                         </td>
                                         <td style="max-width: 200px;"><?php echo stripslashes($category_path); ?></td>
                                         <td>
-                                            <p><strong>Price: </strong><?php echo number_format($value["product_price_min"], 2); ?></p>
+                                            <p><strong>Price: </strong><?php echo get_currency_symbol($value["product_currency"]) . number_format($value["product_price_min"], 2); ?></p>
                                             <p><strong>Color: </strong><?php echo (!empty($value["product_color"]) ? stripslashes($value["product_color"]) : "NA"); ?></p>
                                             <p><strong>Size: </strong><?php echo (!empty($value["product_size"]) ? stripslashes($value["product_size"]) : "NA"); ?></p>
                                             <p><strong>Brand: </strong><?php echo stripslashes($value["product_brand"]); ?></p>
@@ -111,6 +111,7 @@
                                             }
                                             ?>
                                             <p><a href="<?php echo base_url_admin("products/cron_edit_product/" . $value["product_id"]) ?>" class="btn btn-success btn-xs">Edit</a></p>
+                                            <p><a href="<?php echo base_url_admin("products/product_featured_status/" . $value["product_id"] . "/" . ($value["product_featured"] == 1 ? "0" : "1")) ?>" class="btn btn-<?php echo ($value["product_featured"] == 1 ? "default" : "info") ?> btn-xs"><?php echo ($value["product_featured"] == 1 ? "Unfeature" : "Feature") ?></a></p>
                                             <p><a href="<?php echo base_url_admin("products/delete_product/" . $value["dc_product_unique_code"]) ?>" class="text-danger" onclick="return confirm('Sure you want to delete?');">Delete</a></p>
                                         </td>
                                     </tr>

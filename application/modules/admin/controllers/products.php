@@ -55,7 +55,8 @@ class Products extends CI_Controller
         {
             $arr = $this->input->post();
             $model = new Common_model();
-            $dc_id = $model->insertData(TABLE_DAILY_CRON, array("dc_category_id" => $arr["category_id"], "dc_product_unique_code" => trim($arr["product_code"]), "dc_type" => $arr["dc_type"]));
+            $currency_code = $arr["dc_type"] == "amazon" ? "INR" : "USD";
+            $dc_id = $model->insertData(TABLE_DAILY_CRON, array("dc_category_id" => $arr["category_id"], "dc_product_unique_code" => trim($arr["product_code"]), "dc_type" => $arr["dc_type"], "dc_currency" => $currency_code));
 
             // updating the products info
             $this->fetch_cron_product_info($dc_id);
@@ -126,6 +127,14 @@ class Products extends CI_Controller
         $model->updateData(TABLE_DAILY_CRON, array("is_deleted" => 1), array("dc_product_unique_code" => $product_unique_code));
         $model->updateData(TABLE_PRODUCTS, array("product_status" => 2), array("product_unique_code" => $product_unique_code));
         $this->session->set_flashdata("success", "Product deleted successfully");
+        redirect(base_url_admin("products/cron_list_products"));
+    }
+
+    public function product_featured_status($product_id, $status)
+    {
+        $model = new Common_model();
+        $model->updateData(TABLE_PRODUCTS, array("product_featured" => $status), array("product_id" => $product_id));
+        $this->session->set_flashdata("success", "Product featured status changed");
         redirect(base_url_admin("products/cron_list_products"));
     }
 

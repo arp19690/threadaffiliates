@@ -11,24 +11,28 @@ class Index extends CI_Controller
         parent::__construct();
     }
 
-    public function index()
+    public function index($currency_code = "INR")
     {
         $data = array();
-//        $model = new Common_model();
+        $model = new Common_model();
         $custom_model = new Custom_model();
 
-        $home_decor_products = $custom_model->get_all_products_for_category(10);
-        $smartphone_products = $custom_model->get_all_products_for_category(12);
-        $camera_products = $custom_model->get_all_products_for_category(61);
-//        $featured_products = $model->fetchSelectedData("*", TABLE_PRODUCTS, array("product_status" => 1, "product_featured" => 1), "rand()", "rand()", "0,12");
+        $women_apparels_products = $custom_model->get_all_products_for_category(8, $currency_code);
+        $home_decor_products = $custom_model->get_all_products_for_category(10, $currency_code);
+        $smartphone_products = $custom_model->get_all_products_for_category(12, $currency_code);
+        $camera_products = $custom_model->get_all_products_for_category(61, $currency_code);
+        $featured_products = $model->fetchSelectedData("*", TABLE_PRODUCTS, array("product_status" => 1, "product_featured" => 1, "product_currency" => $currency_code), "rand()", "rand()", "0,12");
 
         $page_title = "Home - " . SITE_NAME;
         $data["page_title"] = $page_title;
         $data['meta_title'] = $data["page_title"];
+
+        $data['women_apparels_products'] = $women_apparels_products;
         $data['home_decor_products'] = $home_decor_products;
         $data['smartphone_products'] = $smartphone_products;
         $data['camera_products'] = $camera_products;
-//        $data['featured_products'] = $featured_products;
+        $data['featured_products'] = $featured_products;
+
         $this->template->write_view("content", "pages/index/index", $data);
         $this->template->render();
     }

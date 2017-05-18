@@ -1,5 +1,17 @@
 <?php
 
+function get_currency_symbol($currency_code)
+{
+    $output = "Rs. ";
+    switch ($currency_code)
+    {
+        case "USD":
+            $output = "$";
+            break;
+    }
+    return $output;
+}
+
 function add_get_parameter($arg, $value, $current_url)
 {
     $get_params = $_GET;
@@ -79,20 +91,36 @@ function custom_parse_url($url, $append = UTM_SOURCE_CODE)
     return $url;
 }
 
-function get_google_ad()
+function get_google_ad($type = "responsive")
 {
     if (USER_IP != '127.0.0.1')
     {
-        $str = '<div style="margin: 20px 0;"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <!-- ThreadAffiliates Responsive -->
-                    <ins class="adsbygoogle"
-                         style="display:block"
-                         data-ad-client="ca-pub-7594968339633253"
-                         data-ad-slot="6340911725"
-                         data-ad-format="auto"></ins>
-                    <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script></div>';
+        switch ($type)
+        {
+            case "responsive":
+                $str = '<div style="margin: 20px 0;"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <!-- ThreadAffiliates Responsive -->
+                            <ins class="adsbygoogle"
+                                 style="display:block"
+                                 data-ad-client="ca-pub-7594968339633253"
+                                 data-ad-slot="6340911725"
+                                 data-ad-format="auto"></ins>
+                            <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script></div>';
+                break;
+            case "square":
+                $str = '<div style="margin: 20px 0;"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <!-- Threadcrafts Square -->
+                            <ins class="adsbygoogle"
+                                 style="display:inline-block;width:300px;height:250px"
+                                 data-ad-client="ca-pub-7594968339633253"
+                                 data-ad-slot="4001805724"></ins>
+                            <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script></div>';
+                break;
+        }
     }
     else
     {

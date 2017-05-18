@@ -28,7 +28,7 @@
                                     </div> 
                                     <div class="product-info clearfix">
                                         <a class="product-title" href="<?php echo base_url("p/" . stripslashes($value["product_url_key"])); ?>"><?php echo stripslashes($value["product_title"]); ?></a>
-                                        <div class="content_price"><span class="price"><span class="money">Rs. <?php echo number_format($value["product_price_min"], 2); ?></span></span></div>
+                                        <div class="content_price"><span class="price"><span class="money"><?php echo get_currency_symbol($value["product_currency"]) . number_format($value["product_price_min"], 2); ?></span></span></div>
                                     </div>
                                 </div>
                             </div>
@@ -99,6 +99,54 @@
                             <div class="block-content">
                                 <div class="jms-tab">
                                     <ul class="nav nav-tabs" role="tablist">
+                                        <li class="active"><a href="#women-fashion" data-toggle="tab" class="button">Women Fashion</a></li>
+                                    </ul>  
+                                    <span class="small-star"><i class="fa fa-star-o" aria-hidden="true"></i></span>
+                                </div> 
+                                <div class="tab-content">
+                                    <div id="women-fashion" class="tab-pane active" role="tabpanel">      
+                                        <div class="product-tab-carousel">
+                                            <?php
+                                            foreach ($women_apparels_products as $value)
+                                            {
+                                                ?>
+                                                <div class="item">
+                                                    <div class="product-preview  clearfix">
+                                                        <div class="preview">
+                                                            <a href="<?php echo base_url("p/" . stripslashes($value["product_url_key"])); ?>">
+                                                                <img src="<?php echo $value['product_image_url']; ?>" data-original="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="first-image img-responsive lazy">
+                                                                <img src="<?php echo $value['product_image_url']; ?>" data-original="<?php echo $value['product_image_url']; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="second-img img-responsive lazy" />
+                                                            </a>
+                                                            <div class="wrapper-label <?php echo strtolower($value["product_type"]); ?>"><?php echo ucwords($value["product_type"]); ?></div>
+                                                        </div> 
+
+                                                        <div class="product-info clearfix">
+                                                            <a class="product-title" href="<?php echo base_url("p/" . stripslashes($value["product_url_key"])); ?>"><?php echo stripslashes($value["product_title"]); ?></a>
+                                                            <div class="content_price"><span class="price"><span class="money"><?php echo get_currency_symbol($value["product_currency"]) . number_format($value["product_price_min"], 2); ?></span></span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <?php
+                                            }
+                                            ?>
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-products productfilter-section">
+            <div class="container">
+                <div class="home-row row fullwidth">  
+                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12"> 
+                        <div class="home-block">
+                            <div class="block-content">
+                                <div class="jms-tab">
+                                    <ul class="nav nav-tabs" role="tablist">
                                         <li class="active"><a href="#smartphones" data-toggle="tab" class="button">Smartphones</a></li>
                                     </ul>  
                                     <span class="small-star"><i class="fa fa-star-o" aria-hidden="true"></i></span>
@@ -122,7 +170,7 @@
 
                                                         <div class="product-info clearfix">
                                                             <a class="product-title" href="<?php echo base_url("p/" . stripslashes($value["product_url_key"])); ?>"><?php echo stripslashes($value["product_title"]); ?></a>
-                                                            <div class="content_price"><span class="price"><span class="money">Rs. <?php echo number_format($value["product_price_min"], 2); ?></span></span></div>
+                                                            <div class="content_price"><span class="price"><span class="money"><?php echo get_currency_symbol($value["product_currency"]) . number_format($value["product_price_min"], 2); ?></span></span></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -170,7 +218,7 @@
 
                                                         <div class="product-info clearfix">
                                                             <a class="product-title" href="<?php echo base_url("p/" . stripslashes($value["product_url_key"])); ?>"><?php echo stripslashes($value["product_title"]); ?></a>
-                                                            <div class="content_price"><span class="price"><span class="money">Rs. <?php echo number_format($value["product_price_min"], 2); ?></span></span></div>
+                                                            <div class="content_price"><span class="price"><span class="money"><?php echo get_currency_symbol($value["product_currency"]) . number_format($value["product_price_min"], 2); ?></span></span></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -218,7 +266,7 @@
 
                                                         <div class="product-info clearfix">
                                                             <a class="product-title" href="<?php echo base_url("p/" . stripslashes($value["product_url_key"])); ?>"><?php echo stripslashes($value["product_title"]); ?></a>
-                                                            <div class="content_price"><span class="price"><span class="money">Rs. <?php echo number_format($value["product_price_min"], 2); ?></span></span></div>
+                                                            <div class="content_price"><span class="price"><span class="money"><?php echo get_currency_symbol($value["product_currency"]) . number_format($value["product_price_min"], 2); ?></span></span></div>
                                                         </div>
                                                     </div>
                                                 </div>
