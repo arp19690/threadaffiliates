@@ -36,7 +36,7 @@ class AutorunHelper
             if ($value["dc_type"] == "amazon" || $value["dc_type"] == "amazon_usa")
             {
                 $aws_tag = $value["dc_type"] == "amazon" ? AWS_ASSOCIATE_TAG : AWS_ASSOCIATE_TAG_USA;
-                $country_code = $value["dc_type"] == "amazon" ? "in" : "us";
+                $country_code = $value["dc_type"] == "amazon" ? "in" : "com";
 
                 $product_info = $amazon_helper->get_product_info($product_unique_code, $aws_tag, $country_code);
                 if (isset($product_info->Items))
