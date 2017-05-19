@@ -11,7 +11,7 @@ class Products extends CI_Controller
         parent::__construct();
     }
 
-    public function get_category_products($parent_category, $child_category = NULL, $child2_category = NULL)
+    public function get_category_products($parent_category, $child_category = NULL, $child2_category = NULL, $currency_code = CURRENCY_CODE)
     {
         $model = new Common_model();
         $custom_model = new Custom_model();
@@ -60,7 +60,7 @@ class Products extends CI_Controller
         $total_products_count = 0;
         if (!empty($product_category_arr))
         {
-            $where_str = "product_status = 1 AND product_category_id IN (" . implode(", ", $product_category_arr) . ")";
+            $where_str = "product_status = 1 AND product_currency = '" . $currency_code . "' AND product_category_id IN (" . implode(", ", $product_category_arr) . ")";
             $product_data = $custom_model->get_all_products_and_data("p.*, count(pviews.ps_id) as ps_views, count(pclicks.ps_id) as ps_clicks", $where_str, $order_by, $limit);
             $total_products_count = $custom_model->get_total_products_count($where_str);
         }
