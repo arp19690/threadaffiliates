@@ -67,7 +67,7 @@ $path = $controller . "/" . $action;
         if (isset($meta_price_amount))
         {
             echo '<meta property="og:price:amount" content="' . round($meta_price_amount, 2) . '">';
-            echo '<meta property="og:price:currency" content="INR">';
+            echo '<meta property="og:price:currency" content="' . CURRENCY_CODE . '">';
         }
 
         if (isset($meta_logo_image))

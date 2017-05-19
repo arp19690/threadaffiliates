@@ -77,7 +77,7 @@ class Products extends CI_Controller
         $this->template->render();
     }
 
-    public function get_product_details($product_url_key, $currency_code = "INR")
+    public function get_product_details($product_url_key, $currency_code = CURRENCY_CODE)
     {
         $model = new Common_model();
         $custom_model = new Custom_model();
@@ -122,7 +122,7 @@ class Products extends CI_Controller
         {
             $custom_model = new Custom_model();
             $keyword = $this->input->get("q");
-            $product_data = $custom_model->search_keyword($keyword, "INR");
+            $product_data = $custom_model->search_keyword($keyword, CURRENCY_CODE);
 
             // now we render the data here
             $data = array();

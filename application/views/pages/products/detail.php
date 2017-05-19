@@ -61,7 +61,7 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                     <div class="product-item">
                         <h1 class="product-title" itemprop="name" content="<?php echo stripslashes($product_data["product_title"]); ?>"><?php echo stripslashes($product_data["product_title"]); ?></h1>
                         <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                            <meta itemprop="priceCurrency" content="INR">
+                            <meta itemprop="priceCurrency" content="<?php echo CURRENCY_CODE; ?>">
                             <link itemprop="availability" href="http://schema.org/In Stock">
                             <div class="prices">              
                                 <span id="ProductPrice" class="price money" itemprop="price" content="<?php echo number_format($product_data["product_price_min"], 2); ?>"><?php echo get_currency_symbol($product_data["product_currency"]) . number_format($product_data["product_price_min"], 2); ?></span>
