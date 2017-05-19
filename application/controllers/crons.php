@@ -78,7 +78,7 @@ class Crons extends CI_Controller
         }
 
         // all the active products
-        $product_records = $model->fetchSelectedData('product_url_key', TABLE_PRODUCTS, array('product_status' => '1'));
+        $product_records = $model->fetchSelectedData('product_url_key', TABLE_PRODUCTS, array('product_status' => '1', 'product_currency' => CURRENCY_CODE));
         foreach ($product_records as $value)
         {
             $product_url = base_url("p/" . $value['product_url_key']);
