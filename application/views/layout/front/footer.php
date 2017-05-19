@@ -4,7 +4,7 @@
                 <div class="row">
                     <div class="layout-column col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
                         <div class="addon-box">
-                            <a href="<?php echo base_url(); ?>" class="logo-wrapper">
+                            <a href="/" class="logo-wrapper">
                                 <img src="<?php echo IMAGES_PATH . "/logo.png" ?>" data-original="<?php echo IMAGES_PATH . "/logo.png" ?>" alt="<?php echo SITE_NAME; ?>" class="lazy" width="150">
                             </a>
                         </div>

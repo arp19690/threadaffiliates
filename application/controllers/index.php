@@ -11,7 +11,7 @@ class Index extends CI_Controller
         parent::__construct();
     }
 
-    public function index($currency_code = "INR")
+    public function index($currency_code = CURRENCY_CODE)
     {
         $data = array();
         $model = new Common_model();

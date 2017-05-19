@@ -1,12 +1,13 @@
 <?php
 
-try
+if (isset($_SERVER["HTTP_ACCEPT_ENCODING"]))
 {
     if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip'))
     {
         ob_start("ob_gzhandler");
     }
-} catch (Exception $e)
+}
+else
 {
     ob_start();
 }

@@ -41,7 +41,7 @@ if (!defined('BASEPATH'))
   |
  */
 //$route['module_name'] = 'admin';
-$route['default_controller'] = "index";
+$route['default_controller'] = DEFAULT_CONTROLLER;
 $route['404_override'] = 'index/pagenotfound';
 
 $route['home'] = 'index/index';
