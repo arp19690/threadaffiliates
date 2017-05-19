@@ -123,7 +123,7 @@ $path = $controller . "/" . $action;
                                 <div class="row">
                                     <div class="layout-column col-lg-2 col-md-2 col-sm-12 col-xs-12 navbar-logo pull-left">
                                         <div class="addon-box">
-                                            <a href="<?php echo base_url(); ?>" class="logo-wrapper">
+                                            <a href="/" class="logo-wrapper">
                                                 <img src="<?php echo IMAGES_PATH; ?>/logo-name.png" alt="<?php echo SITE_NAME; ?>" width="180">
                                             </a>
                                         </div>

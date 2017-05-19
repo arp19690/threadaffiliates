@@ -12,7 +12,7 @@ switch ($type)
                     <img src="<?php echo IMAGES_PATH . "/logo-circle.png" ?>" alt="<?php echo SITE_NAME; ?>" width="40" style="max-width: 40px;"/>
                 </div>
                 <ul class="nav nav-pills nav-stacked level0">
-                    <li class="mega  active"><a href="<?php echo base_url(); ?>">Home</a></li>
+                    <li class="mega  active"><a href="/">Home</a></li>
                     <?php
                     foreach ($menu_data as $value)
                     {
