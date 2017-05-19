@@ -88,7 +88,12 @@ class Crons extends CI_Controller
         $xml .= '</urlset>';
 //        prd($xml);
 
-        $file = fopen((APPPATH . '/../sitemap.xml'), 'w');
+        $sitemap_filename = 'sitemap.xml';
+        if (CURRENCY_CODE == "USD")
+        {
+            $sitemap_filename = 'international-sitemap.xml';
+        }
+        $file = fopen((APPPATH . '/../' . $sitemap_filename), 'w');
         fwrite($file, $xml);
         fclose($file);
         echo "Sitemap generated successfully";
