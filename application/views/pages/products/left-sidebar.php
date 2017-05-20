@@ -4,8 +4,6 @@ $menu_data = $custom_model->create_menu();
 ?>
 
 <div class="">
-    <div class="banner-left-sidebar visible-lg"><?php echo get_google_ad(); ?></div>
-
     <div class="block categories-block hidden-xs">
         <h3 class="block-title">Categories<span class="layered_close"></span></h3>
         <div class="block-content">
