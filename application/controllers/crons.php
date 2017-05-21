@@ -91,7 +91,7 @@ class Crons extends CI_Controller
         $sitemap_filename = 'sitemap.xml';
         if (CURRENCY_CODE == "USD")
         {
-            $sitemap_filename = 'international-sitemap.xml';
+            $sitemap_filename = 'usa-sitemap.xml';
         }
         $file = fopen((APPPATH . '/../' . $sitemap_filename), 'w');
         fwrite($file, $xml);

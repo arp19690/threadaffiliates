@@ -11,17 +11,17 @@ class Subdomains extends CI_Controller
         parent::__construct();
     }
 
-    public function index($type = "international")
+    public function index($type = "usa")
     {
         switch ($type)
         {
-            case "international":
-                $this->international();
+            case "usa":
+                $this->usa();
                 break;
         }
     }
 
-    public function international($currency_code = "USD")
+    public function usa($currency_code = "USD")
     {
         require_once APPPATH . "controllers/index.php";
         $index_controller = new Index();
