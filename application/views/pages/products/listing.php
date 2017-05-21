@@ -37,7 +37,7 @@ echo isset($breadcrumb) ? $breadcrumb : "";
                                             <img src="<?php echo $value["product_image_url"]; ?>" data-original="<?php echo $value["product_image_url"]; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="first-image img-responsive lazy">
                                             <img src="<?php echo $value["product_image_url"]; ?>" data-original="<?php echo $value["product_image_url"]; ?>" alt="<?php echo stripslashes($value["product_title"]); ?>" class="second-img img-responsive lazy" />
                                         </a>
-                                        <div class="wrapper-label <?php echo strtolower($value["product_type"]); ?>"><?php echo ucwords($value["product_type"]); ?></div>
+                                        <div class="wrapper-label <?php echo strtolower($value["product_type"]); ?>"><?php echo get_affiliate_name($value["product_type"]); ?></div>
                                     </div> 
 
                                     <div class="product-info clearfix">

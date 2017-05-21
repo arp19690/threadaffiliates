@@ -1,5 +1,20 @@
 <?php
 
+function get_affiliate_name($type = "amazon")
+{
+    $output = "Amazon IN";
+    switch ($type)
+    {
+        case "amazon_usa":
+            $output = "Amazon USA";
+            break;
+        case "flipkart":
+            $output = "Flipkart";
+            break;
+    }
+    return $output;
+}
+
 function get_currency_symbol($currency_code)
 {
     $output = "Rs. ";
