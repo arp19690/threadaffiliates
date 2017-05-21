@@ -57,7 +57,7 @@
                                     <tr class="text-left">
                                         <td>
                                             <p style="margin: 0;"><?php echo $value["dc_product_unique_code"]; ?></p>
-                                            <p style="margin: 0;"><small><strong><?php echo ucwords($value["dc_type"]); ?></strong></small></p>
+                                            <p style="margin: 0;"><small><strong><?php echo get_affiliate_name($value["dc_type"]); ?></strong></small></p>
                                             <?php
                                             if ($value["product_status"] == "1")
                                             {

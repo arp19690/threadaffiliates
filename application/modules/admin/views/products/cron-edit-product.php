@@ -53,7 +53,8 @@
                                     <div class="col-lg-8">
                                         <select name="dc_type" class="form-control" required="required">
                                             <option value=""></option>
-                                            <option value="amazon" <?php echo $product_data["product_type"] == "amazon" ? "selected='selected'" : ""; ?>>Amazon</option>
+                                            <option value="amazon" <?php echo $product_data["product_type"] == "amazon" ? "selected='selected'" : ""; ?>>Amazon India</option>
+                                            <option value="amazon_usa" <?php echo $product_data["product_type"] == "amazon_usa" ? "selected='selected'" : ""; ?>>Amazon USA</option>
                                             <option value="flipkart" <?php echo $product_data["product_type"] == "flipkart" ? "selected='selected'" : ""; ?>>Flipkart</option>
                                         </select>
                                     </div>
