@@ -28,6 +28,9 @@ class Crons extends CI_Controller
                 case "flipkart":
                     $where_cond_arr["dc_type"] = "flipkart";
                     break;
+                case "aliexpress":
+                    $where_cond_arr["dc_type"] = "aliexpress";
+                    break;
             }
             $autorun_helper->auto_populate($where_cond_arr);
             echo "Product details fetched and updated successfully.\n";

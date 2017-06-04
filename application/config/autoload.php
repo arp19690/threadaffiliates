@@ -67,7 +67,7 @@ $autoload['libraries'] = array('template', 'session', 'AdminLogin_auth');
   |	$autoload['helper'] = array('url', 'file');
  */
 
-$autoload['helper'] = array("url", "form", "cookie", "AmazonHelper", "FlipkartHelper", "AutorunHelper");
+$autoload['helper'] = array("url", "form", "cookie", "AmazonHelper", "FlipkartHelper", "AliexpressHelper", "AutorunHelper");
 
 
 /*

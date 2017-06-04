@@ -49,6 +49,7 @@
                                             <option value="amazon">Amazon India</option>
                                             <option value="amazon_usa">Amazon USA</option>
                                             <option value="flipkart">Flipkart</option>
+                                            <option value="aliexpress">AliExpress</option>
                                         </select>
                                     </div>
                                 </div>

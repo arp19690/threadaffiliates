@@ -27,6 +27,7 @@ class AutorunHelper
 
         $amazon_helper = new AmazonHelper();
         $flipkart_helper = new FlipkartHelper();
+        $aliexpress_helper = new AliexpressHelper();
 
         foreach ($products_data as $value)
         {
@@ -179,6 +180,79 @@ class AutorunHelper
                     {
                         $this->ci->session->set_flashdata("warning", "This product is currently Out of Stock");
                     }
+                }
+            }
+            else if ($value["dc_type"] == "aliexpress")
+            {
+                $product_info = $aliexpress_helper->get_product_info($product_unique_code);
+                if ($product_info["errorCode"] == 20010000)
+                {
+                    if (isset($product_info["result"]))
+                    {
+                        $item_details = $product_info["result"];
+                        $promotion_url = $aliexpress_helper->get_promotion_link($item_details['productUrl']);
+                        if ($promotion_url["errorCode"] == 20010000)
+                        {
+                            $item_details['salePrice'] = str_replace("US $", "", $item_details['salePrice']);
+                            $item_details['originalPrice'] = str_replace("US $", "", $item_details['originalPrice']);
+                            $item_details['discount'] = str_replace("%", "", $item_details['discount']);
+                            $item_details['allImageUrls'] = explode(",", $item_details['allImageUrls']);
+
+                            $product_display_image = $item_details['imageUrl'];
+                            $product_title = $item_details['productTitle'];
+                            $product_price_min = $item_details['salePrice'];
+                            $product_price_max = $item_details['originalPrice'];
+                            $product_url_key = strtolower(get_unique_product_url_key($product_title));
+                            $product_discount_percent = $item_details['discount'];
+                            foreach ($item_details['allImageUrls'] as $img_key => $img_value)
+                            {
+                                $product_other_images[] = $img_value;
+                            }
+                            $product_url_long = $promotion_url["result"]["promotionUrls"][0]["promotionUrl"];
+
+                            $insert_arr = array(
+                                "product_category_id" => $product_category_id,
+                                "product_unique_code" => $product_unique_code,
+                                "product_title" => addslashes($product_title),
+                                "product_price_min" => floatval($product_price_min),
+                                "product_price_max" => floatval($product_price_max),
+                                "product_discount_percent" => floatval($product_discount_percent),
+                                "product_url_long" => addslashes($product_url_long),
+                                "product_image_url" => addslashes($product_display_image),
+                                "product_images_json" => empty($product_other_images) ? NULL : json_encode($product_other_images),
+                                "product_url_key" => $product_url_key,
+                                "product_currency" => "USD",
+                                "product_status" => "1",
+                                "product_type" => "aliexpress"
+                            );
+
+                            // If product exists, then update it else insert a new
+                            $is_exists = $model->is_exists("product_id", TABLE_PRODUCTS, array("product_unique_code" => $product_unique_code));
+                            if (empty($is_exists))
+                            {
+                                $model->insertData(TABLE_PRODUCTS, $insert_arr);
+                            }
+                            else
+                            {
+                                $model->updateData(TABLE_PRODUCTS, $insert_arr, array("product_unique_code" => $product_unique_code, "product_type" => "aliexpress"));
+                            }
+
+                            // now updating the daily cron table
+                            $model->updateData(TABLE_DAILY_CRON, array("updated_on" => date("Y-m-d H:i:s")), array("dc_id" => $value["dc_id"]));
+                        }
+                        else
+                        {
+                            $this->ci->session->set_flashdata("error", "Could not generate Promotion URL");
+                        }
+                    }
+                    else
+                    {
+                        $this->ci->session->set_flashdata("error", "No data found for this product. Please search for another product");
+                    }
+                }
+                else
+                {
+                    $this->ci->session->set_flashdata("error", "An error occurred while fetching product info");
                 }
             }
 

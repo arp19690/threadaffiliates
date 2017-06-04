@@ -56,10 +56,23 @@ class Products extends CI_Controller
             $arr = $this->input->post();
             $model = new Common_model();
             $currency_code = $arr["dc_type"] == "amazon" ? "INR" : "USD";
-            $dc_id = $model->insertData(TABLE_DAILY_CRON, array("dc_category_id" => $arr["category_id"], "dc_product_unique_code" => trim($arr["product_code"]), "dc_type" => $arr["dc_type"], "dc_currency" => $currency_code));
+            $explode_product_code = explode("_", trim($arr["product_code"]));
+            $product_code = $explode_product_code[count($explode_product_code) - 1];
 
-            // updating the products info
-            $this->fetch_cron_product_info($dc_id);
+            $insert_arr = array("dc_category_id" => $arr["category_id"], "dc_product_unique_code" => trim($product_code), "dc_type" => $arr["dc_type"], "dc_currency" => $currency_code);
+            $is_exists = $model->fetchSelectedData("dc_id", TABLE_DAILY_CRON, $insert_arr);
+            if (empty($is_exists))
+            {
+                $dc_id = $model->insertData(TABLE_DAILY_CRON, $insert_arr);
+
+                // updating the products info
+                $this->fetch_cron_product_info($dc_id);
+            }
+            else
+            {
+                $this->session->set_flashdata("warning", "Product already exists");
+                redirect(base_url_admin("products/cron_list_products"));
+            }
         }
         else
         {
